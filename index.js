@@ -52,16 +52,21 @@ let onNavItemClick = (pathName) => {
 contentDiv.innerHTML = routes[window.location.pathname];
 
 window.addEventListener("popstate", event => {
-  var stateId = event.state.id;
-  if (event.state != null ){
+  var stateId;
+  if (event.state === null ){
+    stateId = "home";
     console.log("stateId = ", stateId);
     select_tab(stateId);
       document.title = ``;
-      document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
+      document.title = `smartCINEMA | HOME`;
+
   } else {
-      select_tab("home");
+       stateId = event.state.id;
+      console.log("stateId = ", stateId);
+      select_tab(stateId);
         document.title = ``;
-        document.title = `smartCINEMA | HOME`;
+        document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
+
   }
 
 });
