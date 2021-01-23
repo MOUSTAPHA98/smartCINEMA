@@ -23,11 +23,7 @@ let recieveRedirect = () => {
         var a = v.split('=');
         let tabID = a[1].substr(1);
 
-        function select_tab(tabID) {
-          document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-          document.querySelectorAll("#" + tabID).forEach(item => item.classList.add('active'));
-        };
-        select_tab(tabID);
+
         q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
       });
       if (q.p !== undefined) {
@@ -39,4 +35,10 @@ let recieveRedirect = () => {
       }
     }
   }(window.location));
+
+  function select_tab(tabID) {
+    document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
+    document.querySelectorAll("#" + tabID).forEach(item => item.classList.add('active'));
+  };
+  select_tab(tabID);
 }
