@@ -52,11 +52,18 @@ let onNavItemClick = (pathName) => {
 contentDiv.innerHTML = routes[window.location.pathname];
 
 window.addEventListener("popstate", event => {
-  let stateId = undefined;
-  console.log("stateId = ", stateId);
-  select_tab(stateId);
-    document.title = ``;
-    document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
+  var stateId = event.state.id;
+  if (stateId != undefined){
+    console.log("stateId = ", stateId);
+    select_tab(stateId);
+      document.title = ``;
+      document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
+  } else {
+      select_tab("home");
+        document.title = ``;
+        document.title = `smartCINEMA | HOME`;
+  }
+
 });
 
 
