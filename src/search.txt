@@ -1,0 +1,75 @@
+<header class="section-header d-flex flex-row justify-content-between align-items-center">
+    <div class="search-field">
+        <input type="text" placeholder="What movie looking for ?">
+        <button>SEARCH</button>
+    </div>
+    <div class="d-flex flex-row ">
+        <div class="settings">
+            <a href="">
+                <i class="fal fa-cog"></i>
+            </a>
+        </div>
+        <div class="social-links">
+            <a href="">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+.app-container .container .row .movies-content header{
+    padding: 0 50px;
+    height:  98px;
+}
+
+.app-container .container .row .movies-content header div{
+    position: relative;
+}
+
+.app-container .container .row .movies-content header > .search-field::before{
+    color:var(--main-text-color);
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    font-size: 20px;
+    content: "\f002";
+}
+
+.app-container .container .row .movies-content header input{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border: 0;
+    outline: 0;
+    padding: 10px 50px;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.app-container .container .row .movies-content header button{
+    font-size: 16px;
+    border-radius: 100px;
+    font-weight: 500;
+    color: var(--second-text-color);
+    background-color: var(--second-color);
+    border: 0;
+    outline: 0;
+    padding: 10px 30px;
+    margin: 0 10px;
+}

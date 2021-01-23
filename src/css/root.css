@@ -1,0 +1,39 @@
+:root{
+    --back-color: #161616;
+    --main-color:#202020 ;
+    --second-color: #c91919 ;
+    --second-color-transparent: #c9191944 ;
+    --main-text-color: rgb(189, 189, 189);
+    --second-text-color: #FFF ;
+    --main-font: "Poppins";
+    --second-font: "Fredoka One";
+}
+
+/* :root{
+    --back-color: #d6d6d6;
+    --main-color:#c4c4c4 ;
+    --second-color: #1988c9 ;
+    --second-color-transparent: #1988c944 ;
+    --main-text-color: #161616;
+    --second-text-color: #202020 ;
+    --main-font: "Poppins";
+    --second-font: "Fredoka One";
+} */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--back-color);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    height: 20px;
+}
+
+body{
+    background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat;
+    background-size: cover;
+}
