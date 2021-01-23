@@ -104,9 +104,12 @@
 <!--    ===       END   PAGE      ===     -->
 
 <script>
-    console.log(document.querySelector('#popular').classList);
-    if (window.location.pathname === "/popular"){
-        document.querySelector('#popular').classList.add("active");
+    if (location.pathname === "/popular"){
+        function select_tab(id) {
+        document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
+        document.querySelectorAll("#popular").forEach(item => item.classList.add('active'));
+    };
+    select_tab();
     }
 </script>
 

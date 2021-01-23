@@ -1,7 +1,7 @@
 function select_tab(id) {
   document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
   document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
-}
+};
 
 function push(event) {
   let id = event.target.id;
@@ -43,12 +43,12 @@ let routes = {
 
 window.onpopstate = () => {
   contentDiv.innerHTML = routes[window.location.pathname];
-}
+};
 
 let onNavItemClick = (pathName) => {
   contentDiv.innerHTML = routes[pathName];
   // window.history.pushState({}, pathName, window.location.origin + pathName);
-}
+};
 contentDiv.innerHTML = routes[window.location.pathname];
 
 window.addEventListener("popstate", event => {
