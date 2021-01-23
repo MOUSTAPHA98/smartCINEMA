@@ -6,9 +6,9 @@ function select_tab(id) {
 function push(event) {
   let id = event.target.id;
   select_tab(id);
-  // document.title = ``;
-  // document.title = `smartCINEMA | ${id.toUpperCase()}`;
-  // window.history.pushState({id}, `${id}`, `${id}`);
+  document.title = ``;
+  document.title = `smartCINEMA | ${id.toUpperCase()}`;
+  window.history.pushState({id}, `${id}`, `${id}`);
 }
 
 
@@ -46,7 +46,7 @@ window.onpopstate = () => {
 
 let onNavItemClick = (pathName) => {
   contentDiv.innerHTML = routes[pathName];
-  window.history.pushState({}, pathName, window.location.origin + pathName);
+  // window.history.pushState({}, pathName, window.location.origin + pathName);
 }
 contentDiv.innerHTML = routes[window.location.pathname];
 
