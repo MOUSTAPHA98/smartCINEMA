@@ -1,6 +1,6 @@
-function select_tab(id) {
+function select_tab(tabID) {
   document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-  document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
+  document.querySelectorAll("#" + tabID).forEach(item => item.classList.add('active'));
 }
 
 
