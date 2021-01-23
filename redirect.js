@@ -1,6 +1,5 @@
-// Single Page Apps for GitHub Pages
-// https://github.com/rafrex/spa-github-pages
-// Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+import{select_tab}from'./index';
+
 
 let redirect404 = () => {
   var segmentCount = 0;
@@ -18,7 +17,9 @@ let recieveRedirect = () => {
   (function(location) {
     if (location.search) {
       var q = {};
-      console.log(q);
+      let tabID = q[0];
+      console.log(tabID);
+
       location.search.slice(1).split('&').forEach(function(v) {
         var a = v.split('=');
       console.log(a);
