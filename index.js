@@ -8,7 +8,7 @@ function push(event) {
   select_tab(id);
   document.title = ``;
   document.title = `smartCINEMA | ${id.toUpperCase()}`;
-  window.history.pushState({id}, `${id}`, `${id}`);
+  // window.history.pushState({id}, `${id}`, `${id}`);
 }
 
 
