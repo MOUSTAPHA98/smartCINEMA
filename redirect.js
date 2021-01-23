@@ -20,7 +20,7 @@ let recieveRedirect = () => {
   (function(location) {
     if (location.search) {
       var q = {};
-      let tabID = q[0];
+      let tabID = q;
       console.log(tabID);
 
       location.search.slice(1).split('&').forEach(function(v) {
