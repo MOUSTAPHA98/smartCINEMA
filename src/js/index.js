@@ -26,6 +26,45 @@
 
 
 
+// let contentDiv = document.getElementById('content');
+
+// let routes = {
+//   '/': homepage,
+//   '/index.html': homepage,
+//   '/popular': popular,
+//   '/now_playing': now_playing,
+//   '/top_rated': top_rated,
+//   '/upcoming': upcoming,
+//   '/search': search,
+//   '/favourites': favourites,
+//   '/bookmarks': bookmarks
+// };
+
+// window.onpopstate = () => {
+//   contentDiv.innerHTML = routes[window.location.pathname];
+// }
+
+// let onNavItemClick = (pathName) => {
+//   contentDiv.innerHTML = routes[pathName];
+//   window.history.pushState({}, pathName, window.location.origin + pathName);
+// }
+// contentDiv.innerHTML = routes[window.location.pathname];
+
+// window.addEventListener("popstate", event => {
+//   let stateId = event.state.id;
+//   console.log("stateId = ", stateId);
+//   select_tab(stateId);
+//     document.title = ``;
+//     document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
+// });
+
+
+
+
+
+
+
+
 let contentDiv = document.getElementById('content');
 
 let routes = {
@@ -45,15 +84,8 @@ window.onpopstate = () => {
 }
 
 let onNavItemClick = (pathName) => {
-  contentDiv.innerHTML = routes[pathName];
   window.history.pushState({}, pathName, window.location.origin + pathName);
+  contentDiv.innerHTML = routes[pathName];
 }
-contentDiv.innerHTML = routes[window.location.pathname];
 
-// window.addEventListener("popstate", event => {
-//   let stateId = event.state.id;
-//   console.log("stateId = ", stateId);
-//   select_tab(stateId);
-//     document.title = ``;
-//     document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
-// });
+contentDiv.innerHTML = routes[window.location.pathname];
