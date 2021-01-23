@@ -41,15 +41,15 @@ let routes = {
   '/bookmarks': bookmarks
 };
 
-window.onpopstate = () => {
-  contentDiv.innerHTML = routes[window.location.pathname];
-};
+// window.onpopstate = () => {
+//   contentDiv.innerHTML = routes[window.location.pathname];
+// };
 
 let onNavItemClick = (pathName) => {
   contentDiv.innerHTML = routes[pathName];
-  // window.history.pushState({}, pathName, window.location.origin + pathName);
 };
-contentDiv.innerHTML = routes[window.location.pathname];
+
+// contentDiv.innerHTML = routes[window.location.pathname];
 
 window.addEventListener("popstate", event => {
   let stateId = event.state.id;
