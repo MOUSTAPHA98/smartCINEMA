@@ -30,6 +30,7 @@ let contentDiv = document.getElementById('content');
 
 let routes = {
   '/': homepage,
+  '/home': homepage,
   '/index.html': homepage,
   '/popular': popular,
   '/now_playing': now_playing,
