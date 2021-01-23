@@ -6,8 +6,8 @@ function select_tab(id) {
 function push(event) {
   let id = event.target.id;
   select_tab(id);
-  document.title = ``;
-  document.title = `smartCINEMA | ${id.toUpperCase()}`;
+  // document.title = ``;
+  // document.title = `smartCINEMA | ${id.toUpperCase()}`;
   // window.history.pushState({id}, `${id}`, `${id}`);
 }
 
