@@ -52,7 +52,7 @@ let onNavItemClick = (pathName) => {
 contentDiv.innerHTML = routes[window.location.pathname];
 
 window.addEventListener("popstate", event => {
-  let stateId = "home";
+  let stateId = event.state.id;
   console.log("stateId = ", stateId);
   select_tab(stateId);
     document.title = ``;
