@@ -53,7 +53,7 @@ contentDiv.innerHTML = routes[window.location.pathname];
 
 window.addEventListener("popstate", event => {
   var stateId = event.state.id;
-  if (stateId != undefined){
+  if (event.state != null ){
     console.log("stateId = ", stateId);
     select_tab(stateId);
       document.title = ``;
