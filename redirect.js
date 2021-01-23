@@ -13,6 +13,7 @@ let redirect404 = () => {
   );
 }
 
+var tabID;
 let recieveRedirect = () => {
   (function(location) {
     if (location.search) {
@@ -21,7 +22,7 @@ let recieveRedirect = () => {
 
       location.search.slice(1).split('&').forEach(function(v) {
         var a = v.split('=');
-        let tabID = a[1].substr(1);
+        tabID = a[1].substr(1);
 
 
         q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
