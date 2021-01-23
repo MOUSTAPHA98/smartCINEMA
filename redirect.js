@@ -25,8 +25,9 @@ let recieveRedirect = () => {
       location.search.slice(1).split('&').forEach(function(v) {
         var a = v.split('=');
       console.log(a);
-      let tabID = a[1];
+      let tabID = a[1].substr(1);
       console.log(tabID);
+      select_tab(tabID);
         q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
       });
       if (q.p !== undefined) {
