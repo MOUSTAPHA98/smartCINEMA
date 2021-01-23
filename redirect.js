@@ -1,7 +1,10 @@
-
-
+function select_tab(id) {
+  document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
+  document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
+};
 
 let redirect404 = () => {
+  select_tab("popular");
   var segmentCount = 0;
   var location = window.location;
   location.replace(
@@ -11,20 +14,17 @@ let redirect404 = () => {
     (location.search ? '&q=' + location.search.slice(1).replace(/&/g, '~and~') : '') +
     location.hash
   );
+  select_tab("popular");
 }
 
-var tabID;
 let recieveRedirect = () => {
+  select_tab("popular");
+
   (function(location) {
     if (location.search) {
       var q = {};
-
-
       location.search.slice(1).split('&').forEach(function(v) {
         var a = v.split('=');
-        tabID = a[1].substr(1);
-
-
         q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
       });
       if (q.p !== undefined) {
@@ -36,10 +36,5 @@ let recieveRedirect = () => {
       }
     }
   }(window.location));
-
-  function select_tab(tabID) {
-    document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-    document.querySelectorAll("#" + tabID).forEach(item => item.classList.add('active'));
-  };
-  select_tab(tabID);
+  select_tab("popular");
 }
