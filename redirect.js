@@ -18,8 +18,10 @@ let recieveRedirect = () => {
   (function(location) {
     if (location.search) {
       var q = {};
+      console.log(q);
       location.search.slice(1).split('&').forEach(function(v) {
         var a = v.split('=');
+      console.log(a);
         q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
       });
       if (q.p !== undefined) {
