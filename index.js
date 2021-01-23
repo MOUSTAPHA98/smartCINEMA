@@ -17,7 +17,7 @@ window.onload = event => {
   window["home"].addEventListener("click", event => push(event))
   window["popular"].addEventListener("click", event => push(event))
   window["now_playing"].addEventListener("click", event => push(event))
-  window["top-rated"].addEventListener("click", event => push(event))
+  window["top_rated"].addEventListener("click", event => push(event))
   window["upcoming"].addEventListener("click", event => push(event))
   window["search"].addEventListener("click", event => push(event))
   window["favourites"].addEventListener("click", event => push(event))
