@@ -1,7 +1,4 @@
-function select_tab(tabID) {
-  document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-  document.querySelectorAll("#" + tabID).forEach(item => item.classList.add('active'));
-}
+
 
 
 let redirect404 = () => {
@@ -24,10 +21,13 @@ let recieveRedirect = () => {
 
       location.search.slice(1).split('&').forEach(function(v) {
         var a = v.split('=');
-      console.log(a);
-      let tabID = a[1].substr(1);
-      console.log(tabID);
-      select_tab(tabID);
+        let tabID = a[1].substr(1);
+
+        function select_tab(tabID) {
+          document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
+          document.querySelectorAll("#" + tabID).forEach(item => item.classList.add('active'));
+        };
+        select_tab(tabID);
         q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
       });
       if (q.p !== undefined) {
