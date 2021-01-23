@@ -1,10 +1,4 @@
-function select_tab(id) {
-  document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-  document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
-};
-
 let redirect404 = () => {
-  select_tab("popular");
   var segmentCount = 0;
   var location = window.location;
   location.replace(
@@ -14,12 +8,9 @@ let redirect404 = () => {
     (location.search ? '&q=' + location.search.slice(1).replace(/&/g, '~and~') : '') +
     location.hash
   );
-  select_tab("popular");
 }
 
 let recieveRedirect = () => {
-  select_tab("popular");
-
   (function(location) {
     if (location.search) {
       var q = {};
@@ -36,5 +27,4 @@ let recieveRedirect = () => {
       }
     }
   }(window.location));
-  select_tab("popular");
 }
