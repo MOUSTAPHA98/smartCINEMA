@@ -20,11 +20,9 @@
     <script>recieveRedirect()</script>
 
     <script>
-        function select_tab() {
-        document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-        document.querySelectorAll("#popular").forEach(item => item.classList.add('active'));
-        select_tab();
-    }
+        if (window.location.pathname === "/popular"){
+            document.getElementById('popular').classList.add("active");
+        }
     </script>
 
     <script  src='./templates/homepage.js'></script>
