@@ -19,11 +19,7 @@
     <script  src="./redirect.js"></script>
     <script>recieveRedirect()</script>
 
-    <script>
-        if (window.location.pathname === "/popular"){
-            document.getElementById('popular').classList.add("active");
-        }
-    </script>
+
 
     <script  src='./templates/homepage.js'></script>
     <script  src='./templates/popular.js'></script>
@@ -106,6 +102,13 @@
         </div>
     </div>
 <!--    ===       END   PAGE      ===     -->
+
+<script>
+    console.log(document.querySelector('#popular').classList);
+    if (window.location.pathname === "/popular"){
+        document.querySelector('#popular').classList.add("active");
+    }
+</script>
 
 <!--    ===     SCRIPTS     ===     -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
