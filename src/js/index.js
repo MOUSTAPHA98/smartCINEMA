@@ -50,10 +50,10 @@ let onNavItemClick = (pathName) => {
 }
 contentDiv.innerHTML = routes[window.location.pathname];
 
-window.addEventListener("popstate", event => {
-  let stateId = event.state.id;
-  console.log("stateId = ", stateId);
-  select_tab(stateId);
-    // document.title = ``;
-    // document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
-});
+// window.addEventListener("popstate", event => {
+//   let stateId = event.state.id;
+//   console.log("stateId = ", stateId);
+//   select_tab(stateId);
+//     document.title = ``;
+//     document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
+// });
