@@ -49,17 +49,13 @@
 
 .app-container .container .row .side-menu  .nav-links  .nav-item .navbar-link:hover{
     font-weight: 600;
-    font-size: 15px;
+    /* font-size: 15px; */
     color: var(--second-text-color) !important;
 }
 
 .app-container .container .row .side-menu  .nav-links  .nav-item .navbar-link.active:hover{
     font-weight: 500;
     font-size: 14px;
-}
-
-.app-container .container .row .side-menu  .nav-links  .nav-item .navbar-link:hover.navbar-link i{
-    font-size: 20px;
 }
 
 .app-container .container .row .side-menu  .nav-links  .nav-item .navbar-link.active i{

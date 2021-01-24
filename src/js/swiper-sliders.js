@@ -1,5 +1,4 @@
 var activeSlider = () =>{
-  console.log("SFS");
     var swiper = new Swiper('.homepage-content-swiper-container', {
       spaceBetween: 0,
       observer: true,
