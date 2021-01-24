@@ -211,6 +211,7 @@
     background: linear-gradient(to left, var(--back-color-transparent) 0%, var(--back-color-transparent) 100%), url(../../../src/images/background/back.jpg) center no-repeat;
     background-size: cover;
     padding: 30px;
+    position: relative;
 }
 
 .homepage-area .homepage-trendmovies-container .homepage-trend-content-heading{
@@ -304,7 +305,7 @@
 
 .swiper-slide.trend-movie .trend-movie-img img{
     object-fit: cover;
-    transition: ease-in-out 2s;
+    transition: ease-in-out 1.5s;
 }
 
 .swiper-slide.trend-movie .trend-movie-img img:hover{

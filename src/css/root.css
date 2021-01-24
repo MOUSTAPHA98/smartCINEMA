@@ -42,7 +42,8 @@
 
 body{
     /* height: 10000px; */
-    background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat;
+    /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat; */
+    background: linear-gradient(to left, #222 0%, #222 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat;
     background-size: cover;
     /* overflow: hidden; */
 }

@@ -27,10 +27,10 @@ var activeSlider = () =>{
     slidesPerView: 5,
     centeredSlides: false,
     spaceBetween: 10,
-    speed: 7000,
+    speed: 2000,
     loop: true,
     autoplay: {
-        delay: 1,
+        delay: 3000,
         disableOnInteraction: true,
       },
     // pagination: {
