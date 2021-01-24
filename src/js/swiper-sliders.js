@@ -1,5 +1,7 @@
 var swiper = new Swiper('.homepage-content-swiper-container', {
     spaceBetween: 0,
+    observer: true,
+    observeParents: true,
     centeredSlides: true,
     speed: 2000,
     // effect: "fade",

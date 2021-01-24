@@ -9,11 +9,12 @@
     overflow: hidden !important;
     background-color: black;
     position: relative;
+    min-height: 560px;
 }
 
 
 .homepage-area .homepage-content-swiper-container .swiper-slide{
-    max-height: 560px;
+    min-height: 560px;
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide.slide1{
@@ -32,7 +33,7 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide .slide-content{
-    height: 545px;
+    min-height: 560px;
     padding: 85px;
     backdrop-filter: blur(10px);
     position: relative;
