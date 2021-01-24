@@ -20,4 +20,26 @@ var activeSlider = () =>{
       prevEl: '.homepage-content-swiper-button-prev',
       },
   });
+
+  var trendMovies_swiper = new Swiper('.homepage-trend-slider-container', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 5,
+    centeredSlides: false,
+    spaceBetween: 10,
+    speed: 7000,
+    loop: true,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: true,
+      },
+    // pagination: {
+    // el: '.homepage-content-swiper-pagination',
+    // clickable: true,
+    // },
+    navigation: {
+    nextEl: '.homepage-trendmovies-swiper-button-next',
+    prevEl: '.homepage-trendmovies-swiper-button-prev',
+    },
+});
 };

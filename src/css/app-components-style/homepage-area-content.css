@@ -1,7 +1,7 @@
-.homepage-area{
-    background-color: chocolate;
-    /* background-color: var(--main-color); */
-}
+/* .homepage-area{
+    background-color: rgb(9, 136, 145);
+    background-color: var(--main-color);
+} */
 
 .homepage-area .homepage-content-swiper-container{
     overflow: hidden !important;
@@ -204,3 +204,145 @@
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.homepage-area .homepage-trendmovies-container{
+    /* background-color: tomato; */
+    /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 58.8%, var(--second-color) 58.8%, var(--second-color) 100%), url(../../../src/images/background/back.jpg) center no-repeat; */
+    background: linear-gradient(to left, var(--back-color-transparent) 0%, var(--back-color-transparent) 100%), url(../../../src/images/background/back.jpg) center no-repeat;
+    background-size: cover;
+    padding: 30px;
+}
+
+.homepage-area .homepage-trendmovies-container .homepage-trend-content-heading{
+    color: var(--main-text-color);
+    font-weight: 300;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.homepage-area .homepage-trendmovies-container .homepage-trend-content-heading i{
+    color: var(--second-text-color);
+    font-weight: 300;
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+
+.homepage-trend-slider-container{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 5px;
+}
+
+.swiper-slide.trend-movie{
+    /* min-height: 300px; */
+    font-size: 18px;
+    /* background: rgb(80, 11, 11); */
+    position: relative;
+}
+
+.swiper-slide.trend-movie .ribbon{
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    z-index: 12;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+}
+
+.swiper-slide.trend-movie .ribbon span{
+    background-color: var(--second-color);
+    color: #FFF;
+    text-align: center;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    box-shadow: 0 3px 10px -5px #000;
+    position: absolute;
+    top: 19px;
+    left: -21px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.swiper-slide.trend-movie .ribbon span::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid var(--second-color);
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid var(--second-color);
+}
+
+.swiper-slide.trend-movie .ribbon span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid var(--second-color);
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid var(--second-color);
+}
+
+.swiper-slide.trend-movie .trend-movie-img{
+    display: block;
+    /* height: 230px; */
+    width: 100%;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.swiper-slide.trend-movie .trend-movie-img img{
+    object-fit: cover;
+    transition: ease-in-out 2s;
+}
+
+.swiper-slide.trend-movie .trend-movie-img img:hover{
+    transform: scale(1.05);
+    object-fit: cover;
+}
+
+.swiper-slide.trend-movie .trend-movie-info{
+    font-weight: 400;
+    font-family: var(--third-font);
+    text-transform: capitalize;
+    color: var(--second-text-color);
+    margin-top: 15px;
+
+}
+
+.swiper-slide.trend-movie .trend-movie-info h2{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    line-height: .3;
+    letter-spacing: -1px;
+}
+
+.swiper-slide.trend-movie .trend-movie-info span{
+    font-size: 12px;
+    color: var(--main-text-color);
+    font-weight: 300;
+    line-height: 0;
+}
+
+.homepage-trendmovies-swiper-button-prev{
+    left: 0;
+    color: var(--second-color);
+}
+
+.homepage-trendmovies-swiper-button-next{
+    right: 0;
+    color: var(--second-color);
+}

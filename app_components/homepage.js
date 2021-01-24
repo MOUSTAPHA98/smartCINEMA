@@ -65,7 +65,7 @@ let homepage = `
                                     </p>
                                     <div class="slide-movie-btns d-flex flex-row justify-content-start align-items-center">
                                         <a class="btn">Watch Now</a>
-                                        <a class="btn invert">View Trailer</a>
+                                        <a class="btn invert">View trend</a>
                                     </div>
                             </div>
                         </div>
@@ -121,7 +121,7 @@ let homepage = `
                                 </p>
                                 <div class="slide-movie-btns d-flex flex-row justify-content-start align-items-center">
                                     <a class="btn">Watch Now</a>
-                                    <a class="btn invert">View Trailer</a>
+                                    <a class="btn invert">View trend</a>
                                 </div>
                             </div>
                     </div>
@@ -139,7 +139,7 @@ let homepage = `
                                     MOVIES
                                 </span>
                                 <h2 class="slide-movie-title">
-                                    Caption America
+                                    Captian America
                                 </h2>
                                 <div class="slide-movie-generes d-flex flex-row align-items-center">
                                     <span>
@@ -177,7 +177,7 @@ let homepage = `
                                 </p>
                                 <div class="slide-movie-btns d-flex flex-row justify-content-start align-items-center">
                                     <a class="btn">Watch Now</a>
-                                    <a class="btn invert">View Trailer</a>
+                                    <a class="btn invert">View trend</a>
                                 </div>
                             </div>
                     </div>

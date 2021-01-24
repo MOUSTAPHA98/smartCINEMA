@@ -1,23 +1,30 @@
 :root{
     --back-color: #161616;
+    --back-color-transparent: #161616f3;
     --main-color:#202020 ;
+    --main-color-transparent:#202020f3 ;
     --second-color: #c91919 ;
     --second-color-transparent: #c9191944 ;
     --main-text-color: rgb(190, 190, 190);
     --second-text-color: #FFF ;
     --main-font: "Poppins";
     --second-font: "Fredoka One";
+    --third-font: "Quicksand";
 }
 
+
 /* :root{
-    --back-color: #d6d6d6;
-    --main-color:#c4c4c4 ;
+    --back-color: #c4c4c4;
+    --back-color-transparent: #c4c4c4f3;
+    --main-color:#d6d6d6 ;
+    --main-color-transparent:#d6d6d6f3;
     --second-color: #c91919 ;
     --second-color-transparent: #c9191944 ;
     --main-text-color: #161616;
     --second-text-color: #202020 ;
     --main-font: "Poppins";
     --second-font: "Fredoka One";
+    --third-font: "Quicksand";
 } */
 
 ::-webkit-scrollbar {
@@ -34,15 +41,16 @@
 }
 
 body{
+    /* height: 10000px; */
     background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat;
     background-size: cover;
     /* overflow: hidden; */
 }
 
-/* .workarea{
-    height: 100vh;
+.workarea{
+    /* height: 100vh; */
     margin: 50px 0;
-} */
+}
 
 .app-container .container{
     background-color: var(--main-color);
