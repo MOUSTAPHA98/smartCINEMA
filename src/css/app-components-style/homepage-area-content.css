@@ -318,7 +318,7 @@
     font-family: var(--third-font);
     text-transform: capitalize;
     color: var(--second-text-color);
-    margin-top: 15px;
+    margin-top: 20px;
 
 }
 
@@ -356,3 +356,47 @@
 .homepage-trendmovies-swiper-button-next{
     right: 0;
 }
+
+.swiper-slide.trend-movie .trend-movie-rate{
+    background-color: var(--main-color);
+    color: #FFF;
+    text-align: center;
+    width: 46px;
+    height: 46px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px -5px #000;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    text-transform: uppercase;
+    z-index: 20;
+    line-height: 45px;
+    font-size: 11px;
+    font-family: var(--third-font);
+    font-weight: 600;
+}
+
+
+.circular-chart {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    display: block;
+    max-width: 90%;
+    margin: 3px;
+  }
+  
+  .circle {
+    stroke: #4CC790;
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }

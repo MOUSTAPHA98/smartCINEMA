@@ -26,7 +26,7 @@ var activeSlider = () =>{
     observeParents: true,
     slidesPerView: 5,
     centeredSlides: false,
-    spaceBetween: 10,
+    spaceBetween: 15,
     speed: 2000,
     loop: true,
     autoplay: {
