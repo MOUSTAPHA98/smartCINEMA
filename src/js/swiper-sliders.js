@@ -1,5 +1,5 @@
 var activeSlider = () =>{
-    var swiper = new Swiper('.homepage-content-swiper-container', {
+    var main_swiper = new Swiper('.homepage-content-swiper-container', {
       spaceBetween: 0,
       observer: true,
       observeParents: true,

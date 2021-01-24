@@ -1,15 +1,12 @@
 .homepage-area{
     background-color: chocolate;
     /* background-color: var(--main-color); */
-    /* height: 100%; */
-    /* width: 100%; */
 }
 
 .homepage-area .homepage-content-swiper-container{
     overflow: hidden !important;
     background-color: black;
     position: relative;
-    min-height: 560px;
 }
 
 
@@ -18,7 +15,7 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide.slide1{
-    background: linear-gradient(to top, var(--back-color) 0%, transparent 100%),url(../../images/slider/deadpool.jpg);
+    background: linear-gradient(to top, var(--back-color)  0%, transparent 100%),url(../../images/slider/deadpool.jpg);
     background-size: cover;
 }
 
@@ -43,26 +40,29 @@
 .homepage-area .homepage-content-swiper-container .swiper-slide .slide-content img{
     position: absolute;
     right: -62px;
-    top: -102px;
-    width: 570px;
+    top: -10%;
+    width: 560px;
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie{
-    /* color: var(--second-text-color); */
+    color: rgb(190, 190, 190);
     height: 100%;
     /* background-color: rgb(8, 202, 8); */
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-category{
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     font-size: 14px;
     font-weight: 500;
+    /* color: rgb(190, 190, 190); */
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-title{
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 0;
     font-family: var(--second-font);
     font-size: 72px;
-    color: var(--second-text-color);
+    color: rgb(190,190,190);
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-generes{
@@ -70,6 +70,7 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-generes span{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     border: .1px solid rgba(255, 255, 255, 0.233);
     padding: 4px 11px;
     margin-right: 10px;
@@ -79,6 +80,7 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-info span{
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     margin-right: 25px;
     margin-bottom: 20px;
     margin: 15px 25px 15px 0;
@@ -96,6 +98,7 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-description{
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     font-size: 14px;
     font-weight: 500;
     line-height: 25px;
@@ -111,14 +114,15 @@
     font-weight: 400;
     line-height: 20px;
     text-transform: uppercase;
-    color: var(--second-text-color);
+    color: rgb(190, 190, 190);
     background-color: var(--second-color);
     cursor: pointer;
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-btns .btn.invert{
     background-color: transparent;
-    border: 1px solid var(--main-text-color);
+    border: 1px solid var(--second-text-color);
+    color: var(--second-text-color);
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-button-next,
@@ -154,7 +158,7 @@
     content: "";
     display: block;
     width: 150px;
-    height: 1px;
+    height: 2px;
     background-color: var(--main-text-color);
     left: 100%;
 }

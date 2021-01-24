@@ -5,7 +5,14 @@
     /* transform: translate(0%, 10%); */
 }
 
-.app-container .container .row .side-menu{
+.app-container .container .row .content{              /*       RIGHT SIDE       */
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border-radius: 0px 10px 10px 0px ;
+    overflow: hidden;
+}
+
+.app-container .container .row .side-menu{         /*       LEFT SIDE       */
     background-color: var(--back-color);
     border-radius: 10px 0 0 10px ;
     overflow: hidden;

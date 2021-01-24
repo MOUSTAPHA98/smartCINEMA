@@ -6,10 +6,10 @@ let homepage = `
     <section class="homepage-area">
         <div class="homepage-content-swiper-container">
             <!-- Add Arrows -->
-            <div class="homepage-content-swiper-button-next swiper-button-next swiper-pagination">
+            <div class="homepage-content-swiper-button-next swiper-button-next swiper-pagination d-none d-md-flex">
                 <i class="fal fa-chevron-right"></i>
             </div>
-            <div class="homepage-content-swiper-button-prev swiper-button-prev swiper-pagination">
+            <div class="homepage-content-swiper-button-prev swiper-button-prev swiper-pagination  d-none d-md-flex">
                 <i class="fal fa-chevron-left"></i>
             </div>
             <!-- Add Pagination -->
@@ -20,7 +20,7 @@ let homepage = `
             <!--    ===     START SLIDE #01    ===    -->
                 <div class="swiper-slide slide1">
                     <div class="slide-content">
-                    <img class="" src="./src/images/deadpool.png" alt="">
+                    <img class="d-none d-md-block" src="./src/images/deadpool.png" alt="">
                         <div class="row">
                             <div class="slide-movie col-xl-7 p-0 d-flex flex-column justify-content-center">
                                     <span class="slide-category">
@@ -76,7 +76,7 @@ let homepage = `
                 <!--    ===     START SLIDE #02    ===    -->
                 <div class="swiper-slide slide2">
                 <div class="slide-content">
-                    <img class="" src="./src/images/ironman.png" alt="">
+                    <img class="d-none d-md-block" src="./src/images/ironman.png" alt="">
                     <div class="row">
                             <div class="slide-movie col-xl-7 p-0 d-flex flex-column justify-content-center">
                                 <span class="slide-category">
@@ -132,7 +132,7 @@ let homepage = `
             <!--    ===     START SLIDE #03    ===    -->
             <div class="swiper-slide slide3">
                 <div class="slide-content">
-                    <img class="" src="./src/images/marvel.png" alt="">
+                    <img class="d-none d-md-block" src="./src/images/marvel.png" alt="">
                     <div class="row">
                             <div class="slide-movie col-xl-12 p-0 d-flex flex-column justify-content-center">
                                 <span class="slide-category">
@@ -173,9 +173,7 @@ let homepage = `
                                     </span>
                                 </div>
                                 <p class="slide-movie-description">
-                                    Steve Rogers, a rejected military soldier, <br> 
-                                    transforms into Captain America after taking <br> 
-                                    a dose of a "Super-Soldier serum".
+                                    Steve Rogers, a rejected military soldier  transforms into Captain America after taking a dose of a "Super-Soldier serum".
                                 </p>
                                 <div class="slide-movie-btns d-flex flex-row justify-content-start align-items-center">
                                     <a class="btn">Watch Now</a>
@@ -193,6 +191,5 @@ let homepage = `
             <div class="homepage-content-swiper-pagination swiper-pagination"></div>
             
         </div>
-        <!-- <br><br><br><br><br> -->
     </section>
 `;

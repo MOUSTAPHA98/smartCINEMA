@@ -3,7 +3,7 @@
     --main-color:#202020 ;
     --second-color: #c91919 ;
     --second-color-transparent: #c9191944 ;
-    --main-text-color: rgb(189, 189, 189);
+    --main-text-color: rgb(190, 190, 190);
     --second-text-color: #FFF ;
     --main-font: "Poppins";
     --second-font: "Fredoka One";
@@ -36,11 +36,4 @@
 body{
     background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat;
     background-size: cover;
-}
-
-.app-container .container .row .movies-content{
-    color: var(--main-text-color);
-    background-color: var(--main-color);
-    border-radius: 0px 10px 10px 0px ;
-    overflow: hidden;
 }
