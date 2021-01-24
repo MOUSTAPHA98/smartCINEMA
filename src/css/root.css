@@ -33,11 +33,24 @@
     height: 20px;
 }
 
-/* html{
-    overflow: hidden !important;
+body{
+    background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat;
+    background-size: cover;
+    /* overflow: hidden; */
+}
+
+/* .workarea{
+    height: 100vh;
+    margin: 50px 0;
 } */
 
-body{
-    background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.45%, var(--second-color-transparent) 71.45%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat;
-    background-size: cover;
+.app-container .container{
+    background-color: var(--main-color);
+}
+
+.app-container .container .row .content{              /*       RIGHT SIDE       */
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border-radius: 0px 10px 10px 0px ;
+    overflow: hidden;
 }
