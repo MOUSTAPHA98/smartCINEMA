@@ -43,10 +43,12 @@ let routes = {
 
 window.onpopstate = () => {
   contentDiv.innerHTML = routes[window.location.pathname];
+  activeSlider();
 };
 
 let onNavItemClick = (pathName) => {
   contentDiv.innerHTML = routes[pathName];
+  activeSlider();
 };
 
 contentDiv.innerHTML = routes[window.location.pathname];
