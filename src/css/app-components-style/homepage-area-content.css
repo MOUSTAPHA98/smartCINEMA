@@ -338,12 +338,21 @@
     line-height: 0;
 }
 
+.homepage-trendmovies-swiper-button-prev,
+.homepage-trendmovies-swiper-button-next{
+    color: var(--second-color);
+    outline: none !important;
+}
+
+.homepage-trendmovies-swiper-button-prev:focus,
+.homepage-trendmovies-swiper-button-next:focus{
+    outline: none !important;
+}
+
 .homepage-trendmovies-swiper-button-prev{
     left: 0;
-    color: var(--second-color);
 }
 
 .homepage-trendmovies-swiper-button-next{
     right: 0;
-    color: var(--second-color);
 }
