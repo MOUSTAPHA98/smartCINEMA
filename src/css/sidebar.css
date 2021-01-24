@@ -1,8 +1,11 @@
+.workarea{
+    /* background-color: royalblue; */
+    height: 100vh;
+    padding: 50px 0;
+}
+
 .app-container .container{
     background-color: var(--main-color);
-    margin: 50px auto;
-    /* margin: auto auto; */
-    /* transform: translate(0%, 10%); */
 }
 
 .app-container .container .row .content{              /*       RIGHT SIDE       */

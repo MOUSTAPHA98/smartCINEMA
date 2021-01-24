@@ -181,7 +181,7 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-button-next::before{
-    content: "next";
+    content: "Next";
     width: 120px;
     right: 100%;
     top: -10px;
