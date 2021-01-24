@@ -1,6 +1,6 @@
-let homepage = `<!--=========================-->
-<!--    ===     HOMEPAGE AREA    ===    -->
-<!--=========================-->
+let homepage = `                <!--=============================-->
+<!--    ===     START HOMEPAGE AREA    ===    -->
+<!--==============================-->
 
 <section class="homepage-area">
     <div class="homepage-content-swiper-container">
@@ -203,7 +203,23 @@ let homepage = `<!--=========================-->
         <div class="homepage-trend-slider">
             <div class="homepage-trend-slider-container">
                 <div class="swiper-wrapper">
+
+
+                  <!-- START TREND MOVIE #01 -->
                   <div class="swiper-slide trend-movie">
+                      <span class="trend-movie-rate">
+                        <span>
+                            90%
+                          </span>
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle"
+                              stroke-dasharray="90, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                          </svg>
+                      </span>
                     <span class="ribbon">
                         <span>
                             EN
@@ -221,7 +237,23 @@ let homepage = `<!--=========================-->
                           </span>
                       </div>
                   </div>
+                  <!-- END TREND MOVIE #01 -->
+
+
+                  <!-- START TREND MOVIE #02 -->
                   <div class="swiper-slide trend-movie">
+                    <span class="trend-movie-rate">
+                        <span>
+                            90%
+                          </span>
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle"
+                              stroke-dasharray="90, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                          </svg>
+                      </span>
                     <span class="ribbon">
                         <span>
                             EN
@@ -239,7 +271,24 @@ let homepage = `<!--=========================-->
                         </span>
                     </div>
                 </div>
+                <!-- END TREND MOVIE #02 -->
+
+
+                <!-- START TREND MOVIE #03 -->
                 <div class="swiper-slide trend-movie">
+                    <span class="trend-movie-rate">
+                        <span>
+                            90%
+                          </span>
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle"
+                              stroke-dasharray="90, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                          </svg>
+                      </span>
                     <span class="ribbon">
                         <span>
                             EN
@@ -257,12 +306,24 @@ let homepage = `<!--=========================-->
                         </span>
                     </div>
                 </div>
+                <!-- END TREND MOVIE #03 -->
+
+
+                <!-- START TREND MOVIE #04 -->
                 <div class="swiper-slide trend-movie">
-                    <span class="ribbon">
+                    <span class="trend-movie-rate">
                         <span>
-                            EN
-                        </span>
-                    </span>
+                            90%
+                          </span>
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle"
+                              stroke-dasharray="90, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                          </svg>
+                      </span>
                     <span class="ribbon">
                         <span>
                             EN
@@ -280,7 +341,24 @@ let homepage = `<!--=========================-->
                         </span>
                     </div>
                 </div>
+                <!-- END TREND MOVIE #04 -->
+
+
+                <!-- START TREND MOVIE #05 -->
                 <div class="swiper-slide trend-movie">
+                    <span class="trend-movie-rate">
+                        <span>
+                            90%
+                          </span>
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle"
+                              stroke-dasharray="90, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                          </svg>
+                      </span>
                     <span class="ribbon">
                         <span>
                             EN
@@ -298,7 +376,24 @@ let homepage = `<!--=========================-->
                         </span>
                     </div>
                 </div>
+                <!-- END TREND MOVIE #05 -->
+
+
+                <!-- START TREND MOVIE #06 -->
                 <div class="swiper-slide trend-movie">
+                    <span class="trend-movie-rate">
+                        <span>
+                            90%
+                          </span>
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle"
+                              stroke-dasharray="90, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                          </svg>
+                      </span>
                     <span class="ribbon">
                         <span>
                             EN
@@ -316,7 +411,24 @@ let homepage = `<!--=========================-->
                         </span>
                     </div>
                 </div>
+                <!-- END TREND MOVIE #06 -->
+
+
+                <!-- START TREND MOVIE #07 -->
                 <div class="swiper-slide trend-movie">
+                    <span class="trend-movie-rate">
+                        <span>
+                            90%
+                          </span>
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle"
+                              stroke-dasharray="90, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                          </svg>
+                      </span>
                     <span class="ribbon">
                         <span>
                             EN
@@ -334,11 +446,12 @@ let homepage = `<!--=========================-->
                         </span>
                     </div>
                 </div>
+                <!-- START TREND MOVIE #07 -->
                 </div>
-                <!-- Add Pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
-                
             </div>
         </div>
     </div>
-</section>`;
+</section>
+<!--============================-->
+<!--    ===     END HOMEPAGE AREA    ===    -->
+<!--============================-->`
