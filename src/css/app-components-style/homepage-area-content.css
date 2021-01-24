@@ -1,6 +1,196 @@
-.app-container .container .row .movies-content{
-    color: var(--main-text-color);
-    background-color: var(--main-color);
-    border-radius: 0px 10px 10px 0px ;
+.homepage-area{
+    background-color: chocolate;
+    /* background-color: var(--main-color); */
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.homepage-area .homepage-content-swiper-container{
+    overflow: hidden !important;
+    background-color: black;
+    position: relative;
+}
+
+
+.homepage-area .homepage-content-swiper-container .swiper-slide{
+    max-height: 560px;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide.slide1{
+    background: linear-gradient(to top, var(--back-color) 0%, transparent 100%),url(../../images/slider/deadpool.jpg);
+    background-size: cover;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide.slide2{
+    background: linear-gradient(to top, var(--back-color) 0%, transparent 100%),url(../../images/slider/ironman.webp);
+    background-size: cover;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide.slide3{
+    background: linear-gradient(to top, var(--back-color) 0%, transparent 100%),url(../../images/slider/ca.jpg);
+    background-size: cover;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide .slide-content{
+    height: 545px;
+    padding: 85px;
+    backdrop-filter: blur(10px);
+    position: relative;
     overflow: hidden;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide .slide-content img{
+    position: absolute;
+    right: -62px;
+    top: -102px;
+    width: 570px;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie{
+    /* color: var(--second-text-color); */
+    height: 100%;
+    /* background-color: rgb(8, 202, 8); */
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-category{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-title{
+    margin-bottom: 0;
+    font-family: var(--second-font);
+    font-size: 72px;
+    color: var(--second-text-color);
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-generes{
+    margin: 10px 0;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-generes span{
+    border: .1px solid rgba(255, 255, 255, 0.233);
+    padding: 4px 11px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-info span{
+    margin-right: 25px;
+    margin-bottom: 20px;
+    margin: 15px 25px 15px 0;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-info .slide-movie-info-rate i{
+    color: #FFDA3B;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-info .slide-movie-info-likes i{
+    color: #3289B4;
+}
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-info .slide-movie-info-comments i{
+    color: #129866;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-description{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-right: 35px;
+    text-transform: capitalize;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-btns .btn{
+    border-radius: 100px;
+    margin-right: 15px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: var(--second-text-color);
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-btns .btn.invert{
+    background-color: transparent;
+    border: 1px solid var(--main-text-color);
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-button-next,
+.homepage-area .homepage-content-swiper-container .swiper-button-prev{
+    content: "";
+    top: 90%;
+    left: 85%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-text-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-button-next i,
+.homepage-area .homepage-content-swiper-container .swiper-button-prev i{
+    color: var(--second-color);
+    font-size: 24px;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-button-prev{
+    top: 75%;
+    left: 60%;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-button-next:after,
+.homepage-area .homepage-content-swiper-container .swiper-button-prev::after{
+    box-shadow:  1px 1px 10px #000;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background-color: var(--main-text-color);
+    left: 100%;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-button-next:after{
+    left: -300%;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-button-next:before,
+.homepage-area .homepage-content-swiper-container .swiper-button-prev::before{
+    color: var(--main-text-color);
+    font-size: 18px;
+    position: absolute;
+    font-weight: 600;
+    font-family: var(--second-font);
+    content: "Prev";
+    width: 120px;
+    left: 240%;
+    top: -10px;
+}
+
+.homepage-area .homepage-content-swiper-container .swiper-button-next::before{
+    content: "next";
+    width: 120px;
+    right: 100%;
+    top: -10px;
+    left: -379%;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 50%;
+    left: 12.5px;
+    width: auto;
+    transform: rotate(90deg);
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--main-text-color);
+    transform: scale(1.2);
 }

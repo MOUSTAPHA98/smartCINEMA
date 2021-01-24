@@ -12,8 +12,8 @@
 /* :root{
     --back-color: #d6d6d6;
     --main-color:#c4c4c4 ;
-    --second-color: #1988c9 ;
-    --second-color-transparent: #1988c944 ;
+    --second-color: #c91919 ;
+    --second-color-transparent: #c9191944 ;
     --main-text-color: #161616;
     --second-text-color: #202020 ;
     --main-font: "Poppins";
@@ -36,4 +36,11 @@
 body{
     background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat;
     background-size: cover;
+}
+
+.app-container .container .row .movies-content{
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border-radius: 0px 10px 10px 0px ;
+    overflow: hidden;
 }

@@ -55,14 +55,12 @@ window.addEventListener("popstate", event => {
   var stateId;
   if (event.state === null ){
     stateId = "home";
-    console.log("stateId = ", stateId);
     select_tab(stateId);
       document.title = ``;
       document.title = `smartCINEMA | HOME`;
 
   } else {
        stateId = event.state.id;
-      console.log("stateId = ", stateId);
       select_tab(stateId);
         document.title = ``;
         document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
