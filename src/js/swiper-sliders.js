@@ -21,7 +21,7 @@ var activeSlider = () =>{
       },
   });
 
-  var trendMovies_swiper = new Swiper('.homepage-trend-slider-container', {
+  var pickedmovies_swiper = new Swiper('.homepage-random-slider-container', {
     observer: true,
     observeParents: true,
     slidesPerView: 5,
@@ -38,8 +38,8 @@ var activeSlider = () =>{
     // clickable: true,
     // },
     navigation: {
-    nextEl: '.homepage-trendmovies-swiper-button-next',
-    prevEl: '.homepage-trendmovies-swiper-button-prev',
+    nextEl: '.homepage-pickedmovies-swiper-button-next',
+    prevEl: '.homepage-pickedmovies-swiper-button-prev',
     },
 });
 };

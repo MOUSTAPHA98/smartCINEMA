@@ -205,7 +205,7 @@
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.homepage-area .homepage-trendmovies-container{
+.homepage-area .homepage-pickedmovies-container{
     /* background-color: tomato; */
     /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 58.8%, var(--second-color) 58.8%, var(--second-color) 100%), url(../../../src/images/background/back.jpg) center no-repeat; */
     background: linear-gradient(to left, var(--back-color-transparent) 0%, var(--back-color-transparent) 100%), url(../../../src/images/background/back.jpg) center no-repeat;
@@ -214,13 +214,14 @@
     position: relative;
 }
 
-.homepage-area .homepage-trendmovies-container .homepage-trend-content-heading{
+.homepage-area .homepage-pickedmovies-container .homepage-random-content-heading{
     color: var(--main-text-color);
     font-weight: 300;
-    font-size: 26px;
+    font-size: 22px;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
-.homepage-area .homepage-trendmovies-container .homepage-trend-content-heading i{
+.homepage-area .homepage-pickedmovies-container .homepage-random-content-heading i{
     color: var(--second-text-color);
     font-weight: 300;
     font-size: 40px;
@@ -228,21 +229,21 @@
 }
 
 
-.homepage-trend-slider-container{
+.homepage-random-slider-container{
     height: 100%;
     overflow: hidden;
     position: relative;
     padding-top: 5px;
 }
 
-.swiper-slide.trend-movie{
+.swiper-slide.random-movie{
     /* min-height: 300px; */
     font-size: 18px;
     /* background: rgb(80, 11, 11); */
     position: relative;
 }
 
-.swiper-slide.trend-movie .ribbon{
+.swiper-slide.random-movie .ribbon{
     position: absolute;
     left: -5px;
     top: -5px;
@@ -252,7 +253,7 @@
     height: 75px;
 }
 
-.swiper-slide.trend-movie .ribbon span{
+.swiper-slide.random-movie .ribbon span{
     background-color: var(--second-color);
     color: #FFF;
     text-align: center;
@@ -270,7 +271,7 @@
     text-transform: uppercase;
 }
 
-.swiper-slide.trend-movie .ribbon span::before{
+.swiper-slide.random-movie .ribbon span::before{
     content: "";
     position: absolute;
     left: 0;
@@ -282,7 +283,7 @@
     border-top: 3px solid var(--second-color);
 }
 
-.swiper-slide.trend-movie .ribbon span::after{
+.swiper-slide.random-movie .ribbon span::after{
     content: "";
     position: absolute;
     right: 0;
@@ -294,26 +295,27 @@
     border-top: 3px solid var(--second-color);
 }
 
-.swiper-slide.trend-movie .trend-movie-img{
+.swiper-slide.random-movie .random-movie-img{
     display: block;
     /* height: 230px; */
     width: 100%;
     background-color: var(--second-color);
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
-.swiper-slide.trend-movie .trend-movie-img img{
+.swiper-slide.random-movie .random-movie-img img{
     object-fit: cover;
     transition: ease-in-out 1.5s;
 }
 
-.swiper-slide.trend-movie .trend-movie-img img:hover{
+.swiper-slide.random-movie .random-movie-img img:hover{
     transform: scale(1.05);
     object-fit: cover;
 }
 
-.swiper-slide.trend-movie .trend-movie-info{
+.swiper-slide.random-movie .random-movie-info{
     font-weight: 400;
     font-family: var(--third-font);
     text-transform: capitalize;
@@ -322,42 +324,42 @@
 
 }
 
-.swiper-slide.trend-movie .trend-movie-info h2{
+.swiper-slide.random-movie .random-movie-info h2{
     font-size: 20px;
     padding: 0;
     margin: 0;
     font-weight: 400;
-    line-height: .3;
+    /* line-height: .3; */
     letter-spacing: -1px;
 }
 
-.swiper-slide.trend-movie .trend-movie-info span{
+.swiper-slide.random-movie .random-movie-info span{
     font-size: 12px;
     color: var(--main-text-color);
     font-weight: 300;
     line-height: 0;
 }
 
-.homepage-trendmovies-swiper-button-prev,
-.homepage-trendmovies-swiper-button-next{
+.homepage-pickedmovies-swiper-button-prev,
+.homepage-pickedmovies-swiper-button-next{
     color: var(--second-color);
     outline: none !important;
 }
 
-.homepage-trendmovies-swiper-button-prev:focus,
-.homepage-trendmovies-swiper-button-next:focus{
+.homepage-pickedmovies-swiper-button-prev:focus,
+.homepage-pickedmovies-swiper-button-next:focus{
     outline: none !important;
 }
 
-.homepage-trendmovies-swiper-button-prev{
+.homepage-pickedmovies-swiper-button-prev{
     left: 0;
 }
 
-.homepage-trendmovies-swiper-button-next{
+.homepage-pickedmovies-swiper-button-next{
     right: 0;
 }
 
-.swiper-slide.trend-movie .trend-movie-rate{
+.swiper-slide.random-movie .random-movie-rate{
     background-color: var(--main-color);
     color: #FFF;
     text-align: center;
@@ -367,7 +369,7 @@
     border-radius: 50%;
     box-shadow: 0 3px 10px -5px #000;
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
     right: 0;
     text-transform: uppercase;
     z-index: 20;

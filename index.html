@@ -18,6 +18,8 @@
     <script  src="./redirect.js"></script>
     <script>recieveRedirect()</script>
 
+    <script src="./src/js/API.js"></script>
+
     <script  src='./app_components/homepage.js'></script>
     <script  src='./app_components/popular.js'></script>
     <script  src='./app_components/now_playing.js'></script>
@@ -29,7 +31,7 @@
 
 </head>
 <body>
-<!--    ===     START PAGE      ===     -->
+<!--    ===     START APP      ===     -->
 <div class="workarea">
     <div class="app-container">
         <div class="container p-0">
@@ -170,7 +172,7 @@
                                                 </p>
                                                 <div class="slide-movie-btns d-flex flex-row justify-content-start align-items-center">
                                                     <a class="btn">Watch Now</a>
-                                                    <a class="btn invert">View trend</a>
+                                                    <a class="btn invert">View Trailler</a>
                                                 </div>
                                         </div>
                                     </div>
@@ -226,7 +228,7 @@
                                             </p>
                                             <div class="slide-movie-btns d-flex flex-row justify-content-start align-items-center">
                                                 <a class="btn">Watch Now</a>
-                                                <a class="btn invert">View trend</a>
+                                                <a class="btn invert">view trailer</a>
                                             </div>
                                         </div>
                                 </div>
@@ -282,7 +284,7 @@
                                             </p>
                                             <div class="slide-movie-btns d-flex flex-row justify-content-start align-items-center">
                                                 <a class="btn">Watch Now</a>
-                                                <a class="btn invert">View trend</a>
+                                                <a class="btn invert">view trailer</a>
                                             </div>
                                         </div>
                                 </div>
@@ -296,24 +298,24 @@
                         <div class="homepage-content-swiper-pagination swiper-pagination"></div>
                     </div>
 
-                    <div class="homepage-trendmovies-container d-flex flex-column">
+                    <div class="homepage-pickedmovies-container d-flex flex-column">
                         <!-- Add Arrows -->
-                        <div class="homepage-trendmovies-swiper-button-next   swiper-button-next    swiper-pagination d-none d-md-flex">
+                        <div class="homepage-pickedmovies-swiper-button-next   swiper-button-next    swiper-pagination d-none d-md-flex">
                         </div>
-                        <div class="homepage-trendmovies-swiper-button-prev   swiper-button-prev    swiper-pagination  d-none d-md-flex">
+                        <div class="homepage-pickedmovies-swiper-button-prev   swiper-button-prev    swiper-pagination  d-none d-md-flex">
                         </div>
-                        <div class="homepage-trend-content-heading d-flex flex-row align-items-center">
+                        <div class="homepage-random-content-heading d-flex flex-row align-items-center">
                             <i class="fal fa-film"></i>
-                            Trends Now
+                            random picked
                         </div>
-                        <div class="homepage-trend-slider">
-                            <div class="homepage-trend-slider-container">
+                        <div class="homepage-random-slider">
+                            <div class="homepage-random-slider-container">
                                 <div class="swiper-wrapper">
 
 
                                   <!-- START TREND MOVIE #01 -->
-                                  <div class="swiper-slide trend-movie">
-                                      <span class="trend-movie-rate">
+                                  <div class="swiper-slide random-movie">
+                                      <span class="random-movie-rate">
                                         <span>
                                             90%
                                           </span>
@@ -331,14 +333,14 @@
                                             EN
                                         </span>
                                     </span>
-                                      <a href="" class="trend-movie-img">
+                                      <a href="" class="random-movie-img">
                                           <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/xjyEpcuDbB1jy0ehNQMBiO8KOdr.jpg" alt="">
                                       </a>
-                                      <div class="trend-movie-info">
-                                          <h2 class="trend-moviee-title">
+                                      <div class="random-movie-info">
+                                          <h2 class="random-moviee-title">
                                               movie tittle
                                             </h2>
-                                          <span class="trend-movie-release-date">
+                                          <span class="random-movie-release-date">
                                             Jan 26, 2017
                                           </span>
                                       </div>
@@ -347,8 +349,8 @@
 
 
                                   <!-- START TREND MOVIE #02 -->
-                                  <div class="swiper-slide trend-movie">
-                                    <span class="trend-movie-rate">
+                                  <div class="swiper-slide random-movie">
+                                    <span class="random-movie-rate">
                                         <span>
                                             90%
                                           </span>
@@ -365,14 +367,14 @@
                                             EN
                                         </span>
                                     </span>
-                                    <a href="" class="trend-movie-img">
+                                    <a href="" class="random-movie-img">
                                         <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="">
                                     </a>
-                                    <div class="trend-movie-info">
-                                        <h2 class="trend-moviee-title">
+                                    <div class="random-movie-info">
+                                        <h2 class="random-moviee-title">
                                             movie tittle
                                           </h2>
-                                        <span class="trend-movie-release-date">
+                                        <span class="random-movie-release-date">
                                           Jan 26, 2017
                                         </span>
                                     </div>
@@ -381,8 +383,8 @@
 
 
                                 <!-- START TREND MOVIE #03 -->
-                                <div class="swiper-slide trend-movie">
-                                    <span class="trend-movie-rate">
+                                <div class="swiper-slide random-movie">
+                                    <span class="random-movie-rate">
                                         <span>
                                             90%
                                           </span>
@@ -400,14 +402,14 @@
                                             EN
                                         </span>
                                     </span>
-                                    <a href="" class="trend-movie-img">
+                                    <a href="" class="random-movie-img">
                                         <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/e6SK2CAbO3ENy52UTzP3lv32peC.jpg" alt="">
                                     </a>
-                                    <div class="trend-movie-info">
-                                        <h2 class="trend-moviee-title">
+                                    <div class="random-movie-info">
+                                        <h2 class="random-moviee-title">
                                             movie tittle
                                           </h2>
-                                        <span class="trend-movie-release-date">
+                                        <span class="random-movie-release-date">
                                           Jan 26, 2017
                                         </span>
                                     </div>
@@ -416,8 +418,8 @@
 
 
                                 <!-- START TREND MOVIE #04 -->
-                                <div class="swiper-slide trend-movie">
-                                    <span class="trend-movie-rate">
+                                <div class="swiper-slide random-movie">
+                                    <span class="random-movie-rate">
                                         <span>
                                             90%
                                           </span>
@@ -435,14 +437,14 @@
                                             EN
                                         </span>
                                     </span>
-                                    <a href="" class="trend-movie-img">
+                                    <a href="" class="random-movie-img">
                                         <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/5mi3aRl16yKmfpQJMzvqN5TXkdA.jpg" alt="">
                                     </a>
-                                    <div class="trend-movie-info">
-                                        <h2 class="trend-moviee-title">
+                                    <div class="random-movie-info">
+                                        <h2 class="random-moviee-title">
                                             movie tittle
                                           </h2>
-                                        <span class="trend-movie-release-date">
+                                        <span class="random-movie-release-date">
                                           Jan 26, 2017
                                         </span>
                                     </div>
@@ -451,8 +453,8 @@
 
 
                                 <!-- START TREND MOVIE #05 -->
-                                <div class="swiper-slide trend-movie">
-                                    <span class="trend-movie-rate">
+                                <div class="swiper-slide random-movie">
+                                    <span class="random-movie-rate">
                                         <span>
                                             90%
                                           </span>
@@ -470,14 +472,14 @@
                                             EN
                                         </span>
                                     </span>
-                                    <a href="" class="trend-movie-img">
+                                    <a href="" class="random-movie-img">
                                         <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/7K4mdWaLGF2F4ASb2L12tlya9c9.jpg" alt="">
                                     </a>
-                                    <div class="trend-movie-info">
-                                        <h2 class="trend-moviee-title">
+                                    <div class="random-movie-info">
+                                        <h2 class="random-moviee-title">
                                             movie tittle
                                           </h2>
-                                        <span class="trend-movie-release-date">
+                                        <span class="random-movie-release-date">
                                           Jan 26, 2017
                                         </span>
                                     </div>
@@ -486,8 +488,8 @@
 
 
                                 <!-- START TREND MOVIE #06 -->
-                                <div class="swiper-slide trend-movie">
-                                    <span class="trend-movie-rate">
+                                <div class="swiper-slide random-movie">
+                                    <span class="random-movie-rate">
                                         <span>
                                             90%
                                           </span>
@@ -505,14 +507,14 @@
                                             EN
                                         </span>
                                     </span>
-                                    <a href="" class="trend-movie-img">
+                                    <a href="" class="random-movie-img">
                                         <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/cjzU4g6SlScnP4MdkleyI25KGlR.jpg" alt="">
                                     </a>
-                                    <div class="trend-movie-info">
-                                        <h2 class="trend-moviee-title">
+                                    <div class="random-movie-info">
+                                        <h2 class="random-moviee-title">
                                             movie tittle
                                           </h2>
-                                        <span class="trend-movie-release-date">
+                                        <span class="random-movie-release-date">
                                           Jan 26, 2017
                                         </span>
                                     </div>
@@ -521,8 +523,8 @@
 
 
                                 <!-- START TREND MOVIE #07 -->
-                                <div class="swiper-slide trend-movie">
-                                    <span class="trend-movie-rate">
+                                <div class="swiper-slide random-movie">
+                                    <span class="random-movie-rate">
                                         <span>
                                             90%
                                           </span>
@@ -540,14 +542,14 @@
                                             EN
                                         </span>
                                     </span>
-                                    <a href="" class="trend-movie-img">
+                                    <a href="" class="random-movie-img">
                                         <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/OgUfLlhfBFx5BPK6LzBWFvBW1w.jpg" alt="">
                                     </a>
-                                    <div class="trend-movie-info">
-                                        <h2 class="trend-moviee-title">
+                                    <div class="random-movie-info">
+                                        <h2 class="random-moviee-title">
                                             movie tittle
                                           </h2>
-                                        <span class="trend-movie-release-date">
+                                        <span class="random-movie-release-date">
                                           Jan 26, 2017
                                         </span>
                                     </div>
