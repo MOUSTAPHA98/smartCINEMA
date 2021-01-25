@@ -66,6 +66,5 @@ window.addEventListener("popstate", event => {
       select_tab(stateId);
         document.title = ``;
         document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
-
   }
 });
