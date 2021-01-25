@@ -1,4 +1,4 @@
-var homepage;
+var homepage = "";
 
 fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785`)
   .then(response => response.json())
