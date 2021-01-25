@@ -51,7 +51,10 @@ let onNavItemClick = (pathName) => {
   activeSlider();
 };
 
-contentDiv.innerHTML = routes[window.location.pathname];
+function POST_Data() {
+    contentDiv.innerHTML = routes[window.location.pathname];
+};
+POST_Data();
 
 window.addEventListener("popstate", event => {
   var stateId;
