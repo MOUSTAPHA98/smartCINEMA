@@ -1,4 +1,4 @@
-var homepage;
+var homepage = "test";
 
 fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785`)
   .then(response => response.json())
@@ -6,9 +6,9 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89
       (data) => {
           let miniMoviesList = [
               data.results[0],
-              data.results[1],
+              data.results[8],
               data.results[2],
-              data.results[3],
+              data.results[17],
               data.results[4],
               data.results[5],
               data.results[19]
@@ -18,7 +18,7 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89
   )
   .then(
       ((miniMoviesList) => {
-         homepage = `<!--=============================-->
+        homepage = `<!--=============================-->
 <!--    ===     START HOMEPAGE AREA    ===    -->
 <!--==============================-->
 
@@ -479,7 +479,7 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89
 </section>
 <!--============================-->
 <!--    ===     END HOMEPAGE AREA    ===    -->
-<!--============================-->`
+<!--============================-->`;
           
       })
   )

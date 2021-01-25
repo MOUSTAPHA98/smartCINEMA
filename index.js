@@ -25,10 +25,10 @@ window.onload = event => {
 }
 
 
-
 let contentDiv = document.getElementById('content');
 
 let routes = {
+  '': homepage,
   '/': homepage,
   '/home': homepage,
   '/index.html': homepage,
@@ -68,5 +68,4 @@ window.addEventListener("popstate", event => {
         document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
 
   }
-
 });
