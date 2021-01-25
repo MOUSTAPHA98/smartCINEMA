@@ -17,8 +17,7 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89
       }
   )
   .then(
-      (miniMoviesList => {
-          console.log(miniMoviesList);
+      ((miniMoviesList) => {
          homepage = `<!--=============================-->
 <!--    ===     START HOMEPAGE AREA    ===    -->
 <!--==============================-->

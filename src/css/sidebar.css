@@ -1,9 +1,3 @@
-.app-container .container .row .side-menu{         /*       LEFT SIDE       */
-    background-color: var(--back-color);
-    border-radius: 10px 0 0 10px ;
-    overflow: hidden;
-}
-
 .app-container .container .row .side-menu .app-brand .app-brand-link{
     text-align: center;
     text-decoration: none;

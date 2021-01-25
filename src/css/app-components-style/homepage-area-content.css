@@ -147,8 +147,9 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-button-prev{
-    top: 75%;
-    left: 60%;
+    left: 8.5% !important;
+    /* left: 50% !important; */
+    /* top: 80% !important; */
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-button-next:after,
@@ -190,14 +191,16 @@
 
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
     bottom: 50%;
-    left: 12.5px;
+    left: -50px;
     width: auto;
     transform: rotate(90deg);
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet{
+    border-radius: 0;
     background-color: var(--main-text-color);
-    transform: scale(1.2);
+    width: 50px;
+    height: 2px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -208,7 +211,7 @@
 .homepage-area .homepage-pickedmovies-container{
     /* background-color: tomato; */
     /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 58.8%, var(--second-color) 58.8%, var(--second-color) 100%), url(../../../src/images/background/back.jpg) center no-repeat; */
-    background: linear-gradient(to left, var(--back-color-transparent) 0%, var(--back-color-transparent) 100%), url(../../../src/images/background/back.jpg) center no-repeat;
+    background: linear-gradient(to bottom, var(--back-color) 0%, var(--back-color-transparent) 100%), url(../../../src/images/background/back.jpg) center no-repeat;
     background-size: cover;
     padding: 30px;
     position: relative;
@@ -233,7 +236,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
-    padding-top: 5px;
+    padding: 5px;
 }
 
 .swiper-slide.random-movie{
@@ -328,16 +331,14 @@
     font-size: 20px;
     padding: 0;
     margin: 0;
-    font-weight: 400;
-    /* line-height: .3; */
+    font-weight: 500;
     letter-spacing: -1px;
 }
 
 .swiper-slide.random-movie .random-movie-info span{
     font-size: 12px;
     color: var(--main-text-color);
-    font-weight: 300;
-    line-height: 0;
+    font-weight: 500;
 }
 
 .homepage-pickedmovies-swiper-button-prev,
@@ -361,20 +362,20 @@
 
 .swiper-slide.random-movie .random-movie-rate{
     background-color: var(--main-color);
-    color: #FFF;
+    color: var(--second-text-color);
     text-align: center;
-    width: 46px;
-    height: 46px;
+    width: 40px;
+    height: 40px;
     display: block;
     border-radius: 50%;
     box-shadow: 0 3px 10px -5px #000;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 3px;
+    right: 3px;
     text-transform: uppercase;
     z-index: 20;
-    line-height: 45px;
-    font-size: 11px;
+    line-height: 40px;
+    font-size: 12px;
     font-family: var(--third-font);
     font-weight: 600;
 }

@@ -1,3 +1,32 @@
+let contentDiv = document.getElementById('content');
+
+let routes = {
+  '/': homepage,
+  '/home': homepage,
+  '/index.html': homepage,
+  '/popular': popular,
+  '/now_playing': now_playing,
+  '/top_rated': top_rated,
+  '/upcoming': upcoming,
+  '/search': search,
+  '/favourites': favourites,
+  '/bookmarks': bookmarks
+};
+
+window.onpopstate = () => {
+  contentDiv.innerHTML = routes[window.location.pathname];
+  activeSlider();
+};
+
+let onNavItemClick = (pathName) => {
+  contentDiv.innerHTML = routes[pathName];
+  activeSlider();
+};
+
+contentDiv.innerHTML = routes[window.location.pathname];
+
+
+
 function select_tab(id) {
   document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
   document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
@@ -26,32 +55,7 @@ window.onload = event => {
 
 
 
-let contentDiv = document.getElementById('content');
 
-let routes = {
-  '/': homepage,
-  '/home': homepage,
-  '/index.html': homepage,
-  '/popular': popular,
-  '/now_playing': now_playing,
-  '/top_rated': top_rated,
-  '/upcoming': upcoming,
-  '/search': search,
-  '/favourites': favourites,
-  '/bookmarks': bookmarks
-};
-
-window.onpopstate = () => {
-  contentDiv.innerHTML = routes[window.location.pathname];
-  activeSlider();
-};
-
-let onNavItemClick = (pathName) => {
-  contentDiv.innerHTML = routes[pathName];
-  activeSlider();
-};
-
-contentDiv.innerHTML = routes[window.location.pathname];
 
 window.addEventListener("popstate", event => {
   var stateId;
