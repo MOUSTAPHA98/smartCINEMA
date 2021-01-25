@@ -28,41 +28,11 @@
     <script  src='./app_components/search.js'></script>
     <script  src='./app_components/favourites.js'></script>
     <script  src='./app_components/bookmarks.js'></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 </head>
 <body>
 
-<!--    ===     START LOADING DIV      ===     -->
 
-    <div class="loading-page">
-        <div class="counter">
-        <p>LOADING...</p>
-        <h1>0%</h1>
-        <hr/>
-        </div>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-        var counter = 0;
-        var c = 0;
-        var i = setInterval(function(){
-            $(".loading-page .counter h1").html(c + "%");
-            $(".loading-page .counter hr").css("width", c + "%");
-            counter++;
-            c++;
-            if(counter == 101) {
-                clearInterval(i);
-                $(".loading-page").css("opacity", "0");
-                setInterval(() => {
-                    $(".loading-page").hide();
-                }, 1900);
-            }
-        }, 50);
-        });
-    </script>
-<!--    ===     END LOADING DIV      ===     -->
 
 
 
@@ -623,6 +593,36 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="./src/js/swiper-sliders.js"></script>
 <script  src="./index.js"></script>
+<!--    ===     START LOADING DIV      ===     -->
+
+<div class="loading-page">
+    <div class="counter">
+    <p>LOADING...</p>
+    <h1>0%</h1>
+    <hr/>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+    var counter = 0;
+    var c = 0;
+    var i = setInterval(function(){
+        $(".loading-page .counter h1").html(c + "%");
+        $(".loading-page .counter hr").css("width", c + "%");
+        counter++;
+        c++;
+        if(counter == 101) {
+            clearInterval(i);
+            $(".loading-page").css("opacity", "0");
+            setInterval(() => {
+                $(".loading-page").hide();
+            }, 1900);
+        }
+    }, 50);
+    });
+</script>
+<!--    ===     END LOADING DIV      ===     -->
 <script>activeSlider();</script>
 </body>
 </html>
