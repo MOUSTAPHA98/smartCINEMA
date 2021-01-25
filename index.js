@@ -1,30 +1,3 @@
-function select_tab(id) {
-  document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-  document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
-};
-
-function push(event) {
-  let id = event.target.id;
-  select_tab(id);
-  document.title = ``;
-  document.title = `smartCINEMA | ${id.toUpperCase()}`;
-  window.history.pushState({id}, `${id}`, `${id}`);
-}
-
-
-
-window.onload = event => {
-  window["home"].addEventListener("click", event => push(event))
-  window["popular"].addEventListener("click", event => push(event))
-  window["now_playing"].addEventListener("click", event => push(event))
-  window["top_rated"].addEventListener("click", event => push(event))
-  window["upcoming"].addEventListener("click", event => push(event))
-  window["search"].addEventListener("click", event => push(event))
-  window["favourites"].addEventListener("click", event => push(event))
-  window["bookmarks"].addEventListener("click", event => push(event))
-}
-
-
 let contentDiv = document.getElementById('content');
 
 let routes = {
@@ -41,6 +14,7 @@ let routes = {
   '/bookmarks': bookmarks
 };
 
+
 window.onpopstate = () => {
   contentDiv.innerHTML = routes[window.location.pathname];
   activeSlider();
@@ -51,10 +25,35 @@ let onNavItemClick = (pathName) => {
   activeSlider();
 };
 
-function POST_Data() {
-    contentDiv.innerHTML = routes[window.location.pathname];
+contentDiv.innerHTML = routes[window.location.pathname];
+
+
+function select_tab(id) {
+  document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
+  document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
 };
-POST_Data();
+
+function push(event) {
+  let id = event.target.id;
+  select_tab(id);
+  document.title = ``;
+  document.title = `smartCINEMA | ${id.toUpperCase()}`;
+  window.history.pushState({id}, `${id}`, `${id}`);
+  // window.history.pushState({}, pathName, window.location.origin + pathName);
+}
+
+
+
+window.onload = event => {
+  window["home"].addEventListener("click", event => push(event))
+  window["popular"].addEventListener("click", event => push(event))
+  window["now_playing"].addEventListener("click", event => push(event))
+  window["top_rated"].addEventListener("click", event => push(event))
+  window["upcoming"].addEventListener("click", event => push(event))
+  window["search"].addEventListener("click", event => push(event))
+  window["favourites"].addEventListener("click", event => push(event))
+  window["bookmarks"].addEventListener("click", event => push(event))
+}
 
 window.addEventListener("popstate", event => {
   var stateId;
