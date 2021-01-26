@@ -219,31 +219,31 @@ async function GET_DATA_home() {
                       <div class="swiper-slide random-movie">
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[0].original_language).toUpperCase()}
+                                ${(miniMoviesList[9].original_language).toUpperCase()}
                             </span>
                         </span>
                           <a href="" class="random-movie-img">
                             <span class="random-movie-rate">
                                 <span>
-                                    ${(miniMoviesList[0].vote_average) * 10}%
+                                    ${(miniMoviesList[9].vote_average) * 10}%
                                 </span>
                                 <svg viewBox="0 0 36 36" class="circular-chart">
                                     <path class="circle"
-                                    stroke-dasharray="${(miniMoviesList[0].vote_average) * 10}, 100"
+                                    stroke-dasharray="${(miniMoviesList[9].vote_average) * 10}, 100"
                                     d="M18 2.0845
                                         a 15.9155 15.9155 0 0 1 0 31.831
                                         a 15.9155 15.9155 0 0 1 0 -31.831"
                                     />
                                 </svg>
                             </span>
-                              <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[0].poster_path}" alt="">
+                              <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[9].poster_path}" alt="">
                           </a>
                           <div class="random-movie-info">
                               <h2 class="random-moviee-title">
-                                  ${miniMoviesList[0].title}
+                                  ${miniMoviesList[9].title}
                                 </h2>
                               <span class="random-movie-release-date">
-                                ${miniMoviesList[0].release_date}
+                                ${miniMoviesList[9].release_date}
                               </span>
                           </div>
                       </div>
