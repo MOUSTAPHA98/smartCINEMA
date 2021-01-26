@@ -22,6 +22,8 @@ function select_tab(id) {
   navbarLinks.forEach(item => item.classList.remove('active'));
   document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
 };
+select_tab(pathLink);
+
 
 let onNavItemClick;
 navbarLinks.forEach(element => {
