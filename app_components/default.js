@@ -3,7 +3,7 @@ var contentDiv = document.getElementById("content");
 async function GET_DATA_() {
   
     // read API DATA
-    let response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785');
+    let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.floor(Math.random()*10)}`);
     let results = await response.json();
     let miniMoviesList = await results.results;
 
@@ -219,31 +219,31 @@ async function GET_DATA_() {
                       <div class="swiper-slide random-movie">
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[0].original_language).toUpperCase()}
+                                ${(miniMoviesList[19].original_language).toUpperCase()}
                             </span>
                         </span>
                           <a href="" class="random-movie-img">
                             <span class="random-movie-rate">
                                 <span>
-                                    ${(miniMoviesList[0].vote_average) * 10}%
+                                    ${(miniMoviesList[19].vote_average) * 10}%
                                 </span>
                                 <svg viewBox="0 0 36 36" class="circular-chart">
                                     <path class="circle"
-                                    stroke-dasharray="${(miniMoviesList[0].vote_average) * 10}, 100"
+                                    stroke-dasharray="${(miniMoviesList[19].vote_average) * 10}, 100"
                                     d="M18 2.0845
                                         a 15.9155 15.9155 0 0 1 0 31.831
                                         a 15.9155 15.9155 0 0 1 0 -31.831"
                                     />
                                 </svg>
                             </span>
-                              <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[0].poster_path}" alt="">
+                              <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[19].poster_path}" alt="">
                           </a>
                           <div class="random-movie-info">
                               <h2 class="random-moviee-title">
-                                  ${miniMoviesList[0].title}
+                                  ${miniMoviesList[19].title}
                                 </h2>
                               <span class="random-movie-release-date">
-                                ${miniMoviesList[0].release_date}
+                                ${miniMoviesList[19].release_date}
                               </span>
                           </div>
                       </div>
@@ -254,30 +254,30 @@ async function GET_DATA_() {
                       <div class="swiper-slide random-movie">
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[1].original_language).toUpperCase()}
+                                ${(miniMoviesList[17].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a href="" class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[1].vote_average) * 10}%
+                            ${(miniMoviesList[17].vote_average) * 10}%
                               </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[1].vote_average) * 10}, 100"
+                                  stroke-dasharray="${(miniMoviesList[17].vote_average) * 10}, 100"
                                   d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"/>
                               </svg>
                           </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[1].poster_path}" alt="">
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[17].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-moviee-title">
-                                ${miniMoviesList[1].title}
+                                ${miniMoviesList[17].title}
                               </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[1].release_date}
+                                ${miniMoviesList[17].release_date}
                             </span>
                         </div>
                     </div>
@@ -289,31 +289,31 @@ async function GET_DATA_() {
                         
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[2].original_language).toUpperCase()}
+                                ${(miniMoviesList[15].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a href="" class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[2].vote_average) * 10}%
+                            ${(miniMoviesList[15].vote_average) * 10}%
                               </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[2].vote_average) * 10}, 100"
+                                  stroke-dasharray="${(miniMoviesList[15].vote_average) * 10}, 100"
                                   d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
                               </svg>
                           </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[2].poster_path}" alt="">
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[15].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-moviee-title">
-                                ${miniMoviesList[2].title}
+                                ${miniMoviesList[15].title}
                               </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[2].release_date}
+                                ${miniMoviesList[15].release_date}
                             </span>
                         </div>
                     </div>
@@ -325,31 +325,31 @@ async function GET_DATA_() {
                         
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[3].original_language).toUpperCase()}
+                                ${(miniMoviesList[13].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a href="" class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[3].vote_average) * 10}%
+                            ${(miniMoviesList[13].vote_average) * 10}%
                               </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[3].vote_average) * 10}, 100"
+                                  stroke-dasharray="${(miniMoviesList[13].vote_average) * 10}, 100"
                                   d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
                               </svg>
                           </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[3].poster_path}" alt="">
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[13].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-moviee-title">
-                                ${miniMoviesList[3].title}
+                                ${miniMoviesList[13].title}
                               </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[3].release_date}
+                                ${miniMoviesList[13].release_date}
                             </span>
                         </div>
                     </div>
@@ -361,31 +361,31 @@ async function GET_DATA_() {
                        
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[4].original_language).toUpperCase()}
+                                ${(miniMoviesList[11].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a href="" class="random-movie-img">
                         <span class="random-movie-rate">
                         <span>
-                        ${(miniMoviesList[4].vote_average) * 10}%
+                        ${(miniMoviesList[11].vote_average) * 10}%
                           </span>
                         <svg viewBox="0 0 36 36" class="circular-chart">
                             <path class="circle"
-                              stroke-dasharray="${(miniMoviesList[4].vote_average) * 10}, 100"
+                              stroke-dasharray="${(miniMoviesList[11].vote_average) * 10}, 100"
                               d="M18 2.0845
                                 a 15.9155 15.9155 0 0 1 0 31.831
                                 a 15.9155 15.9155 0 0 1 0 -31.831"
                             />
                           </svg>
                       </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[4].poster_path}" alt="">
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[11].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-moviee-title">
-                                ${miniMoviesList[4].title}
+                                ${miniMoviesList[11].title}
                               </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[4].release_date}
+                                ${miniMoviesList[11].release_date}
                             </span>
                         </div>
                     </div>
@@ -397,31 +397,31 @@ async function GET_DATA_() {
                         
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[5].original_language).toUpperCase()}
+                                ${(miniMoviesList[9].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a href="" class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[5].vote_average) * 10}%
+                            ${(miniMoviesList[9].vote_average) * 10}%
                               </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[5].vote_average) * 10}, 100"
+                                  stroke-dasharray="${(miniMoviesList[9].vote_average) * 10}, 100"
                                   d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
                               </svg>
                           </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[5].poster_path}" alt="">
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[9].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-moviee-title">
-                                ${miniMoviesList[5].title}
+                                ${miniMoviesList[9].title}
                               </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[5].release_date}
+                                ${miniMoviesList[9].release_date}
                             </span>
                         </div>
                     </div>
@@ -433,31 +433,31 @@ async function GET_DATA_() {
                         
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[6].original_language).toUpperCase()}
+                                ${(miniMoviesList[14].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a href="" class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[6].vote_average) * 10}%
+                            ${(miniMoviesList[14].vote_average) * 10}%
                               </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[6].vote_average) * 10}, 100"
+                                  stroke-dasharray="${(miniMoviesList[14].vote_average) * 10}, 100"
                                   d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
                               </svg>
                           </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[6].poster_path}" alt="">
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[14].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-moviee-title">
-                                ${miniMoviesList[6].title}
+                                ${miniMoviesList[14].title}
                               </h2>
                             <span class="random-movie-release-date">
-                            ${miniMoviesList[6].release_date}
+                            ${miniMoviesList[14].release_date}
                             </span>
                         </div>
                     </div>
