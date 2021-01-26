@@ -1,4 +1,5 @@
 let navbarLinks = document.querySelectorAll('.navbar-link');
+document.title = `smartCINEMA | ${id.toUpperCase()}`;
 
 
 var pathLink = window.location.pathname.substring(1);
