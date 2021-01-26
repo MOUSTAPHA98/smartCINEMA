@@ -3,15 +3,15 @@
 
 
 let routes = {
-  '/': home,
-  '/index.html': home,
-  '/POPULAR' : popular,
-  '/NOW_PLAYING' : now_playing,
-  '/TOP_RATED' : top_rated,
-  '/UPCOMING' : upcoming,
+  // '/': home,
+  // '/index.html': home,
+  // '/POPULAR' : popular,
+  // '/NOW_PLAYING' : now_playing,
+  // '/TOP_RATED' : top_rated,
+  // '/UPCOMING' : upcoming,
   '/SEARCH' : search,
-  '/FAVOURITES' : favourites,
-  '/BOOKMARKS' : bookmarks,
+  // '/FAVOURITES' : favourites,
+  // '/BOOKMARKS' : bookmarks,
 };
 
 
