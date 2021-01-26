@@ -18,6 +18,8 @@ let routes = {
   '/bookmarks' : bookmarks,
 };
 
+document.title = `smartCINEMA | ${id.toUpperCase()}`;
+
 function select_tab(id) {
   navbarLinks.forEach(item => item.classList.remove('active'));
   document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
