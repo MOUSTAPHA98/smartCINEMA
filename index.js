@@ -18,7 +18,9 @@ let routes = {
   '/bookmarks' : bookmarks,
 };
 
-document.title = `smartCINEMA | ${pathLink.toUpperCase()}`;
+if (pathLink != " "){
+  document.title = `smartCINEMA | ${pathLink.toUpperCase()}`;
+};
 
 function select_tab(id) {
   navbarLinks.forEach(item => item.classList.remove('active'));
