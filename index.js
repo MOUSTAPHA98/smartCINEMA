@@ -1,22 +1,76 @@
-// var load_content = new Function(`return GET_DATA_${location.pathname.substr(1).toUpperCase()}()`);
-// load_content();
+let navbarLinks = document.querySelectorAll('.navbar-link');
 
 
-// let routes = {
-  // '/': home,
-  // '/index.html': home,
-  // '/POPULAR' : popular,
-  // '/NOW_PLAYING' : now_playing,
-  // '/TOP_RATED' : top_rated,
-  // '/UPCOMING' : upcoming,
-  // '/SEARCH' : search,
-  // '/FAVOURITES' : favourites,
-  // '/BOOKMARKS' : bookmarks,
-// };
+var pathLink = window.location.pathname.substring(1);
+var load_content = new Function (`return GET_DATA_${pathLink}()`);
+load_content();
 
 
+let routes = {
+  '/': home,
+  '/index.html': home,
+  '/popular' : popular,
+  '/now_playing' : now_playing,
+  '/top_rated' : top_rated,
+  '/upcoming' : upcoming,
+  '/search' : search,
+  '/favourites' : favourites,
+  '/bookmarks' : bookmarks,
+};
 
+function select_tab(id) {
+  navbarLinks.forEach(item => item.classList.remove('active'));
+  document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
+};
 
+let onNavItemClick;
+navbarLinks.forEach(element => {
+    element.onNavItemClick = function(pathName) {
+      let id = element.id;
+      let pathLink = pathName.substring(1);
+      console.log(id);
+      console.log(pathLink);
+      select_tab(id);
+      load_content = new Function (`return GET_DATA_${pathLink}()`);
+      load_content(pathName);
+      if (history.state === null && id != "home"){
+        window.history.pushState({id}, `${id}`, `${id.toUpperCase()}`);
+      } else if ( history.state != null && id != history.state.id) {
+        window.history.pushState({id}, `${id}`, `${id.toUpperCase()}`);
+      }
+      document.title = `smartCINEMA | ${id.toUpperCase()}`;
+  }
+});
+
+window.addEventListener("popstate", event => {
+  var stateId;
+  if (event.state === null ){
+    stateId = "home";
+    select_tab(stateId);
+    load_content = new Function (`return GET_DATA_${stateId}()`);
+    load_content();
+      document.title = ``;
+      document.title = `smartCINEMA | HOME`;
+
+  } else {
+       stateId = event.state.id;
+      select_tab(stateId);
+      load_content = new Function (`return GET_DATA_${stateId}()`);
+      load_content();
+        document.title = ``;
+        document.title = `smartCINEMA | ${stateId}`;
+  }
+});
+
+// let onNavItemClick = (pathName) => {
+//   console.log(this)
+//   // console.log(pathName);
+//   let pathLink = pathName.substring(1);
+//   console.log(pathLink);
+//   //   window.history.pushState({id}, `${id}`, `${id.toUpperCase()}`);
+
+//   window.history.pushState({pathLink}, `${pathLink}`, `${pathLink}`);
+// }
 
 
 // var newPath = pathName.substring(1);
@@ -24,10 +78,7 @@
 // load_content();
 
 
-// function select_tab(id) {
-//   document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-//   document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
-// };
+
 
 
 
@@ -40,11 +91,6 @@ function push(event) {
   // load_content = new Function(`return GET_DATA_${id.toUpperCase()}()`);
   // load_content();
 
-  // if (history.state === null && id != "home"){
-  //   window.history.pushState({id}, `${id}`, `${id.toUpperCase()}`);
-  // } else if ( history.state != null && id != history.state.id) {
-  //   window.history.pushState({id}, `${id}`, `${id.toUpperCase()}`);
-  // }
 
   // document.title = `smartCINEMA | ${id.toUpperCase()}`;
 }
