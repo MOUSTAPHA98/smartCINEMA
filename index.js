@@ -36,7 +36,7 @@ navbarLinks.forEach(element => {
       if (history.state === null && id != "home"){
         window.history.pushState({id}, `${id}`, `${id}`);
       } else if ( history.state != null && id != history.state.id) {
-        window.history.pushState({id}, `${id}`, `${id.}`);
+        window.history.pushState({id}, `${id}`, `${id}`);
       }
       document.title = `smartCINEMA | ${id.toUpperCase()}`;
   }
