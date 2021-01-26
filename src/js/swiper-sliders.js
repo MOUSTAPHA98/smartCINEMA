@@ -33,13 +33,11 @@ var activeSlider = () =>{
         delay: 3000,
         disableOnInteraction: true,
       },
-    // pagination: {
-    // el: '.homepage-content-swiper-pagination',
-    // clickable: true,
-    // },
     navigation: {
     nextEl: '.homepage-pickedmovies-swiper-button-next',
     prevEl: '.homepage-pickedmovies-swiper-button-prev',
     },
 });
 };
+
+

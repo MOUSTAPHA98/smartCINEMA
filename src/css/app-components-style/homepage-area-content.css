@@ -300,7 +300,7 @@
 
 .swiper-slide.random-movie .random-movie-img{
     display: block;
-    /* height: 230px; */
+    min-height: 223px;
     width: 100%;
     background-color: var(--second-color);
     border-radius: 10px;
