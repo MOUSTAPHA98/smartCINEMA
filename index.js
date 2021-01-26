@@ -20,7 +20,7 @@ let routes = {
 
 if (pathLink = ""){
   document.title = `smartCINEMA | HOME}`;
-} else {
+} else if (pathLink != "") {
   document.title = `smartCINEMA | ${pathLink.toUpperCase()}`;
 };
 
