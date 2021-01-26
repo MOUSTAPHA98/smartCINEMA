@@ -34,9 +34,9 @@ navbarLinks.forEach(element => {
       load_content = new Function (`return GET_DATA_${pathLink}()`);
       load_content(pathName);
       if (history.state === null && id != "home"){
-        window.history.pushState({id}, `${id}`, `${id.toUpperCase()}`);
+        window.history.pushState({id}, `${id}`, `${id}`);
       } else if ( history.state != null && id != history.state.id) {
-        window.history.pushState({id}, `${id}`, `${id.toUpperCase()}`);
+        window.history.pushState({id}, `${id}`, `${id.}`);
       }
       document.title = `smartCINEMA | ${id.toUpperCase()}`;
   }
