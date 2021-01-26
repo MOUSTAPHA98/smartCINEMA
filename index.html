@@ -21,6 +21,16 @@
 </head>
 <body>
 
+
+    
+<div class="loading-page">
+    <div class="counter">
+      <p>loading</p>
+      <h1>0%</h1>
+      <hr/>
+    </div>
+  </div>
+
 <!--    ===     START APP      ===     -->
 <div class="workarea">
     <div class="app-container">
@@ -580,6 +590,27 @@
 <script src="./app_components/bookmarks.js"></script>
 <script src="./index.js"></script>
 
+<script>
+    $(document).ready(function() {
+  
+  var counter = 0;
+  var c = 0;
+  var i = setInterval(function(){
+      $(".loading-page .counter h1").html(c + "%");
+      $(".loading-page .counter hr").css("width", c + "%");
+    counter++;
+    c++;
+      
+    if(counter == 101) {
+        clearInterval(i);
+        $(".loading-page").css("opacity" , "0");
+        setInterval(() => {
+            $(".loading-page").css("display" , "none");
+        }, 1900);
+    }
+  }, 50);
+});
+</script>
 
 <script>
     activeSlider();
