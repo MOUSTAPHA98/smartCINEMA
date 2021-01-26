@@ -18,9 +18,7 @@ let routes = {
   '/bookmarks' : bookmarks,
 };
 
-if (pathLink = ""){
-  document.title = `smartCINEMA | HOME}`;
-} else if (pathLink != "") {
+if (pathLink != ""){
   document.title = `smartCINEMA | ${pathLink.toUpperCase()}`;
 };
 
