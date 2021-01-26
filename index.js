@@ -1,3 +1,7 @@
+var load_content = new Function(`return GET_DATA_${location.pathname.substr(1).toUpperCase()}()`);
+load_content();
+
+
 let routes = {
   '/': home,
   '/HOME': home,
@@ -11,11 +15,15 @@ let routes = {
   '/BOOKMARKS' : bookmarks,
 };
 
+
+
 let onNavItemClick = (pathName) => {
   var newPath = pathName.substring(1);
-  var load_content = new Function(`return GET_DATA_${newPath}()`);
+  load_content = new Function(`return GET_DATA_${newPath}()`);
   load_content();
 }
+
+
 
 
 function select_tab(id) {
