@@ -1,8 +1,10 @@
 let navbarLinks = document.querySelectorAll('.navbar-link');
 
-console.log(location.pathname);
 var pathLink = window.location.pathname.substring(1);
 var load_content = new Function (`return GET_DATA_${pathLink}()`);
+if (pathLink == ""){
+   load_content = new Function (`return GET_DATA_home()`);
+}
 load_content();
 
 
@@ -37,8 +39,13 @@ navbarLinks.forEach(element => {
       let id = element.id;
       let pathLink = pathName.substring(1);
       select_tab(id);
+      if (pathLink == ""){
+        load_content = new Function (`return GET_DATA_home()`);
+       load_content();
+     } else{
       load_content = new Function (`return GET_DATA_${pathLink}()`);
-      load_content(pathName);
+      load_content();
+     }
       if (history.state === null ){
         window.history.pushState({id}, `${id}`, `${id}`);
       } else if ( history.state != null && id != history.state.id) {

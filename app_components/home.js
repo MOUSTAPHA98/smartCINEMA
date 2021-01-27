@@ -1,9 +1,9 @@
-contentDiv = document.getElementById("content");
+var contentDiv = document.getElementById("content");
 
 async function GET_DATA_home() {
   
     // read API DATA
-    let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.floor(Math.random()*20)}`);
+    let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.floor(Math.random()*10)}`);
     let results = await response.json();
     let miniMoviesList = await results.results;
 
@@ -219,31 +219,31 @@ async function GET_DATA_home() {
                       <div class="swiper-slide random-movie">
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[0].original_language).toUpperCase()}
+                                ${(miniMoviesList[19].original_language).toUpperCase()}
                             </span>
                         </span>
                           <a href="" class="random-movie-img">
                             <span class="random-movie-rate">
                                 <span>
-                                    ${(miniMoviesList[0].vote_average) * 10}%
+                                    ${(miniMoviesList[19].vote_average) * 10}%
                                 </span>
                                 <svg viewBox="0 0 36 36" class="circular-chart">
                                     <path class="circle"
-                                    stroke-dasharray="${(miniMoviesList[0].vote_average) * 10}, 100"
+                                    stroke-dasharray="${(miniMoviesList[19].vote_average) * 10}, 100"
                                     d="M18 2.0845
                                         a 15.9155 15.9155 0 0 1 0 31.831
                                         a 15.9155 15.9155 0 0 1 0 -31.831"
                                     />
                                 </svg>
                             </span>
-                              <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[17].poster_path}" alt="">
+                              <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[19].poster_path}" alt="">
                           </a>
                           <div class="random-movie-info">
                               <h2 class="random-movie-title">
-                                  ${miniMoviesList[0].title}
+                                  ${miniMoviesList[19].title}
                                 </h2>
                               <span class="random-movie-release-date">
-                                ${miniMoviesList[0].release_date}
+                                ${miniMoviesList[19].release_date}
                               </span>
                           </div>
                       </div>
@@ -470,6 +470,7 @@ async function GET_DATA_home() {
     <!--============================-->
     <!--    ===     END HOMEPAGE AREA    ===    -->
     <!--============================-->`;
+
   
     // wait 3 seconds
     await new Promise((resolve, reject) => setTimeout(resolve, 0));
