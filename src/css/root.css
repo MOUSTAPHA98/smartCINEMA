@@ -4,6 +4,7 @@
     --main-color:#202020 ;
     --main-color-transparent:#202020ee;
     --second-color: #c91919 ;
+    --second-color-darked: #a11414 ;
     --second-color-transparent: #c9191944 ;
     --main-text-color: rgb(190, 190, 190);
     --second-text-color: #FFF ;
@@ -17,6 +18,7 @@
   --main-color:#202020 ;
   --main-color-transparent:#202020ee;
   --second-color: #c91919 ;
+  --second-color-darked: #a11414 ;
   --second-color-transparent: #c9191944 ;
   --main-text-color: rgb(190, 190, 190);
   --second-text-color: #FFF ;
@@ -32,6 +34,7 @@
     --main-color:#d6d6d6 ;
     --main-color-transparent:#d6d6d6cc;
     --second-color: #c91919 ;
+    --second-color-darked: #a11414 ;
     --second-color-transparent: #c9191944 ;
     --main-text-color: #161616;
     --second-text-color: #202020 ;

@@ -7,10 +7,6 @@ if (pathLink == ""){
 }
 load_content();
 
-
-
-
-
 let routes = {
   '/': home,
   '/home': home,
@@ -81,7 +77,6 @@ if (pathLink  == ""){
 } else if (pathLink != ""){
   select_tab(pathLink);
 }
-
 
 
 let modSwitch = document.getElementById("modSwitch");

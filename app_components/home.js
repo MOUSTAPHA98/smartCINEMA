@@ -219,17 +219,17 @@ async function GET_DATA_home() {
                       <div class="swiper-slide random-movie">
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[19].original_language).toUpperCase()}
+                                ${(miniMoviesList[1].original_language).toUpperCase()}
                             </span>
                         </span>
                           <a href="" class="random-movie-img">
                             <span class="random-movie-rate">
                                 <span>
-                                    ${(miniMoviesList[19].vote_average) * 10}%
+                                    ${(miniMoviesList[1].vote_average) * 10}%
                                 </span>
                                 <svg viewBox="0 0 36 36" class="circular-chart">
                                     <path class="circle"
-                                    stroke-dasharray="${(miniMoviesList[19].vote_average) * 10}, 100"
+                                    stroke-dasharray="${(miniMoviesList[1].vote_average) * 10}, 100"
                                     d="M18 2.0845
                                         a 15.9155 15.9155 0 0 1 0 31.831
                                         a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -240,10 +240,10 @@ async function GET_DATA_home() {
                           </a>
                           <div class="random-movie-info">
                               <h2 class="random-movie-title">
-                                  ${miniMoviesList[19].title}
+                                  ${miniMoviesList[1].title}
                                 </h2>
                               <span class="random-movie-release-date">
-                                ${miniMoviesList[19].release_date}
+                                ${miniMoviesList[1].release_date}
                               </span>
                           </div>
                       </div>

@@ -21,13 +21,13 @@
 </head>
 <body>
     
-<div class="loading-page">
+<!-- <div class="loading-page">
     <div class="counter">
       <p>LOADING...</p>
       <h1>0%</h1>
       <hr/>
     </div>
-  </div>
+  </div> -->
 
 <!--    ===     START APP      ===     -->
 <div class="workarea">
@@ -118,7 +118,11 @@
                                 <input id="search-input" type="text" placeholder="What movie looking for ?">
                                 <button id="search-submit">SEARCH</button>
                             </div>
-                            <div id="search-results-area" class="search-results">
+                            <div id="search-results-area" style="background-color: teal" class="search-results">
+                                <div class="page-pagination">
+                                    <!-- <button>next</button> -->
+                                    <!-- <button>prev</button> -->
+                                </div>
                             </div>
                    </section>
 <!--==========================-->
@@ -138,12 +142,12 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="./src/js/swiper-sliders.js"></script>
 <script src="./app_components/home.js"></script>
+<script src="./app_components/search.js"></script>
+<script src="./src/js/search-Operation.js"></script>
 <script src="./app_components/popular.js"></script>
 <script src="./app_components/now_playing.js"></script>
 <script src="./app_components/top_rated.js"></script>
 <script src="./app_components/upcoming.js"></script>
-<script src="./app_components/search.js"></script>
-<script src="./src/js/search-Operation.js"></script>
 <script src="./app_components/favourites.js"></script>
 <script src="./app_components/bookmarks.js"></script>
 <script src="./index.js"></script>
