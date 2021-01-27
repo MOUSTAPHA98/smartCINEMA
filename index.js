@@ -38,7 +38,7 @@ navbarLinks.forEach(element => {
       select_tab(id);
       load_content = new Function (`return GET_DATA_${pathLink}()`);
       load_content(pathName);
-      if (history.state === null && id != "home"){
+      if (history.state === null ){
         window.history.pushState({id}, `${id}`, `${id}`);
       } else if ( history.state != null && id != history.state.id) {
         window.history.pushState({id}, `${id}`, `${id}`);
