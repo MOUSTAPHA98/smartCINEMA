@@ -3,8 +3,9 @@ var contentDiv = document.getElementById("content");
 async function GET_DATA_home() {
   
     // read API DATA
-    let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.floor(Math.random()*10)}`);
+    let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.ceil(Math.random()*10)}`);
     let results = await response.json();
+    console.log(results);
     let miniMoviesList = await results.results;
 
     // write data

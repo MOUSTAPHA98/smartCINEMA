@@ -115,11 +115,14 @@ window.addEventListener("popstate", event => {
   });
 
 // Select HOME tab when popstate to it
-(pathLink  == "" ? {  id = "home", select_tab(id)} : null)
-(pathLink != "" ? select_tab(pathLink) : null)
-  
+if (pathLink  == ""){
+  id = "home";
+  select_tab(id);
+} else if (pathLink != ""){
+  select_tab(pathLink);
+}
 
-// SWITCH APP MODE (DAY OR DARK)
+
 let modSwitch = document.getElementById("modSwitch");
 modSwitch.onclick = function(){
     (modSwitch.checked === false ? document.body.className = "darkMod" : null)
