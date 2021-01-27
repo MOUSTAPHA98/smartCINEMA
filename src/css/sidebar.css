@@ -74,16 +74,8 @@ li.divider{
 }
 
 .switch-mod{
-    /* width: 100%; */
     margin: 0 40px;
 }
-
-/* .center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-} */
 
 input[type="checkbox"]{
     width: 100%;
@@ -118,4 +110,24 @@ input[type="checkbox"]:before{
 input:checked[type="checkbox"]::before{
     left: 153px;
     content: "\f186";
+}
+
+
+
+
+input[type="checkbox"]:after{
+    position: absolute;
+    content: "NIGHTMODE";
+    line-height: 66px;
+    color: var(--main-text-color);
+    left: 75px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    /* font-family: var(--second-font); */
+}
+
+input:checked[type="checkbox"]::after{
+    left: 35px;
+    content: "DAYMODE";
 }
