@@ -21,13 +21,13 @@
 </head>
 <body>
     
-<div class="loading-page">
+<!-- <div class="loading-page">
     <div class="counter">
       <p>LOADING...</p>
       <h1>0%</h1>
       <hr/>
     </div>
-  </div>
+  </div> -->
 
 <!--    ===     START APP      ===     -->
 <div class="workarea">
@@ -96,6 +96,10 @@
                                 <i class="fal fa-bookmark"></i>
                                 Bookmarks
                             </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="nav-item switch-mod center">
+                            <input type="checkbox" id="modSwitch">
                         </li>
                     </ul>
                 </aside>
@@ -168,6 +172,18 @@
     }
   }, 50);
 });
+</script>
+
+<script>
+    let modSwitch = document.getElementById("modSwitch");
+    modSwitch.onclick = function(){
+    if (modSwitch.checked === false){
+        document.body.className = "darkMod"
+    }
+    if(modSwitch.checked === true){
+        document.body.className = "lightMod"
+    }
+   }
 </script>
 
 <script>

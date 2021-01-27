@@ -11,9 +11,22 @@
     --second-font: "Fredoka One";
     --third-font: "Quicksand";
 }
+.darkMod{
+  --back-color: #161616;
+  --back-color-transparent: #161616ee;
+  --main-color:#202020 ;
+  --main-color-transparent:#202020ee;
+  --second-color: #c91919 ;
+  --second-color-transparent: #c9191944 ;
+  --main-text-color: rgb(190, 190, 190);
+  --second-text-color: #FFF ;
+  --main-font: "Poppins";
+  --second-font: "Fredoka One";
+  --third-font: "Quicksand";
+}
 
 
-:root{
+.lightMod{
     --back-color: #c4c4c4;
     --back-color-transparent: #c4c4c4cc;
     --main-color:#d6d6d6 ;
