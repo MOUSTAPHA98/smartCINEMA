@@ -13,9 +13,11 @@ search_input.onblur = () =>{
 
 $(document).on('click', '#search-submit', async function(){
     var search_input = document.getElementById('search-input');
-    var search_results_area = document.getElementById('search-results-area');
-
     let keyword = search_input.value; 
+
+    var search_results_area = document.getElementById('search-results-area');
+    search_results_area.innerHTML = "";
+    
     let response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=0f483e0f9987fd0d89c1b0732ea93785&query=${keyword}&page=1`);
     let results = await response.json();
     let searchResults = await results.results;
