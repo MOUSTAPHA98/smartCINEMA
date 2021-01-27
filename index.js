@@ -6,6 +6,15 @@ var load_content = new Function (`return GET_DATA_${pathLink}()`);
 load_content();
 
 
+    if (location.pathname != "/") {
+        let tabID = location.pathname.substring(1);
+        function select_tab(id) {
+        document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
+        document.querySelectorAll("#" + tabID).forEach(item => item.classList.add('active'));
+    };
+    select_tab();
+    }
+
 
 
 let routes = {
