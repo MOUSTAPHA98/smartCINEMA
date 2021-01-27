@@ -1,6 +1,6 @@
 let navbarLinks = document.querySelectorAll('.navbar-link');
 
-
+console.log(location.pathname);
 var pathLink = window.location.pathname.substring(1);
 var load_content = new Function (`return GET_DATA_${pathLink}()`);
 load_content();
@@ -67,17 +67,6 @@ window.addEventListener("popstate", event => {
         document.title = `smartCINEMA | ${stateId}`;
   }
 });
-
-
-if (location.pathname != "/") {
-  let tabID = location.pathname.substring(1);
-  function select_tab(id) {
-  document.querySelectorAll(".navbar-link").forEach(item => item.classList.remove('active'));
-  document.querySelectorAll("#" + tabID).forEach(item => item.classList.add('active'));
-};
-select_tab();
-}
-
 
 
 let modSwitch = document.getElementById("modSwitch");
