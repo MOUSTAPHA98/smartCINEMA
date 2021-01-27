@@ -86,6 +86,7 @@ input[type="checkbox"]{
     -webkit-appearance: none;
     transition: .8s;
     position: relative;
+    cursor: pointer;
 }
 
 input[type="checkbox"]:before{
@@ -111,9 +112,6 @@ input:checked[type="checkbox"]::before{
     left: 153px;
     content: "\f186";
 }
-
-
-
 
 input[type="checkbox"]:after{
     position: absolute;
