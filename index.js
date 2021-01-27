@@ -32,8 +32,6 @@ navbarLinks.forEach(element => {
     element.onNavItemClick = function(pathName) {
       let id = element.id;
       let pathLink = pathName.substring(1);
-      console.log(id);
-      console.log(pathLink);
       select_tab(id);
       load_content = new Function (`return GET_DATA_${pathLink}()`);
       load_content(pathName);

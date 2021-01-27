@@ -17,12 +17,11 @@ $(document).on('click', '#search-submit', async function(){
 
     var search_results_area = document.getElementById('search-results-area');
     search_results_area.innerHTML = "";
-    
+
     let response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=0f483e0f9987fd0d89c1b0732ea93785&query=${keyword}&page=1`);
     let results = await response.json();
     let searchResults = await results.results;
     await searchResults.forEach(el => {
-        console.log(el)
         let movie_Id = el.id,
             movie_Title = el.title,
             movie_Langage = el.original_language,
