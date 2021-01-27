@@ -64,64 +64,15 @@ window.addEventListener("popstate", event => {
   }
 });
 
-// let onNavItemClick = (pathName) => {
-//   console.log(this)
-//   // console.log(pathName);
-//   let pathLink = pathName.substring(1);
-//   console.log(pathLink);
-//   //   window.history.pushState({id}, `${id}`, `${id.toUpperCase()}`);
-
-//   window.history.pushState({pathLink}, `${pathLink}`, `${pathLink}`);
-// }
-
-
-// var newPath = pathName.substring(1);
-// load_content = new Function(`return GET_DATA_${newPath}()`);
-// load_content();
 
 
 
-
-
-
-
-
-function push(event) {
-
-  let id = event.target.id;
-
-  // load_content = new Function(`return GET_DATA_${id.toUpperCase()}()`);
-  // load_content();
-
-
-  // document.title = `smartCINEMA | ${id.toUpperCase()}`;
+let modSwitch = document.getElementById("modSwitch");
+modSwitch.onclick = function(){
+  if (modSwitch.checked === false){
+      document.body.className = "darkMod"
+  }
+  if(modSwitch.checked === true){
+      document.body.className = "lightMod"
+  }
 }
-
-
-
-window.onload = event => {
-  window["home"].addEventListener("click", event => push(event))
-  window["popular"].addEventListener("click", event => push(event))
-  window["now_playing"].addEventListener("click", event => push(event))
-  window["top_rated"].addEventListener("click", event => push(event))
-  window["upcoming"].addEventListener("click", event => push(event))
-  window["search"].addEventListener("click", event => push(event))
-  window["favourites"].addEventListener("click", event => push(event))
-  window["bookmarks"].addEventListener("click", event => push(event))
-}
-
-// window.addEventListener("popstate", event => {
-//   var stateId;
-//   if (event.state === null ){
-//     stateId = "home";
-//     select_tab(stateId);
-//       document.title = ``;
-//       document.title = `smartCINEMA | HOME`;
-
-//   } else {
-//        stateId = event.state.id;
-//       select_tab(stateId);
-//         document.title = ``;
-//         document.title = `smartCINEMA | ${stateId.toUpperCase()}`;
-//   }
-// });
