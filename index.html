@@ -20,8 +20,6 @@
 
 </head>
 <body>
-
-
     
 <div class="loading-page">
     <div class="counter">
@@ -86,12 +84,6 @@
                                 Upcoming
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a id="search"  class="navbar-link"  onclick="onNavItemClick('/search'); return false;">
-                                <i class="fal fa-search"></i>
-                                Search
-                            </a>
-                        </li>
                         <li class="divider"></li>
                         <li class="nav-item">
                             <a id="favourites"  class="navbar-link"  onclick="onNavItemClick('/favourites'); return false;">
@@ -114,13 +106,23 @@
 
                 <div id="content" class="content col-lg-9 p-0 ">
 
-<!--=============================-->
-<!--    ===     START HOMEPAGE AREA    ===   -->
-<!--=============================-->
-                    
-<!--============================-->
-<!--    ===     END HOMEPAGE AREA    ===    -->
-<!--============================-->
+<!--===========================-->
+<!--    ===     START SEARCH AREA    ===   -->
+<!--===========================-->
+                   <section class="search-area">
+                            <div class="search-field d-flex flex-row justify-content-between align-items-center">
+                                <input id="search-input" type="text" placeholder="What movie looking for ?">
+                                <button id="search-submit">SEARCH</button>
+                            </div>
+                            <div id="search-results-area" class="search-results">
+                                <p>
+                                     Start by searching for a movie. HAVE FUN 😘😘
+                                </p>
+                            </div>
+                   </section>
+<!--==========================-->
+<!--    ===     END SEARCH AREA    ===    -->
+<!--==========================-->
                 </div>
             </div>
         </div>
@@ -136,13 +138,14 @@
 <script src="./src/js/swiper-sliders.js"></script>
 <script src="./app_components/default.js"></script>
 <script src="./app_components/home.js"></script>
-<script src="./app_components/popular.js"></script>
-<script src="./app_components/now_playing.js"></script>
-<script src="./app_components/top_rated.js"></script>
-<script src="./app_components/upcoming.js"></script>
+<!-- <script src="./app_components/popular.js"></script> -->
+<!-- <script src="./app_components/now_playing.js"></script> -->
+<!-- <script src="./app_components/top_rated.js"></script> -->
+<!-- <script src="./app_components/upcoming.js"></script> -->
 <script src="./app_components/search.js"></script>
-<script src="./app_components/favourites.js"></script>
-<script src="./app_components/bookmarks.js"></script>
+<script src="./src/js/search-Operation.js"></script>
+<!-- <script src="./app_components/favourites.js"></script> -->
+<!-- <script src="./app_components/bookmarks.js"></script> -->
 <script src="./index.js"></script>
 
 <script>

@@ -1,0 +1,211 @@
+.app-container .container .row .content .search-area{
+    padding: 0 30px;
+}
+
+.app-container .container .row .content .search-area .search-field{
+    position: relative;
+    height:  98px;
+}
+
+.app-container .container .row .content .search-area > .search-field::before{
+    color:var(--main-text-color);
+    position: absolute;
+    left: 15px;
+    top: 35%;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    font-size: 20px;
+    content: "\f002";
+}
+
+.app-container .container .row .content .search-area input{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border: 0;
+    outline: 0;
+    padding: 10px 50px;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.app-container .container .row .content .search-area button{
+    font-size: 16px;
+    border-radius: 100px;
+    font-weight: 500;
+    color: var(--second-text-color);
+    background-color: var(--second-color);
+    border: 0;
+    outline: 0;
+    padding: 10px 30px;
+    margin: 0 10px;
+}
+
+
+.app-container .container .row .content .search-area .search-results{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 25px;
+    position: relative;
+}
+
+.app-container .container .row .content .search-area .search-results p{
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    position: absolute;
+    font-size: 32px;
+    font-family: var(--second-font);
+    /* left: 50%; */
+}
+
+
+
+
+.movie{
+    /* min-height: 300px; */
+    font-size: 18px;
+    /* background: rgb(80, 11, 11); */
+    position: relative;
+}
+
+.movie .ribbon{
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    z-index: 12;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+}
+
+.movie .ribbon span{
+    background-color: var(--second-color);
+    color: #FFF;
+    text-align: center;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    box-shadow: 0 3px 10px -5px #000;
+    position: absolute;
+    top: 19px;
+    left: -21px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.movie .ribbon span::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid var(--second-color);
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid var(--second-color);
+}
+
+.movie .ribbon span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid var(--second-color);
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid var(--second-color);
+}
+
+.movie .movie-img{
+    display: block;
+    min-height: 223px;
+    width: 100%;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie .movie-img img{
+    object-fit: cover;
+    transition: ease-in-out 1.5s;
+}
+
+.movie .movie-img img:hover{
+    transform: scale(1.05);
+    object-fit: cover;
+}
+
+.movie .movie-info{
+    font-weight: 400;
+    font-family: var(--third-font);
+    text-transform: capitalize;
+    color: var(--second-text-color);
+    margin-top: 20px;
+
+}
+
+.movie .movie-info h2{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -5px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.movie .movie-info span{
+    font-size: 12px;
+    color: var(--main-text-color);
+    font-weight: 500;
+}
+
+.movie .movie-rate{
+    background-color: var(--main-color);
+    color: var(--second-text-color);
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px -5px #000;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    text-transform: uppercase;
+    z-index: 20;
+    line-height: 40px;
+    font-size: 12px;
+    font-family: var(--third-font);
+    font-weight: 600;
+}
+
+.circular-chart {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    display: block;
+    max-width: 90%;
+    margin: 3px;
+  }
+  
+  .circle {
+    stroke: #4CC790;
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }

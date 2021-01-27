@@ -239,7 +239,7 @@ async function GET_DATA_home() {
                               <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[17].poster_path}" alt="">
                           </a>
                           <div class="random-movie-info">
-                              <h2 class="random-moviee-title">
+                              <h2 class="random-movie-title">
                                   ${miniMoviesList[17].title}
                                 </h2>
                               <span class="random-movie-release-date">
@@ -273,7 +273,7 @@ async function GET_DATA_home() {
                             <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[17].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
-                            <h2 class="random-moviee-title">
+                            <h2 class="random-movie-title">
                                 ${miniMoviesList[17].title}
                               </h2>
                             <span class="random-movie-release-date">
@@ -309,7 +309,7 @@ async function GET_DATA_home() {
                             <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[15].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
-                            <h2 class="random-moviee-title">
+                            <h2 class="random-movie-title">
                                 ${miniMoviesList[15].title}
                               </h2>
                             <span class="random-movie-release-date">
@@ -345,7 +345,7 @@ async function GET_DATA_home() {
                             <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[13].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
-                            <h2 class="random-moviee-title">
+                            <h2 class="random-movie-title">
                                 ${miniMoviesList[13].title}
                               </h2>
                             <span class="random-movie-release-date">
@@ -381,7 +381,7 @@ async function GET_DATA_home() {
                             <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[11].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
-                            <h2 class="random-moviee-title">
+                            <h2 class="random-movie-title">
                                 ${miniMoviesList[11].title}
                               </h2>
                             <span class="random-movie-release-date">
@@ -417,7 +417,7 @@ async function GET_DATA_home() {
                             <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[9].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
-                            <h2 class="random-moviee-title">
+                            <h2 class="random-movie-title">
                                 ${miniMoviesList[9].title}
                               </h2>
                             <span class="random-movie-release-date">
@@ -453,7 +453,7 @@ async function GET_DATA_home() {
                             <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[14].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
-                            <h2 class="random-moviee-title">
+                            <h2 class="random-movie-title">
                                 ${miniMoviesList[14].title}
                               </h2>
                             <span class="random-movie-release-date">
