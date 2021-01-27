@@ -1,16 +1,12 @@
-// CLEAR INPTUT FIELD PLACEHOLDER ON FOCUS IT
-search_input.onfocus = () =>{
-    if( search_input.placeholder != ""){
-        search_input.placeholder = ""
-    }
-};
-
 // SET INPTUT FIELD PLACEHOLDER ON BLUR IT
-search_input.onblur = () =>{
-    if(search_input.placeholder === ""){
-        search_input.placeholder = "What movie looking for ?"
-    }
-};
+$(document).on('blur', '#search-input', function () {
+    $(this).attr("placeholder", "What movie looking for ?");
+});
+    
+// CLEAR INPTUT FIELD PLACEHOLDER ON FOCUS IT
+$(document).on('focus', '#search-input', function () {
+    $(this).attr("placeholder", "");
+});
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////

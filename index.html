@@ -15,19 +15,20 @@
     <link rel="stylesheet" href="src/css/main.css">
     <title>smartCINEMA | HOME</title>
 
-    <script type="text/javascript" src="./redirect.js"></script>
-    <script type="text/javascript">recieveRedirect()</script>
+    <script src="./redirect.js"></script>
+    <script>recieveRedirect()</script>
 
 </head>
 <body>
-    
-<!-- <div class="loading-page">
+
+<!--    ===     START LOADING PAGE      ===     -->
+<div class="loading-page">
     <div class="counter">
-      <p>LOADING...</p>
-      <h1>0%</h1>
-      <hr/>
+        <p>LOADING...</p>
+        <h1>0%</h1>
+        <hr/>
     </div>
-  </div> -->
+</div>
 
 <!--    ===     START APP      ===     -->
 <div class="workarea">
@@ -39,6 +40,8 @@
 <!--    ===     SIDE_BAR MENU    ===    -->
 <!--========================-->
 
+
+                <!--    ===     START SIDEBAR AREA      ===     -->
                 <aside class="side-menu col-xl-3 col-lg-3 d-flex flex-column justify-content-start p-0 m-0">
                     <div class="app-brand">
                         <a class="app-brand-link">
@@ -103,31 +106,18 @@
                         </li>
                     </ul>
                 </aside>
+                <!--    ===     END SIDEBAR AREA      ===     -->
 
-<!--===========================-->
-<!--    ===     APP_CONTENT AREA    ===    -->
-<!--===========================-->
+
+<!--================================-->
+<!--    ===     START APP_CONTENT AREA    ===    -->
+<!--================================-->
 
                 <div id="content" class="content col-lg-9 p-0 ">
 
-<!--===========================-->
-<!--    ===     START SEARCH AREA    ===   -->
-<!--===========================-->
-                   <section class="search-area">
-                            <div class="search-field d-flex flex-row justify-content-between align-items-center">
-                                <input id="search-input" type="text" placeholder="What movie looking for ?">
-                                <button id="search-submit">SEARCH</button>
-                            </div>
-                            <div id="search-results-area" style="background-color: teal" class="search-results">
-                                <div class="page-pagination">
-                                    <!-- <button>next</button> -->
-                                    <!-- <button>prev</button> -->
-                                </div>
-                            </div>
-                   </section>
-<!--==========================-->
-<!--    ===     END SEARCH AREA    ===    -->
-<!--==========================-->
+<!--==============================-->
+<!--    ===     END APP_CONTENT AREA    ===    -->
+<!--==============================-->
                 </div>
             </div>
         </div>
@@ -175,7 +165,7 @@
 </script>
 
 <script>
-    activeSlider();
+    // activeSlider();
 </script>
 </body>
 </html>
