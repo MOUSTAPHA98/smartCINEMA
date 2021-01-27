@@ -61,6 +61,22 @@
     /* left: 50%; */
 }
 
+.app-container .container .row .content .search-area .search-results ._404,
+    .app-container .container .row .content .search-area .search-results ._404message{
+    width: 100%;
+    text-align: center;
+    padding: 70px 0;
+    position: absolute;
+    font-size: 125px;
+    font-family: var(--second-font);
+}
+.app-container .container .row .content .search-area .search-results ._404message{
+    font-size: 22px;
+    top: 200px;
+}
+
+
+
 
 
 

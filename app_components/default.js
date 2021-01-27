@@ -470,10 +470,20 @@ async function GET_DATA_() {
     <!--============================-->
     <!--    ===     END HOMEPAGE AREA    ===    -->
     <!--============================-->`;
+
   
     // wait 3 seconds
     await new Promise((resolve, reject) => setTimeout(resolve, 0));
     contentDiv.innerHTML = homePageContent;
+    var paths = document.querySelectorAll('.circle');
+    paths.forEach(el => {
+        let ratee = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
+        if (ratee <= 75){
+            el.style.stroke = "#FFDA3B";
+        }
+        if(ratee < 50) {
+            el.style.stroke = "tomato";
+        }
+    });
     activeSlider();
 };
-

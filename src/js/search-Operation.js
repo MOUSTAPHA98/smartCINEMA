@@ -21,6 +21,16 @@ $(document).on('click', '#search-submit', async function(){
     let response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=0f483e0f9987fd0d89c1b0732ea93785&query=${keyword}&page=1`);
     let results = await response.json();
     let searchResults = await results.results;
+    console.log(searchResults);
+    if (searchResults.length === 0){
+        search_results_area.innerHTML = `
+    <h4 class="_404">
+        404
+    </h4>
+    <span class="_404message">
+        Sorry, We could not found movies you looking for 😔😔
+    </span>`;
+    }
     await searchResults.forEach(el => {
         let movie_Id = el.id,
             movie_Title = el.title,
@@ -65,18 +75,19 @@ $(document).on('click', '#search-submit', async function(){
     <!--    ===  END MOVIE    ===  -->`;
 
     search_results_area.innerHTML += `${movie}`;
-    
    });
-
-    
+   var paths = document.querySelectorAll('.circle');
+   paths.forEach(el => {
+       let ratee = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
+       if (ratee <= 75){
+           el.style.stroke = "#FFDA3B";
+       }
+       if(ratee < 50) {
+           el.style.stroke = "tomato";
+       }
+   });
 });
 
 
-// async function applySearch() {
-
-//     // read API DATA
-    
-// };
-    
 
     

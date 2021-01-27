@@ -6,6 +6,8 @@ var load_content = new Function (`return GET_DATA_${pathLink}()`);
 load_content();
 
 
+
+
 let routes = {
   '/': home,
   '/index.html': home,
@@ -75,4 +77,4 @@ modSwitch.onclick = function(){
   if(modSwitch.checked === true){
       document.body.className = "lightMod"
   }
-}
+};
