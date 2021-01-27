@@ -11,6 +11,7 @@ load_content();
 
 let routes = {
   '/': home,
+  '/home': home,
   '/index.html': home,
   '/popular' : popular,
   '/now_playing' : now_playing,
