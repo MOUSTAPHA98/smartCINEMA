@@ -9,7 +9,6 @@ load_content();
 
 
 
-
 let routes = {
   '/': home,
   '/index.html': home,
@@ -67,6 +66,14 @@ window.addEventListener("popstate", event => {
         document.title = `smartCINEMA | ${stateId}`;
   }
 });
+
+if (pathLink  == ""){
+  id = "home";
+  select_tab(id);
+} else if (pathLink != ""){
+  select_tab(pathLink);
+}
+
 
 
 let modSwitch = document.getElementById("modSwitch");
