@@ -92,7 +92,7 @@ input[type="checkbox"]{
 input[type="checkbox"]:before{
     font-family: "Font Awesome 5 Pro";
     font-weight: 300;
-    content: "\f185";
+    content: "\f186";
     line-height: 50px;
     padding-left: 12px;
     font-size: 26px;
@@ -110,7 +110,7 @@ input[type="checkbox"]:before{
 
 input:checked[type="checkbox"]::before{
     left: 153px;
-    content: "\f186";
+    content: "\f185";
 }
 
 input[type="checkbox"]:after{
