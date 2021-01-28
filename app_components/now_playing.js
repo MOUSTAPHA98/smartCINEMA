@@ -47,7 +47,7 @@ var now_playing_movies_area = document.getElementById("now-playing-movies-area")
         ${movie_Langage}
         </span>
         </span>
-        <a href="" class="movie-img">
+        <a  class="movie-img">
         <span class="movie-rate">
         <span>
         ${movie_Rate}%

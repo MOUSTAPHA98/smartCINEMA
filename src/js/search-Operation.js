@@ -80,7 +80,7 @@ let movie =
 ${movie_Langage}
 </span>
 </span>
-<a href="" class="movie-img">
+<a  class="movie-img">
 <span class="movie-rate">
 <span>
 ${movie_Rate}%

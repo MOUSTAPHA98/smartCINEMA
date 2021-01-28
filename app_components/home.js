@@ -216,13 +216,13 @@ async function GET_DATA_home() {
     
     
                       <!-- START TREND MOVIE #01 -->
-                      <div class="swiper-slide random-movie">
+                      <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[1].id}" >
                         <span class="ribbon">
                             <span>
                                 ${(miniMoviesList[1].original_language).toUpperCase()}
                             </span>
                         </span>
-                          <a href="" class="random-movie-img">
+                          <a  class="random-movie-img">
                             <span class="random-movie-rate">
                                 <span>
                                     ${(miniMoviesList[1].vote_average) * 10}%
@@ -251,13 +251,13 @@ async function GET_DATA_home() {
     
     
                       <!-- START TREND MOVIE #02 -->
-                      <div class="swiper-slide random-movie">
+                      <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[17].id}" >
                         <span class="ribbon">
                             <span>
                                 ${(miniMoviesList[17].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[17].vote_average) * 10}%
@@ -285,14 +285,14 @@ async function GET_DATA_home() {
     
     
                     <!-- START TREND MOVIE #03 -->
-                    <div class="swiper-slide random-movie">
+                    <div class="swiper-slide random-movie movie"  data-movie-id = "${miniMoviesList[15].id}" >
                         
                         <span class="ribbon">
                             <span>
                                 ${(miniMoviesList[15].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[15].vote_average) * 10}%
@@ -321,14 +321,14 @@ async function GET_DATA_home() {
     
     
                     <!-- START TREND MOVIE #04 -->
-                    <div class="swiper-slide random-movie">
+                    <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[13].id}" >
                         
                         <span class="ribbon">
                             <span>
                                 ${(miniMoviesList[13].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[13].vote_average) * 10}%
@@ -357,14 +357,14 @@ async function GET_DATA_home() {
     
     
                     <!-- START TREND MOVIE #05 -->
-                    <div class="swiper-slide random-movie">
+                    <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[11].id}" >
                        
                         <span class="ribbon">
                             <span>
                                 ${(miniMoviesList[11].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                         <span>
                         ${(miniMoviesList[11].vote_average) * 10}%
@@ -393,14 +393,14 @@ async function GET_DATA_home() {
     
     
                     <!-- START TREND MOVIE #06 -->
-                    <div class="swiper-slide random-movie">
+                    <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[9].id}" >
                         
                         <span class="ribbon">
                             <span>
                                 ${(miniMoviesList[9].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[9].vote_average) * 10}%
@@ -429,14 +429,14 @@ async function GET_DATA_home() {
     
     
                     <!-- START TREND MOVIE #07 -->
-                    <div class="swiper-slide random-movie">
+                    <div class="swiper-slide random-movie movie"  data-movie-id = "${miniMoviesList[14].id}" >
                         
                         <span class="ribbon">
                             <span>
                                 ${(miniMoviesList[14].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[14].vote_average) * 10}%

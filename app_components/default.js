@@ -222,7 +222,7 @@ async function GET_DATA_() {
                                 ${(miniMoviesList[19].original_language).toUpperCase()}
                             </span>
                         </span>
-                          <a href="" class="random-movie-img">
+                          <a  class="random-movie-img">
                             <span class="random-movie-rate">
                                 <span>
                                     ${(miniMoviesList[19].vote_average) * 10}%
@@ -257,7 +257,7 @@ async function GET_DATA_() {
                                 ${(miniMoviesList[17].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[17].vote_average) * 10}%
@@ -292,7 +292,7 @@ async function GET_DATA_() {
                                 ${(miniMoviesList[15].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[15].vote_average) * 10}%
@@ -328,7 +328,7 @@ async function GET_DATA_() {
                                 ${(miniMoviesList[13].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[13].vote_average) * 10}%
@@ -364,7 +364,7 @@ async function GET_DATA_() {
                                 ${(miniMoviesList[11].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                         <span>
                         ${(miniMoviesList[11].vote_average) * 10}%
@@ -400,7 +400,7 @@ async function GET_DATA_() {
                                 ${(miniMoviesList[9].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[9].vote_average) * 10}%
@@ -436,7 +436,7 @@ async function GET_DATA_() {
                                 ${(miniMoviesList[14].original_language).toUpperCase()}
                             </span>
                         </span>
-                        <a href="" class="random-movie-img">
+                        <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
                             ${(miniMoviesList[14].vote_average) * 10}%

@@ -47,7 +47,7 @@ var top_rated_movies_area = document.getElementById("top-rated-movies-area");
         ${movie_Langage}
         </span>
         </span>
-        <a href="" class="movie-img">
+        <a  class="movie-img">
         <span class="movie-rate">
         <span>
         ${movie_Rate}%

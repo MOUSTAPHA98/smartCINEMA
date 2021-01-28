@@ -141,5 +141,11 @@
 <script src="./app_components/bookmarks.js"></script>
 <script src="./index.js"></script>
 
+<script>
+    $(document).on('click', '.movie', function () {
+        console.log(this.getAttribute("data-movie-id"));
+    })
+</script>
+
 </body>
 </html>
