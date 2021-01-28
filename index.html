@@ -22,13 +22,13 @@
 <body>
 
 <!--    ===     START LOADING PAGE      ===     -->
-<!-- <div class="loading-page">
+<div class="loading-page">
     <div class="counter">
         <p>LOADING...</p>
         <h1>0%</h1>
         <hr/>
     </div>
-</div> -->
+</div>
 
 <!--    ===     START APP      ===     -->
 <div class="workarea">
@@ -108,53 +108,11 @@
                 </aside>
                 <!--    ===     END SIDEBAR AREA      ===     -->
 
-
 <!--================================-->
 <!--    ===     START APP_CONTENT AREA    ===    -->
 <!--================================-->
 
                 <div id="content" class="content col-lg-9 p-0 ">
-<!--===========================-->
-<!--    ===     START SEARCH AREA    ===   -->
-<!--===========================-->
-                    <section id = "populrar-movies-area" class="popular-movies-area">
-                        <!--    ===  START MOVIE    ===  -->
-                        <div class="movie" data-movie-id=${movie_Id}>
-                            <span class="ribbon">
-                            <span>
-                            ${movie_Langage}
-                            </span>
-                            </span>
-                            <a href="" class="movie-img">
-                            <span class="movie-rate">
-                            <span>
-                            ${movie_Rate}%
-                            </span>
-                            <svg viewBox="0 0 36 36" class="circular-chart">
-                            <path class="circle"
-                            stroke-dasharray="${movie_Rate}, 100"
-                            d="M18 2.0845
-                            a 15.9155 15.9155 0 0 1 0 31.831
-                            a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                            </svg>
-                            </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face${movie_Poster}" alt="">
-                            </a>
-                            <div class="movie-info">
-                            <h2 class="movie-title">
-                            ${movie_Title}
-                            </h2>
-                            <span class="movie-release-date">
-                            ${movie_Date}
-                            </span>
-                            </div>
-                            </div>
-                            <!--    ===  END MOVIE    ===  -->
-                    </section>
-<!--==========================-->
-<!--    ===     END SEARCH AREA    ===    -->
-<!--==========================-->
 
 <!--==============================-->
 <!--    ===     END APP_CONTENT AREA    ===    -->
@@ -182,28 +140,6 @@
 <script src="./app_components/favourites.js"></script>
 <script src="./app_components/bookmarks.js"></script>
 <script src="./index.js"></script>
-
-<script>
-    $(document).ready(function() {
-  
-  var counter = 0;
-  var c = 0;
-  var i = setInterval(function(){
-      $(".loading-page .counter h1").html(c + "%");
-      $(".loading-page .counter hr").css("width", c + "%");
-    counter++;
-    c++;
-      
-    if(counter == 101) {
-        clearInterval(i);
-        $(".loading-page").css("opacity" , "0");
-        setInterval(() => {
-            $(".loading-page").css("display" , "none");
-        }, 1900);
-    }
-  }, 50);
-});
-</script>
 
 </body>
 </html>

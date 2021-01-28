@@ -123,8 +123,36 @@ if (pathLink  == ""){
 }
 
 
+///////////////////////////////////////////
+///////          APP THEME MOD        ///////
+//////////////////////////////////////////
+
 let modSwitch = document.getElementById("modSwitch");
 modSwitch.onclick = function(){
     (modSwitch.checked === false ? document.body.className = "darkMod" : null)
     (modSwitch.checked === true ?  document.body.className = "lightMod" : null)
 };
+
+
+///////////////////////////////////////////
+///////          LOADING PAGE          ///////
+//////////////////////////////////////////
+
+$(document).ready(function() {
+var counter = 0;
+var c = 0;
+var i = setInterval(function(){
+$(".loading-page .counter h1").html(c + "%");
+$(".loading-page .counter hr").css("width", c + "%");
+counter++;
+c++;
+
+if(counter == 101) {
+clearInterval(i);
+$(".loading-page").css("opacity" , "0");
+setInterval(() => {
+$(".loading-page").css("display" , "none");
+}, 1900);
+}
+}, 50);
+});
