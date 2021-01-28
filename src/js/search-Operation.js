@@ -19,11 +19,11 @@ applySearch();
 
 // APPLY SEARCH OPERATION PAGINATION
 let pageNum = 1;
-$(document).on('click', '#nextPagination', function () {
+$(document).on('click', '#nextPaginationSearch', function () {
     applySearch(++pageNum);
 }); 
 
-$(document).on('click', '#prevPagination', function () {
+$(document).on('click', '#prevPaginationSearch', function () {
     (pageNum > 1 ? applySearch(--pageNum) :null);
 }); 
 
@@ -40,17 +40,16 @@ var search_results_area = document.getElementById('search-results-area');
 search_results_area.innerHTML = "";
 let response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=0f483e0f9987fd0d89c1b0732ea93785&query=${keyword}&page=${resultsPage}`);
 let results = await response.json();
-console.log(results);
+
 if (results.total_pages  > 1){
     search_results_area.innerHTML += `
 <div class="page-pagination">
-<button id="prevPagination" class="prev">PREV PAGE</button>
-<button id="nextPagination" class"next">NEXT PAGE</button>
+<button id="prevPaginationSearch" class="prev">PREV PAGE</button>
+<button id="nextPaginationSearch" class"next">NEXT PAGE</button>
 </div>
 `
 }
 let searchResults = await results.results;
-console.log(searchResults);
 if (searchResults.length === 0){
 search_results_area.innerHTML = 
 `

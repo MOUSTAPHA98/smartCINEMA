@@ -1,15 +1,82 @@
-async function GET_DATA_top_rated() {
+// APPLY SEARCH OPERATION PAGINATION
+pageNum = 1;
+$(document).on('click', '#nextPagination', function () {
+    GET_DATA_top_rated(++pageNum);
+}); 
+
+$(document).on('click', '#prevPagination', function () {
+    (pageNum > 1 ? GET_DATA_top_rated(--pageNum) :null);
+}); 
+
+
+
+
+async function GET_DATA_top_rated(resultsPage) {
+
+let top_ratedPageContent =`
+<section id = "top-rated-movies-area" class="top-rated-movies-area">
+    <div class="page-pagination">
+        <button id="prevPagination" class="prev">PREV PAGE</button>
+        <button id="nextPagination" class"next">NEXT PAGE</button>
+    </div>
+</section>`;
+contentDiv.innerHTML = top_ratedPageContent;
+
+var top_rated_movies_area = document.getElementById("top-rated-movies-area");
   
     // read API DATA
-    let response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785');
+    let response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${resultsPage}`);
     let results = await response.json();
-    let miniMoviesList = await results.results;
+    let top_ratedMovies = await results.results;
 
-    // write data
-    topRatedPageContent = `TOP_RATED`;
-  
-    // wait 3 seconds
-    await new Promise((resolve, reject) => setTimeout(resolve, 0));
-    contentDiv.innerHTML = topRatedPageContent;
+    top_ratedMovies.forEach(el => {
+        let movie_Id = el.id,
+        movie_Title = el.title,
+        movie_Langage = el.original_language,
+        movie_Poster = el.poster_path,
+        movie_Date = el.release_date,
+        movie_Rate = el.vote_average *10;
+
+        // APPLY MOVIE FOR EACH OF SEARCH RESULTS
+        let movie =
+        `
+        <!--    ===  START MOVIE    ===  -->
+        <div class="movie" data-movie-id=${movie_Id}>
+        <span class="ribbon">
+        <span>
+        ${movie_Langage}
+        </span>
+        </span>
+        <a href="" class="movie-img">
+        <span class="movie-rate">
+        <span>
+        ${movie_Rate}%
+        </span>
+        <svg viewBox="0 0 36 36" class="circular-chart">
+        <path class="circle"
+        stroke-dasharray="${movie_Rate}, 100"
+        d="M18 2.0845
+        a 15.9155 15.9155 0 0 1 0 31.831
+        a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        </svg>
+        </span>
+        <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face${movie_Poster}" alt="">
+        </a>
+        <div class="movie-info">
+        <h2 class="movie-title">
+        ${movie_Title}
+        </h2>
+        <span class="movie-release-date">
+        ${movie_Date}
+        </span>
+        </div>
+        </div>
+        <!--    ===  END MOVIE    ===  -->
+        `;
+        top_rated_movies_area.innerHTML += `${movie}`;
+        coloRatePaths();
+    });
 };
+
 
