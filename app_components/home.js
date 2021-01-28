@@ -3,15 +3,12 @@ var contentDiv = document.getElementById("content");
 async function GET_DATA_home() {
   
     // read API DATA
-    let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.ceil(Math.random()*10)}`);
+    let response = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.ceil(Math.random()*10)}`);
     let results = await response.json();
     let miniMoviesList = await results.results;
 
     // write data
-    homePageContent = `<!--=============================-->
-    <!--    ===     START HOMEPAGE AREA    ===    -->
-    <!--==============================-->
-    
+    homePageContent = `
     <section class="homepage-area">
         <div class="homepage-content-swiper-container">
             <!-- Add Arrows -->
@@ -198,7 +195,7 @@ async function GET_DATA_home() {
     
             <!-- Add Pagination -->
             <div class="homepage-content-swiper-pagination swiper-pagination"></div>
-        </div>
+            </div>
     
         <div class="homepage-pickedmovies-container d-flex flex-column">
             <!-- Add Arrows -->
@@ -208,7 +205,7 @@ async function GET_DATA_home() {
             </div>
             <div class="homepage-random-content-heading d-flex flex-row align-items-center">
                 <i class="fal fa-film"></i>
-                random picked
+                Trends Now
             </div>
             <div class="homepage-random-slider">
                 <div class="homepage-random-slider-container">
@@ -466,10 +463,7 @@ async function GET_DATA_home() {
                 </div>
             </div>
         </div>
-    </section>
-    <!--============================-->
-    <!--    ===     END HOMEPAGE AREA    ===    -->
-    <!--============================-->`;
+    </section>`;
 
   
     // wait 3 seconds
@@ -477,13 +471,14 @@ async function GET_DATA_home() {
     contentDiv.innerHTML = homePageContent;
     var paths = document.querySelectorAll('.circle');
     paths.forEach(el => {
-        let ratee = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
-        if (ratee <= 75){
+        let reputation = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
+        if (reputation <= 75){
             el.style.stroke = "#FFDA3B";
         }
-        if(ratee < 50) {
+        if(reputation < 50) {
             el.style.stroke = "tomato";
         }
     });
     activeSlider();
 };
+

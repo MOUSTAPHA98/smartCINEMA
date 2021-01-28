@@ -117,8 +117,8 @@ coloRatePaths();
 function coloRatePaths() {
 var paths = document.querySelectorAll('.circle');
 paths.forEach(el => {
-let ratee = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
-if (ratee <= 75 ? el.style.stroke = "#FFDA3B" : null );
-if (ratee <= 50 ? el.style.stroke = "tomato" : null );
+let reputation = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
+if (reputation <= 75 ? el.style.stroke = "#FFDA3B" : null );
+if (reputation <= 50 ? el.style.stroke = "tomato" : null );
 });
 };

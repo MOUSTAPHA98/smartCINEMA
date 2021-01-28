@@ -477,11 +477,11 @@ async function GET_DATA_() {
     contentDiv.innerHTML = homePageContent;
     var paths = document.querySelectorAll('.circle');
     paths.forEach(el => {
-        let ratee = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
-        if (ratee <= 75){
+        let reputation = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
+        if (reputation <= 75){
             el.style.stroke = "#FFDA3B";
         }
-        if(ratee < 50) {
+        if(reputation < 50) {
             el.style.stroke = "tomato";
         }
     });
