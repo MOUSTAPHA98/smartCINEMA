@@ -3,7 +3,6 @@ var that;
 
 $(document).on('click', '.movie', function () {
     that=this;
-    console.log(that);
     GET_DATA_movie();
 });
 
