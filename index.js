@@ -8,9 +8,10 @@ var pathLink = window.location.pathname.substring(1);
 var load_content = new Function (`return GET_DATA_${pathLink}()`);
 
 // Load Default HomePage App Content
-(pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null)
+(pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null);
 load_content();
-(pathLink == 'movie/'+(/\[[0-9]+\]/) ? load_content = new Function (`return GET_DATA_movie()`) : null)
+(pathLink == 'movie/'+(/\[[0-9]+\]/) ? load_content = new Function (`return GET_DATA_movie()`) : null);
+(pathLink == 'movie/(/\[[0-9]+\]/)' ? load_content = new Function (`return GET_DATA_movie()`) : null);
 load_content();
 
 ///////////////////////////
@@ -28,7 +29,7 @@ let routes = {
     '/search' : search,
     '/favourites' : favourites,
     '/bookmarks' : bookmarks,
-    '/movie' : movie,
+    '/movie/+/\[[0-9]+\]/' : movie,
 };
 
 // Change Browser Title Due To the Current Path
