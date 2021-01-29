@@ -159,20 +159,20 @@ modSwitch.onclick = function(){
 //////////////////////////////////////////
 
 $(document).ready(function() {
-var counter = 0;
-var c = 0;
-var i = setInterval(function(){
-$(".loading-page .counter h1").html(c + "%");
-$(".loading-page .counter hr").css("width", c + "%");
-counter++;
-c++;
+      var counter = 0;
+      var c = 0;
+      var i = setInterval(function(){
+      $(".loading-page .counter h1").html(c + "%");
+      $(".loading-page .counter hr").css("width", c + "%");
+      counter++;
+      c++;
 
-if(counter == 101) {
-clearInterval(i);
-$(".loading-page").css("opacity" , "0");
-setInterval(() => {
-$(".loading-page").css("display" , "none");
-}, 1900);
-}
-}, 50);
+      if(counter == 101) {
+      clearInterval(i);
+      $(".loading-page").css("opacity" , "0");
+      setInterval(() => {
+      $(".loading-page").css("display" , "none");
+      }, 1900);
+      }
+      }, 50);
 });
