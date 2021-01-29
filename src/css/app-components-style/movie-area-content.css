@@ -30,7 +30,7 @@
 }
 
 .movie-area .movie-title{
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); */
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 45px;
@@ -135,7 +135,7 @@
 
 
 .movie-area .movie-overview{
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); */
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
