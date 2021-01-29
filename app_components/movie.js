@@ -11,6 +11,7 @@ $(document).on('click', '.movie', function () {
 
 
 GET_DATA_movie = async function (key) {
+    console.log("SDV");
     
     // read API DATA
     let response = await fetch(`https://api.themoviedb.org/3/movie/${key}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar`);
