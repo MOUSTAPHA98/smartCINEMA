@@ -1,9 +1,9 @@
 let redirect404 = () => {
-  var segmentCount = 0;
+  var segmentCount = 1;
   var location = window.location;
   location.replace(
     location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
-    location.pathname.split('/').slice(0, 2 + segmentCount).join('/') + '/?p=/' +
+    location.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
     location.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
     (location.search ? '&q=' + location.search.slice(1).replace(/&/g, '~and~') : '') +
     location.hash
