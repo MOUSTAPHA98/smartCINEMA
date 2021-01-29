@@ -8,6 +8,8 @@ console.log(pathLink);
 var load_content;
 // Load App Content Due To The Current Path
 if (pathLink.substring(0,6) == "movie"){
+ load_content = new Function (`return GET_DATA_movie()`);
+} else {
  load_content = new Function (`return GET_DATA_${pathLink}()`);
 }
 
