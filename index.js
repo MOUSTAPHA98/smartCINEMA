@@ -35,16 +35,16 @@ if (pathLink == "" || pathLink == "index.html") {
 //////////////////////////
 
 let routes = {
-    '/': home,
-    '/home': home,
-    '/index.html': home,
-    '/popular' : popular,
-    '/now_playing' : now_playing,
-    '/top_rated' : top_rated,
-    '/upcoming' : upcoming,
-    '/search' : search,
-    '/favourites' : favourites,
-    '/bookmarks' : bookmarks,
+    // '/': home,
+    // '/home': home,
+    // '/index.html': home,
+    // '/popular' : popular,
+    // '/now_playing' : now_playing,
+    // '/top_rated' : top_rated,
+    // '/upcoming' : upcoming,
+    // '/search' : search,
+    // '/favourites' : favourites,
+    // '/bookmarks' : bookmarks,
 };
 
 // Change Browser Title Due To the Current Path
@@ -158,21 +158,21 @@ modSwitch.onclick = function(){
 ///////          LOADING PAGE          ///////
 //////////////////////////////////////////
 
-$(document).ready(function() {
-      var counter = 0;
-      var c = 0;
-      var i = setInterval(function(){
-      $(".loading-page .counter h1").html(c + "%");
-      $(".loading-page .counter hr").css("width", c + "%");
-      counter++;
-      c++;
+$(window).on("load",function() {
+  var counter = 0;
+  var c = 0;
+  var i = setInterval(function(){
+  $(".loading-page .counter h1").html(c + "%");
+  $(".loading-page .counter hr").css("width", c + "%");
+  counter++;
+  c++;
 
-      if(counter == 101) {
-      clearInterval(i);
-      $(".loading-page").css("opacity" , "0");
-      setInterval(() => {
-      $(".loading-page").css("display" , "none");
-      }, 1900);
-      }
-      }, 50);
+  if(counter == 101) {
+  clearInterval(i);
+  $(".loading-page").css("opacity" , "0");
+  setInterval(() => {
+  $(".loading-page").css("display" , "none");
+  }, 1900);
+  }
+  }, 50);
 });
