@@ -3,17 +3,17 @@ var that;
 
 $(document).on('click', '.movie', function () {
     let $movieID = this.getAttribute("data-movie-id");
-    window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);   
-    GET_DATA_movie($movieID);
+    window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);
+    let key = location.pathname.substring(7);
+    GET_DATA_movie(key);
 });
 
 
 
-GET_DATA_movie = async function () {
-    // Set The History State
+GET_DATA_movie = async function (key) {
     
     // read API DATA
-    let response = await fetch(`https://api.themoviedb.org/3/movie/${$movieID}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar`);
+    let response = await fetch(`https://api.themoviedb.org/3/movie/${key}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar`);
     let result = await response.json();
     let 
         $movie_title = result.original_title,
