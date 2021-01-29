@@ -6,16 +6,13 @@ $(document).on('click', '.movie', async function () {
     let $movieID = this.getAttribute("data-movie-id");
     // Set The History State
     window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);   
-    // Change Browser Title To The Name Of Selected Tab
-    document.title = `smartCINEMA | MOVIE`;
-    //  Clear APP content div
-    // contentDiv.innerHTML = "";
+    
+
 
 
     // read API DATA
     let response = await fetch(`https://api.themoviedb.org/3/movie/${$movieID}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar`);
     let result = await response.json();
-    console.log(result);
     let 
         $movie_title = result.original_title,
         $movie_backdrop = result.backdrop_path,
@@ -30,6 +27,8 @@ $(document).on('click', '.movie', async function () {
         $movie_vote_average = result.vote_average,
         $movie_vote_count = result.vote_count;
        
+        // Change Browser Title To The Name Of Selected Tab
+        document.title = `smartCINEMA | ${$movie_title}`;
 
 
         let movieContent = `
@@ -45,7 +44,7 @@ $(document).on('click', '.movie', async function () {
                                     <h2 class="movie-title">
                                         ${$movie_title} <span class="movie-r-d">(${$movie_r_d})</span>
                                     </h2>
-                                    <div class="movie-generes d-flex flex-row align-items-center">
+                                    <div class="movie-genres d-flex flex-row align-items-center">
                                    </div>
                                     <div class="movie-info d-flex flex-row align-items-center">
                                         <span class="movie-rate">
@@ -89,13 +88,14 @@ $(document).on('click', '.movie', async function () {
                     </section>`;
                 
                      contentDiv.innerHTML = "",
-                     contentDiv.innerHTML = movieContent;
-                     coloRatePaths();
-                     let movie_genres_area =document.querySelector(".movie-generes");
-
-                     $movie_genres.forEach(el => {
-                         let genre = `<span>${el.name}</span>`
-                         console.log(genre);
-                         movie_genres_area.innerHTML += genre;
-                     });
+                     setTimeout(() => {
+                        contentDiv.innerHTML = movieContent;
+                        coloRatePaths();
+                        let movie_genres_area =document.querySelector(".movie-genres");
+   
+                        $movie_genres.forEach(el => {
+                            let genre = `<span>${el.name}</span>`
+                            movie_genres_area.innerHTML += genre;
+                        });
+                     }, 500);
 });

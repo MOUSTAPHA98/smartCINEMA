@@ -38,7 +38,7 @@ async function GET_DATA_() {
                                     <h2 class="slide-movie-title">
                                         Deadpool 2
                                     </h2>
-                                    <div class="slide-movie-generes d-flex flex-row align-items-center">
+                                    <div class="slide-movie-genres d-flex flex-row align-items-center">
                                     <span>
                                         R
                                     </span>
@@ -94,7 +94,7 @@ async function GET_DATA_() {
                                 <h2 class="slide-movie-title">
                                     Iron Man
                                 </h2>
-                                <div class="slide-movie-generes d-flex flex-row align-items-center">
+                                <div class="slide-movie-genres d-flex flex-row align-items-center">
                                     <span>
                                         PG-13
                                     </span>
@@ -150,7 +150,7 @@ async function GET_DATA_() {
                                 <h2 class="slide-movie-title">
                                     Captian America
                                 </h2>
-                                <div class="slide-movie-generes d-flex flex-row align-items-center">
+                                <div class="slide-movie-genres d-flex flex-row align-items-center">
                                     <span>
                                         R
                                     </span>

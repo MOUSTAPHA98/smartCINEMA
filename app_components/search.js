@@ -6,7 +6,7 @@ let searchPageContent =`
 <!--===========================-->
     <section class="search-area">
             <div class="search-field d-flex flex-row justify-content-between align-items-center">
-                <input  id="search-input"  type="text" placeholder="What movie looking for ?">
+                <input  id="search-input"  type="text" placeholder="What movie looking for ?" autocomplete="off">
                 <button  id="search-submit" >SEARCH</button>
             </div>
             <div id = "search-results-area" class="search-results">

@@ -46,11 +46,11 @@
     text-transform: uppercase;
 }
 
-.movie-area .movie-generes{
+.movie-area .movie-genres{
     margin: 10px 0;
 }
 
-.movie-area .movie-generes span{
+.movie-area .movie-genres span{
     border: 1px solid var(--second-text-color);
     padding: 4px 11px;
     margin-right: 10px;
@@ -128,7 +128,6 @@
 
 .circle {
     stroke: #4CC790;
-    fill: none;
     stroke-width: 3;
     stroke-linecap: round;
     animation: progress 1s ease-out forwards;

@@ -66,11 +66,11 @@
     text-transform: uppercase;
 }
 
-.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-generes{
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-genres{
     margin: 10px 0;
 }
 
-.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-generes span{
+.homepage-area .homepage-content-swiper-container .swiper-slide  .slide-movie .slide-movie-genres span{
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     border: .1px solid rgba(255, 255, 255, 0.233);
     padding: 4px 11px;

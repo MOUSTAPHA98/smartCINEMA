@@ -30,9 +30,9 @@
 
 .lightMod{
     --back-color: #c4c4c4;
-    --back-color-transparent: #c4c4c4c0;
+    --back-color-transparent: #c4c4c4cc;
     --main-color:#d6d6d6 ;
-    --main-color-transparent:#d6d6d6c0;
+    --main-color-transparent:#d6d6d6cc;
     --second-color: #c91919 ;
     --second-color-darked: #a11414 ;
     --second-color-transparent: #c9191944 ;
