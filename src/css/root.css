@@ -8,9 +8,9 @@
     --second-color-transparent: #c9191944 ;
     --main-text-color: rgb(190, 190, 190);
     --second-text-color: #FFF ;
-    --main-font: "Poppins" ;
-    --second-font: "Fredoka One" ;
-    --third-font: "Quicksand";
+    --main-font: "Poppins", "cairo" ;
+    --second-font: "Fredoka One" , "cairo";
+    --third-font: "Quicksand", "cairo";
 }
 .darkMod{
   --back-color: #161616;
@@ -22,9 +22,9 @@
   --second-color-transparent: #c9191944 ;
   --main-text-color: rgb(190, 190, 190);
   --second-text-color: #FFF ;
-  --main-font: "Poppins";
-  --second-font: "Fredoka One" ;
-  --third-font: "Quicksand";
+  --main-font: "Poppins", "cairo";
+  --second-font: "Fredoka One", "cairo" ;
+  --third-font: "Quicksand", "cairo";
 }
 
 
@@ -38,9 +38,9 @@
     --second-color-transparent: #c9191944 ;
     --main-text-color: #161616;
     --second-text-color: #202020 ;
-    --main-font: "Poppins";
-    --second-font: "Fredoka One";
-    --third-font: "Quicksand";
+    --main-font: "Poppins", "cairo";
+    --second-font: "Fredoka One", "cairo";
+    --third-font: "Quicksand", "cairo";
 }
 
 ::-webkit-scrollbar {
@@ -57,7 +57,7 @@
 }
 
 body{
-    font-family: "poppins";
+    font-family: "poppins" , "cairo";
     padding: 50px 0;
     min-height: 100Vh;
     /* height: 10000px; */

@@ -18,7 +18,7 @@ GET_DATA_movie = async function () {
     let result = await response.json();
     let 
         $movie_title = result.original_title,
-        $movie_backdrop = result.backdrop_path,
+        $movie_backdrop = `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${result.backdrop_path}`,
         $movie_genres = result.genres,
         $movie_homepage  = result.homepage,
         $movie_overview = result.overview,
@@ -30,6 +30,10 @@ GET_DATA_movie = async function () {
         $movie_budget = result.budget,
         $movie_vote_average = result.vote_average,
         $movie_vote_count = result.vote_count;
+
+        if ($movie_backdrop == `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${null}`){
+            $movie_backdrop = `https://i.pinimg.com/originals/df/36/22/df36227e94aadd202bcd3a9dd7cc6c5c.jpg`;
+        };
        
         // Change Browser Title To The Name Of Selected Tab
         document.title = `smartCINEMA | ${$movie_title}`;
@@ -38,7 +42,7 @@ GET_DATA_movie = async function () {
         let movieContent = `
         <section class="movie-content-area">
                         <div class="movie-area">
-                            <img class="movie-backdrop" src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${$movie_backdrop}" alt="">
+                            <img class="movie-backdrop" src="${$movie_backdrop}" alt="">
                             <div class="overlay"></div>
                             <div class="row m-0">
                                 <div class="col-4 movie-poster">
