@@ -16,7 +16,6 @@ GET_DATA_movie = async function ($movieID) {
     // read API DATA
     let response = await fetch(`https://api.themoviedb.org/3/movie/${$movieID}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar`);
     let result = await response.json();
-    console.log(result)
     let 
         $movie_title = result.original_title,
         $movie_backdrop = `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${result.backdrop_path}`,

@@ -3,7 +3,6 @@ let navbarLinks = document.querySelectorAll('.navbar-link');
 
 // Select The Current App Path Without "/" 
 var pathLink = window.location.pathname.substring(1,20);
-console.log(pathLink);
 
 var load_content;
 let $movieID = location.pathname.substring(7);
