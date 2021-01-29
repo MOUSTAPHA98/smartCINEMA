@@ -19,6 +19,10 @@ if (pathLink.substring(0,6) == "movie/" ) {
   sdsd = new Function (`return GET_DATA_movie($movieID)`);
   sdsd();
 }
+else{
+ load_content = new Function (`return GET_DATA_${pathLink}()`);
+ load_content();
+}
 
  load_content = new Function (`return GET_DATA_${pathLink}()`);
 
