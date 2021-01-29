@@ -33,7 +33,7 @@ async function GET_DATA_home() {
                                         MOVIES
                                     </span>
                                     <h2 class="slide-movie-title">
-                                        Deadpool 2
+                                        Deadpool
                                     </h2>
                                     <div class="slide-movie-generes d-flex flex-row align-items-center">
                                     <span>
@@ -204,7 +204,7 @@ async function GET_DATA_home() {
             <div class="homepage-pickedmovies-swiper-button-prev   swiper-button-prev    swiper-pagination  d-none d-md-flex">
             </div>
             <div class="homepage-random-content-heading d-flex flex-row align-items-center">
-                <i class="fal fa-film"></i>
+                <i class="fal fa-poll"></i>
                 Trends Now
             </div>
             <div class="homepage-random-slider">
@@ -213,7 +213,7 @@ async function GET_DATA_home() {
     
     
                       <!-- START TREND MOVIE #01 -->
-                      <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[1].id}" >
+                      <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[1].id}">
                         <span class="ribbon">
                             <span>
                                 ${(miniMoviesList[1].original_language).toUpperCase()}

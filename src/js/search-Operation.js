@@ -35,6 +35,8 @@ $(document).on('click', '#prevPaginationSearch', function () {
 let applySearch = async function(resultsPage){
 let search_input = document.getElementById('search-input');
 let keyword = search_input.value; 
+// window.history.pushState({keyword}, `${keyword}`, `search/${keyword}`);   
+
 
 var search_results_area = document.getElementById('search-results-area');
 search_results_area.innerHTML = "";

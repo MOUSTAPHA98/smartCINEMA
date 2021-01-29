@@ -26,6 +26,7 @@ let routes = {
     '/search' : search,
     '/favourites' : favourites,
     '/bookmarks' : bookmarks,
+    '/movie' : movie,
 };
 
 // Change Browser Title Due To the Current Path

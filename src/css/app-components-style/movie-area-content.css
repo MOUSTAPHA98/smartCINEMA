@@ -1,0 +1,165 @@
+.movie-area{
+    position: relative;
+    padding: 75px 0;
+    /* min-height: 670px; */
+}
+
+
+.movie-area > img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--back-color-transparent);
+}
+
+.movie-poster img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.movie-area .movie-title{
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 45px;
+    color: var(--second-text-color);
+    text-transform: uppercase;
+}
+
+.movie-area .movie-title span{
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--second-text-color);
+    text-transform: uppercase;
+}
+
+.movie-area .movie-generes{
+    margin: 10px 0;
+}
+
+.movie-area .movie-generes span{
+    border: 1px solid var(--second-text-color);
+    padding: 4px 11px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--second-text-color);
+}
+
+.movie-area .movie-info{
+    color: var(--second-text-color);
+    position: relative;
+    margin: 10px 0;
+}
+
+.movie-area .movie-info span:not(:first-of-type){
+    margin: 0 20px;
+}
+
+.movie-area .movie-info-pop , .movie-area .movie-info-vote{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.movie-area .movie-info-pop i , .movie-area .movie-info-vote i{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--second-color);
+}
+
+.movie-area .movie-info span:nth-of-type(4),
+.movie-area .movie-info span:nth-of-type(5){
+    width: 50px;
+    height: 50px;
+    background-color: var(--second-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.movie-area .movie-info span:nth-of-type(4) i,
+.movie-area .movie-info span:nth-of-type(5) i{
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFF;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+
+.movie-area .movie-info .movie-rate{
+    background-color: var(--main-color);
+    color: var(--second-text-color);
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px -5px #000;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 20;
+    line-height: 75px;
+    font-size: 20px;
+    font-family: var(--third-font);
+    font-weight: 600;
+}
+.circular-chart {
+    right: 1px;
+    display: block;
+}
+
+.circle {
+    stroke: #4CC790;
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+
+.movie-area .movie-overview{
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-right: 35px;
+    text-transform: capitalize;
+    color: var(--second-text-color);
+}
+
+.movie-area .movie-btns .btn{
+    border-radius: 100px;
+    margin-right: 15px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: rgb(190, 190, 190);
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+.movie-area .movie-btns .btn.invert{
+    background-color: transparent;
+    border: 1px solid var(--second-text-color);
+    color: var(--second-text-color);
+}
