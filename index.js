@@ -6,6 +6,8 @@ var pathLink = window.location.pathname.substring(1,20);
 console.log(pathLink);
 
 var load_content;
+let $movieID = location.pathname.substring(7);
+
 // Load App Content Due To The Current Path
 // if (pathLink.substring(0,6) == "movie"){
 //  load_content = new Function (`return GET_DATA_movie($movieID)`);
@@ -14,13 +16,17 @@ var load_content;
 // }
 
 // Load Default HomePage App Content
-let $movieID = location.pathname.substring(7);
-(pathLink.substring(0,6) == "movie/" ? sdsd = new Function (`return GET_DATA_movie($movieID)`) : null)
-sdsd();
+if (pathLink.substring(0,6) == "movie/" ) {
+  sdsd = new Function (`return GET_DATA_movie($movieID)`);
+  sdsd();
+}
 
  load_content = new Function (`return GET_DATA_${pathLink}()`);
-(pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null);
-load_content();
+
+if (pathLink == "" || pathLink == "index.html") { 
+  load_content = new Function (`return GET_DATA_home()`)
+  load_content();
+};
 
 
 
