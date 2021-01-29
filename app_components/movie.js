@@ -4,13 +4,15 @@ var that;
 $(document).on('click', '.movie', function () {
     let $movieID = this.getAttribute("data-movie-id");
     window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);
-    let key = location.pathname.substring(7);
+
     GET_DATA_movie(key);
 });
 
 
 
 GET_DATA_movie = async function (key) {
+    let key = location.pathname.substring(7);
+    console.log(key);
     console.log("SDV");
     
     // read API DATA
