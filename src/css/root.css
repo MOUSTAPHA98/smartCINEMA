@@ -62,7 +62,8 @@ body{
     min-height: 100Vh;
     /* height: 10000px; */
     /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat; */
-    background: linear-gradient(to left, #222 0%, #222 71.65%,  #c9191944 71.65%,  #c9191944 100%), url(../images/background/back.jpg) center no-repeat;
+    /* background: linear-gradient(to left, #222 0%, #222 71.65%,  #c9191944 71.65%,  #c9191944 100%), url(../images/background/back.jpg) center no-repeat; */
+    background: linear-gradient(to left, #222 0%, #222 71.65%,  #c9191944 71.65%,  #c9191944 100%), url(../images/background/1512217.jpg) center no-repeat;
     background-size: cover;
 }
 
