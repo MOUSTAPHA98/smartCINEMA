@@ -10,7 +10,7 @@ $(document).on('click', '.movie', function () {
 
 
 GET_DATA_movie = async function ($movieID) {
-    let $movieID = that.getAttribute("data-movie-id");
+     $movieID = that.getAttribute("data-movie-id");
     // Set The History State
     window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);   
     
