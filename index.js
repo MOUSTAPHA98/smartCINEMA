@@ -136,6 +136,8 @@ modSwitch.onclick = function(){
     } else if (modSwitch.checked == true ){
       appBody.className = "lightMod"
     }
+    appThemeMod = localStorage.setItem("appThemeMod", document.body.className);
+    console.log(localStorage.getItem("appThemeMod"));
 };
 
 
@@ -143,7 +145,9 @@ modSwitch.onclick = function(){
 ///////          LOADING PAGE          ///////
 //////////////////////////////////////////
 
+
 $(document).ready(function() {
+document.body.className = localStorage.getItem("appThemeMod");
 var counter = 0;
 var c = 0;
 var i = setInterval(function(){
