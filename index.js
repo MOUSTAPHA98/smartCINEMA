@@ -9,8 +9,9 @@ console.log(pathLink);
 var load_content = new Function (`return GET_DATA_${pathLink}()`);
 
 // Load Default HomePage App Content
-(pathLink.substring(0,6) == "movie/" ? load_content = new Function (`return GET_DATA_movie()`) : null)
-load_content();
+let $movieID = location.pathname.substring(7);
+(pathLink.substring(0,6) == "movie/" ? load_movie = new Function (`return GET_DATA_movie($movieID)`) : null)
+load_movie();
 
 
 (pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null);
