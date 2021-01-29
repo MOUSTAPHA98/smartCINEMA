@@ -1,6 +1,6 @@
 let movie;
 
-$(document).on('click', '.movie', async function () {
+$(document).on('click', '.movie', async function GET_DATA_movie () {
 
     //  Update the ID of the movie
     let $movieID = this.getAttribute("data-movie-id");
