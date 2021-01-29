@@ -482,7 +482,7 @@ async function GET_DATA_() {
             el.style.stroke = "#FFDA3B";
         }
         if(reputation < 50) {
-            el.style.stroke = "tomato";
+            el.style.stroke = "#C60013";
         }
     });
     activeSlider();

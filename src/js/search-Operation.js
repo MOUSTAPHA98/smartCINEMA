@@ -121,6 +121,6 @@ var paths = document.querySelectorAll('.circle');
 paths.forEach(el => {
 let reputation = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
 if (reputation <= 75 ? el.style.stroke = "#FFDA3B" : null );
-if (reputation <= 50 ? el.style.stroke = "tomato" : null );
+if (reputation <= 50 ? el.style.stroke = "#C60013" : null );
 });
 };
