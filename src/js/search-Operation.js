@@ -66,7 +66,7 @@ Sorry, We could not found movies you looking for 😔😔
 await searchResults.forEach(el => {
 let movie_Id = el.id,
 movie_Title = el.title,
-movie_Langage = el.original_language,
+movie_Language = el.original_language,
 movie_Poster = el.poster_path,
 movie_Date = el.release_date,
 movie_Rate = el.vote_average *10;
@@ -79,7 +79,7 @@ let movie =
 <div class="movie" data-movie-id=${movie_Id}>
 <span class="ribbon">
 <span>
-${movie_Langage}
+${movie_Language}
 </span>
 </span>
 <a  class="movie-img">

@@ -23,6 +23,7 @@ $(document).on('click', '.movie', async function () {
         $movie_poster = result.poster_path,
         $movie_r_d = result.release_date.substring(0, 4),
         $movie_revenue = result.revenue,
+        $movie_Language = result.original_language,
         $movie_budget = result.budget,
         $movie_vote_average = result.vote_average,
         $movie_vote_count = result.vote_count;
@@ -37,7 +38,12 @@ $(document).on('click', '.movie', async function () {
                             <img class="movie-backdrop" src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${$movie_backdrop}" alt="">
                             <div class="overlay"></div>
                             <div class="row m-0">
-                                <div class="col-4 d-flex align-items-center movie-poster">
+                                <div class="col-4 movie-poster">
+                                <span class="ribbon">
+                                    <span>
+                                    ${$movie_Language}
+                                    </span>
+                                </span>
                                     <img class="d-none d-md-block" src="http://image.tmdb.org/t/p/w300_and_h450_bestv2/${$movie_poster}" alt="">
                                 </div>
                                 <div class="col-8 d-flex flex-column justify-content-center">
