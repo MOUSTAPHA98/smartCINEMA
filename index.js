@@ -35,16 +35,17 @@ if (pathLink == "" || pathLink == "index.html") {
 //////////////////////////
 
 let routes = {
-    // '/': home,
-    // '/home': home,
-    // '/index.html': home,
-    // '/popular' : popular,
-    // '/now_playing' : now_playing,
-    // '/top_rated' : top_rated,
-    // '/upcoming' : upcoming,
-    // '/search' : search,
-    // '/favourites' : favourites,
-    // '/bookmarks' : bookmarks,
+    '/': home,
+    '/home': home,
+    '/index.html': home,
+    '/popular' : popular,
+    '/now_playing' : now_playing,
+    '/top_rated' : top_rated,
+    '/upcoming' : upcoming,
+    '/search' : search,
+    '/favourites' : favourites,
+    '/bookmarks' : bookmarks,
+    '/movie': movie
 };
 
 // Change Browser Title Due To the Current Path
