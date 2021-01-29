@@ -158,7 +158,7 @@ modSwitch.onclick = function(){
 ///////          LOADING PAGE          ///////
 //////////////////////////////////////////
 
-$(document).ready(function() {
+$(document).load(function() {
 var counter = 0;
 var c = 0;
 var i = setInterval(function(){
