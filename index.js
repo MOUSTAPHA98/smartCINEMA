@@ -5,9 +5,10 @@ let navbarLinks = document.querySelectorAll('.navbar-link');
 var pathLink = window.location.pathname.substring(1,20);
 console.log(pathLink);
 
+var load_content;
 // Load App Content Due To The Current Path
 if (pathLink.substring(0,6) == "movie"){
-  var load_content = new Function (`return GET_DATA_${pathLink}()`);
+ load_content = new Function (`return GET_DATA_${pathLink}()`);
 }
 
 // Load Default HomePage App Content
