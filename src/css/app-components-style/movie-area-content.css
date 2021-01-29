@@ -152,7 +152,7 @@
     font-weight: 400;
     line-height: 20px;
     text-transform: uppercase;
-    color: rgb(190, 190, 190);
+    color: #FFF;
     background-color: var(--second-color);
     cursor: pointer;
 }
