@@ -1,5 +1,5 @@
 let redirect404 = () => {
-  var segmentCount = 0;
+  var segmentCount = 1;
   var location = window.location;
   location.replace(
     location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
