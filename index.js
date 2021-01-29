@@ -2,32 +2,14 @@
 let navbarLinks = document.querySelectorAll('.navbar-link');
 
 // Select The Current App Path Without "/" 
-var pathLink = window.location.pathname.substring(1,20);
-
-var load_content;
-let $movieID = location.pathname.substring(7);
+var pathLink = window.location.pathname.substring(1);
 
 // Load App Content Due To The Current Path
-// if (pathLink.substring(0,6) == "movie"){
-//  load_content = new Function (`return GET_DATA_movie($movieID)`);
-// } else {
-//  load_content = new Function (`return GET_DATA_${pathLink}()`);
-// }
+var load_content = new Function (`return GET_DATA_${pathLink}()`);
 
 // Load Default HomePage App Content
-if (pathLink.substring(0,6) == "movie/" ) {
-  load_movie = new Function (`return GET_DATA_movie($movieID)`);
-  load_movie();
-}
-else if (pathLink.substring(0,6) != "movie/"  && pathLink == "" || pathLink == "index.html") { 
-  load_content = new Function (`return GET_DATA_home()`)
-  load_content();
-}
-else{
- load_content = new Function (`return GET_DATA_${pathLink}()`);
- load_content();
-}
-
+(pathLink == "" ? load_content = new Function (`return GET_DATA_home()`) : null)
+load_content();
 
 ///////////////////////////
 ///   Set App Routes   ///
@@ -44,12 +26,11 @@ let routes = {
     '/search' : search,
     '/favourites' : favourites,
     '/bookmarks' : bookmarks,
-    '/movie': movie
+    '/movie' : movie,
 };
 
 // Change Browser Title Due To the Current Path
-(pathLink != "" ? document.title = `smartCINEMA | ${pathLink.toUpperCase()}` : null);
-(pathLink === "index.html" ? document.title = `smartCINEMA | HOME` : null);
+(pathLink != "" ? document.title = `smartCINEMA | ${pathLink.toUpperCase()}` : null)
   
 // Select The Tab (Navbar) That Is Clicked Function
 function select_tab(id) {
@@ -138,7 +119,7 @@ window.addEventListener("popstate", event => {
 if (pathLink  == ""){
   id = "home";
   select_tab(id);
-} else if (pathLink != "" && pathLink.substring(0,6) != "movie/" ){
+} else if (pathLink != ""){
   select_tab(pathLink);
 }
 
@@ -158,21 +139,21 @@ modSwitch.onclick = function(){
 ///////          LOADING PAGE          ///////
 //////////////////////////////////////////
 
-$(window).on("load",function() {
-  var counter = 0;
-  var c = 0;
-  var i = setInterval(function(){
-  $(".loading-page .counter h1").html(c + "%");
-  $(".loading-page .counter hr").css("width", c + "%");
-  counter++;
-  c++;
+$(document).ready(function() {
+var counter = 0;
+var c = 0;
+var i = setInterval(function(){
+$(".loading-page .counter h1").html(c + "%");
+$(".loading-page .counter hr").css("width", c + "%");
+counter++;
+c++;
 
-  if(counter == 101) {
-  clearInterval(i);
-  $(".loading-page").css("opacity" , "0");
-  setInterval(() => {
-  $(".loading-page").css("display" , "none");
-  }, 1900);
-  }
-  }, 50);
+if(counter == 101) {
+clearInterval(i);
+$(".loading-page").css("opacity" , "0");
+setInterval(() => {
+$(".loading-page").css("display" , "none");
+}, 1900);
+}
+}, 50);
 });

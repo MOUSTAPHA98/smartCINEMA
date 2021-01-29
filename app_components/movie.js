@@ -1,24 +1,24 @@
 let movie;
-// var that;
+var that;
 
 $(document).on('click', '.movie', function () {
-    let $data_movie_id = this.getAttribute("data-movie-id");
-    window.history.pushState({$data_movie_id}, `${$data_movie_id}`, `movie/${$data_movie_id}`);
-   let $movieID = location.pathname.substring(7);
-    GET_DATA_movie($movieID);
+    that=this;
+    GET_DATA_movie();
 });
 
 
 
-GET_DATA_movie = async function ($movieID) {
+GET_DATA_movie = async function () {
+    let $movieID = that.getAttribute("data-movie-id");
     // Set The History State
+    window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);   
     
     // read API DATA
     let response = await fetch(`https://api.themoviedb.org/3/movie/${$movieID}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar`);
     let result = await response.json();
     let 
         $movie_title = result.original_title,
-        $movie_backdrop = `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${result.backdrop_path}`,
+        $movie_backdrop = result.backdrop_path,
         $movie_genres = result.genres,
         $movie_homepage  = result.homepage,
         $movie_overview = result.overview,
@@ -30,10 +30,6 @@ GET_DATA_movie = async function ($movieID) {
         $movie_budget = result.budget,
         $movie_vote_average = result.vote_average,
         $movie_vote_count = result.vote_count;
-
-        if ($movie_backdrop == `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${null}`){
-            $movie_backdrop = `https://i.pinimg.com/originals/df/36/22/df36227e94aadd202bcd3a9dd7cc6c5c.jpg`;
-        };
        
         // Change Browser Title To The Name Of Selected Tab
         document.title = `smartCINEMA | ${$movie_title}`;
@@ -42,7 +38,7 @@ GET_DATA_movie = async function ($movieID) {
         let movieContent = `
         <section class="movie-content-area">
                         <div class="movie-area">
-                            <img class="movie-backdrop" src="${$movie_backdrop}" alt="">
+                            <img class="movie-backdrop" src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${$movie_backdrop}" alt="">
                             <div class="overlay"></div>
                             <div class="row m-0">
                                 <div class="col-4 movie-poster">
@@ -110,7 +106,7 @@ GET_DATA_movie = async function ($movieID) {
                             let genre = `<span>${el.name}</span>`
                             movie_genres_area.innerHTML += genre;
                         });
-                     }, 0);
+                     }, 500);
     
 }
 
