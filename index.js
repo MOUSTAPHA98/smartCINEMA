@@ -8,15 +8,15 @@ console.log(pathLink);
 var load_content;
 // Load App Content Due To The Current Path
 if (pathLink.substring(0,6) == "movie"){
- load_content = new Function (`return GET_DATA_movie()`);
+ load_content = new Function (`return GET_DATA_movie($movieID)`);
 } else {
  load_content = new Function (`return GET_DATA_${pathLink}()`);
 }
 
 // Load Default HomePage App Content
 let $movieID = location.pathname.substring(7);
-(pathLink.substring(0,6) == "movie/" ? load_movie = new Function (`return GET_DATA_movie($movieID)`) : null)
-load_movie();
+(pathLink.substring(0,6) == "movie/" ? load_content = new Function (`return GET_DATA_movie($movieID)`) : null)
+load_content();
 
 
 (pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null);
