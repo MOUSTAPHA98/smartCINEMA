@@ -139,7 +139,7 @@ window.addEventListener("popstate", event => {
 if (pathLink  == ""){
   id = "home";
   select_tab(id);
-} else if (pathLink != ""){
+} else if (pathLink != "" && pathLink.substring(0,6) != "movie/" ){
   select_tab(pathLink);
 }
 
