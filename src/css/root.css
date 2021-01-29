@@ -74,14 +74,14 @@ body{
 
 .app-container .container .row .side-menu{         /*       LEFT SIDE       */
     background-color: var(--back-color);
-    border-radius: 10px 0 0 10px ;
+    border-radius: 15px 0 0 15px ;
     overflow: hidden;
 }
 
 .app-container .container .row .content{              /*       RIGHT SIDE       */
     color: var(--main-text-color);
     background-color: var(--main-color);
-    border-radius: 0px 10px 10px 0px ;
+    border-radius: 0px 15px 15px 0px ;
     overflow: hidden;
 }
 
