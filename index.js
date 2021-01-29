@@ -8,7 +8,9 @@ var pathLink = window.location.pathname.substring(1);
 var load_content = new Function (`return GET_DATA_${pathLink}()`);
 
 // Load Default HomePage App Content
-(pathLink == "" ? load_content = new Function (`return GET_DATA_home()`) : null)
+(pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null)
+load_content();
+(pathLink == "movie" || pathLink == "movie/" ? load_content = new Function (`return GET_DATA_movie()`) : null)
 load_content();
 
 ///////////////////////////
@@ -30,7 +32,8 @@ let routes = {
 };
 
 // Change Browser Title Due To the Current Path
-(pathLink != "" ? document.title = `smartCINEMA | ${pathLink.toUpperCase()}` : null)
+(pathLink != "" ? document.title = `smartCINEMA | ${pathLink.toUpperCase()}` : null);
+(pathLink === "index.html" ? document.title = `smartCINEMA | HOME` : null);
   
 // Select The Tab (Navbar) That Is Clicked Function
 function select_tab(id) {
