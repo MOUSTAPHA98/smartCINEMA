@@ -24,7 +24,7 @@ GET_DATA_movie = async function (key) {
         $movie_overview = result.overview,
         $movie_pop = result.popularity,
         $movie_poster = result.poster_path,
-        $movie_r_d = result.release_date.substring(0, 4),
+        $movie_r_d = result.release_date,
         $movie_revenue = result.revenue,
         $movie_Language = result.original_language,
         $movie_budget = result.budget,
@@ -64,7 +64,7 @@ GET_DATA_movie = async function (key) {
                                 </div>
                                 <div class="col-8 d-flex flex-column justify-content-center">
                                     <h2 class="movie-title">
-                                        ${$movie_title} <span class="movie-r-d">(${$movie_r_d})</span>
+                                        ${$movie_title} <span class="movie-r-d">(${$movie_r_d.substring(0, 4)})</span>
                                     </h2>
                                     <div class="movie-genres d-flex flex-row align-items-center">
                                    </div>
