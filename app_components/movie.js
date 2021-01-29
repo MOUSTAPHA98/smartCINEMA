@@ -48,7 +48,7 @@ GET_DATA_movie = async function () {
                                     ${$movie_Language}
                                     </span>
                                 </span>
-                                    <img class="d-none d-md-block" src="http://image.tmdb.org/t/p/w300_and_h450_bestv2/${$movie_poster}" alt="">
+                                    <img class="d-none d-md-block" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/${$movie_poster}" alt="">
                                 </div>
                                 <div class="col-8 d-flex flex-column justify-content-center">
                                     <h2 class="movie-title">
