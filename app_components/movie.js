@@ -4,12 +4,12 @@ var that;
 $(document).on('click', '.movie', function () {
     that=this;
     console.log(that);
-    GET_DATA_movie();
+    GET_DATA_movie(location.pathname.substring(5));
 });
 
 
 
-GET_DATA_movie = async function (params) {
+GET_DATA_movie = async function ($movieID) {
     let $movieID = that.getAttribute("data-movie-id");
     // Set The History State
     window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);   
