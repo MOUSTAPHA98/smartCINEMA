@@ -130,8 +130,12 @@ if (pathLink  == ""){
 
 let modSwitch = document.getElementById("modSwitch");
 modSwitch.onclick = function(){
-    (modSwitch.checked === false ? document.body.className = "darkMod" : null)
-    (modSwitch.checked === true ?  document.body.className = "lightMod" : null)
+  let appBody =  document.body;
+    if (modSwitch.checked == false ){
+      appBody.className = "darkMod"
+    } else if (modSwitch.checked == true ){
+      appBody.className = "lightMod"
+    }
 };
 
 

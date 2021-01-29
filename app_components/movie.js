@@ -30,6 +30,19 @@ GET_DATA_movie = async function () {
         $movie_budget = result.budget,
         $movie_vote_average = result.vote_average,
         $movie_vote_count = result.vote_count;
+
+        if($movie_poster === null){
+            $movie_poster = `https://via.placeholder.com/300x450/C91919/FFFFFF/?text=NOT FOUND`
+        } else {
+            $movie_poster = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${result.poster_path}`
+        };
+
+
+        if($movie_backdrop === null){
+            $movie_backdrop = `https://img.wallpapersafari.com/desktop/1366/768/65/44/c1xNqp.jpg`
+        } else {
+            $movie_backdrop = `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${result.backdrop_path}`
+        };
        
         // Change Browser Title To The Name Of Selected Tab
         document.title = `smartCINEMA | ${$movie_title}`;
@@ -38,7 +51,7 @@ GET_DATA_movie = async function () {
         let movieContent = `
         <section class="movie-content-area">
                         <div class="movie-area">
-                            <img class="movie-backdrop" src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${$movie_backdrop}" alt="">
+                            <img class="movie-backdrop" src="${$movie_backdrop}" alt="">
                             <div class="overlay"></div>
                             <div class="row m-0">
                                 <div class="col-4 movie-poster">
@@ -47,7 +60,7 @@ GET_DATA_movie = async function () {
                                     ${$movie_Language}
                                     </span>
                                 </span>
-                                    <img class="d-none d-md-block" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/${$movie_poster}" alt="">
+                                    <img class="d-none d-md-block" src="${$movie_poster}" alt="">
                                 </div>
                                 <div class="col-8 d-flex flex-column justify-content-center">
                                     <h2 class="movie-title">
