@@ -12,7 +12,7 @@ if (pathLink.substring(0, 5) != "movie"){
 
 } else if (pathLink.substring(0, 5) == "movie"){
   load_content = new Function (`return GET_DATA_movie(key)`);
-  load_content(key);
+  load_content(pathLink.substring(7));
 }
 
 // Load Default HomePage App Content
