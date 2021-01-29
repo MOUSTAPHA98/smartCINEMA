@@ -15,8 +15,8 @@ if (pathLink.substring(0,6) == "movie"){
 
 // Load Default HomePage App Content
 let $movieID = location.pathname.substring(7);
-(pathLink.substring(0,6) == "movie/" ? load_content = new Function (`return GET_DATA_movie($movieID)`) : null)
-load_content();
+(pathLink.substring(0,6) == "movie/" ? sdsd = new Function (`return GET_DATA_movie($movieID)`) : null)
+sdsd();
 
 
 (pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null);
