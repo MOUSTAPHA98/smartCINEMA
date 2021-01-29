@@ -3,6 +3,7 @@ let navbarLinks = document.querySelectorAll('.navbar-link');
 
 // Select The Current App Path Without "/" 
 var pathLink = window.location.pathname.substring(1,7);
+console.log(pathLink);
 
 // Load App Content Due To The Current Path
 var load_content = new Function (`return GET_DATA_${pathLink}()`);
