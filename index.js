@@ -8,6 +8,8 @@ var pathLink = window.location.pathname.substring(1);
 var load_content;
 if (pathLink.substring(0, 5) != "movie"){
     load_content = new Function (`return GET_DATA_${pathLink}(1)`);
+} else if (pathLink.substring(0, 5) == "movie"){
+  load_content = new Function (`return GET_DATA_movie()`);
 }
 
 // Load Default HomePage App Content
