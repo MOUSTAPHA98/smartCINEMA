@@ -16,22 +16,17 @@ let $movieID = location.pathname.substring(7);
 
 // Load Default HomePage App Content
 if (pathLink.substring(0,6) == "movie/" ) {
-  sdsd = new Function (`return GET_DATA_movie($movieID)`);
-  sdsd();
+  load_movie = new Function (`return GET_DATA_movie($movieID)`);
+  load_movie();
+}
+else if (pathLink.substring(0,6) != "movie/"  && pathLink == "" || pathLink == "index.html") { 
+  load_content = new Function (`return GET_DATA_home()`)
+  load_content();
 }
 else{
  load_content = new Function (`return GET_DATA_${pathLink}()`);
  load_content();
 }
-
- load_content = new Function (`return GET_DATA_${pathLink}()`);
-
-if (pathLink == "" || pathLink == "index.html") { 
-  load_content = new Function (`return GET_DATA_home()`)
-  load_content();
-};
-
-
 
 
 ///////////////////////////
