@@ -2,14 +2,13 @@ let movie;
 var that;
 
 $(document).on('click', '.movie', function () {
-    that=this;
-    GET_DATA_movie();
+    let $movieID = this.getAttribute("data-movie-id");
+    GET_DATA_movie($movieID);
 });
 
 
 
 GET_DATA_movie = async function () {
-    let $movieID = that.getAttribute("data-movie-id");
     // Set The History State
     window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);   
     
