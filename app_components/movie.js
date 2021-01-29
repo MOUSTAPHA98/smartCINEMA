@@ -10,7 +10,7 @@ $(document).on('click', '.movie', function () {
 
 
 
-GET_DATA_movie = async function ($movieID) {
+GET_DATA_movie = async function () {
     // Set The History State
     
     // read API DATA
