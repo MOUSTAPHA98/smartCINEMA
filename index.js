@@ -10,9 +10,7 @@ var load_content = new Function (`return GET_DATA_${pathLink}()`);
 // Load Default HomePage App Content
 (pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null);
 load_content();
-(pathLink == 'movie/'+(/\[[0-9]+\]/) ? load_content = new Function (`return GET_DATA_movie()`) : null);
-(pathLink == 'movie/(/\[[0-9]+\]/)' ? load_content = new Function (`return GET_DATA_movie()`) : null);
-load_content();
+
 
 ///////////////////////////
 ///   Set App Routes   ///
@@ -29,7 +27,7 @@ let routes = {
     '/search' : search,
     '/favourites' : favourites,
     '/bookmarks' : bookmarks,
-    '/movie/+/\[[0-9]+\]/' : movie,
+    '/movie/+/\[([0-9]+)\]/g' : movie,
 };
 
 // Change Browser Title Due To the Current Path
