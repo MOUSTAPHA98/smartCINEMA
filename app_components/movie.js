@@ -3,12 +3,12 @@ var that;
 
 
 
-// $(document).on('click', '.movie', function () {
-//     let $movieID = this.getAttribute("data-movie-id");
-//     window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);
-
-//     GET_DATA_movie(key);
-// });
+$(document).on('click', '.movie', function () {
+    let $movieID = this.getAttribute("data-movie-id");
+    window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);
+    key = $movieID;
+    GET_DATA_movie(key);
+});
 
 
 
