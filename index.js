@@ -10,7 +10,7 @@ var load_content = new Function (`return GET_DATA_${pathLink}()`);
 // Load Default HomePage App Content
 (pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null)
 load_content();
-(pathLink == `movie`+/x([0-9]+)/ ? load_content = new Function (`return GET_DATA_movie()`) : null)
+(pathLink == `movie/`+/x([0-9]+)/ ? load_content = new Function (`return GET_DATA_movie()`) : null)
 load_content();
 
 ///////////////////////////
