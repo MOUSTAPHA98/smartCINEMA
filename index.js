@@ -11,8 +11,10 @@ if (pathLink.substring(0, 5) != "movie"){
 }
 
 // Load Default HomePage App Content
-(pathLink == "" ? load_content = new Function (`return GET_DATA_home()`) : null)
-load_content();
+if (pathLink == "" ) {
+  load_content = new Function (`return GET_DATA_home()`);
+  load_content()
+}
 
 ///////////////////////////
 ///   Set App Routes   ///
