@@ -14,17 +14,17 @@ $(document).on('focus', '#search-input', function () {
 
 // APPLY SEARCH OPERATION ON CLICK SUBMIT BUTTON
 $(document).on('click', '#search-submit', function () {
-applySearch();
+applySearch(1);
 });
 
 // APPLY SEARCH OPERATION PAGINATION
-let pageNum = 1;
+let SearchpageNum = 1;
 $(document).on('click', '#nextPaginationSearch', function () {
-    applySearch(++pageNum);
+    applySearch(SearchpageNum+=1);
 }); 
 
 $(document).on('click', '#prevPaginationSearch', function () {
-    (pageNum > 1 ? applySearch(--pageNum) :null);
+    (SearchpageNum > 1 ? applySearch(SearchpageNum-=1) :null);
 }); 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -35,7 +35,7 @@ $(document).on('click', '#prevPaginationSearch', function () {
 let applySearch = async function(resultsPage){
 let search_input = document.getElementById('search-input');
 let keyword = search_input.value; 
-// window.history.pushState({keyword}, `${keyword}`, `search/${keyword}`);   
+window.history.pushState({keyword}, `${keyword}`, `search/${keyword}`);   
 
 
 var search_results_area = document.getElementById('search-results-area');
@@ -74,8 +74,7 @@ movie_Rate = el.vote_average *10;
 
 // APPLY MOVIE FOR EACH OF SEARCH RESULTS
 let movie =
-`
-<!--    ===  START MOVIE    ===  -->
+`<!--    ===  START MOVIE    ===  -->
 <div class="movie" data-movie-id=${movie_Id}>
 <span class="ribbon">
 <span>
@@ -107,8 +106,7 @@ ${movie_Date}
 </span>
 </div>
 </div>
-<!--    ===  END MOVIE    ===  -->
-`;
+<!--    ===  END MOVIE    ===  -->`;
 
 search_results_area.innerHTML += `${movie}`;
 coloRatePaths();

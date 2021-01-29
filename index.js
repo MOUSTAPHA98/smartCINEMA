@@ -5,7 +5,7 @@ let navbarLinks = document.querySelectorAll('.navbar-link');
 var pathLink = window.location.pathname.substring(1);
 
 // Load App Content Due To The Current Path
-var load_content = new Function (`return GET_DATA_${pathLink}()`);
+var load_content = new Function (`return GET_DATA_${pathLink}(1)`);
 
 // Load Default HomePage App Content
 (pathLink == "" ? load_content = new Function (`return GET_DATA_home()`) : null)
@@ -64,7 +64,7 @@ navbarLinks.forEach(element => {
         }
         // If The Clicked Tab Is not "HOME"
         else{
-            load_content = new Function (`return GET_DATA_${pathLink}()`);
+            load_content = new Function (`return GET_DATA_${pathLink}(1)`);
             load_content();
         }
 
@@ -95,7 +95,7 @@ window.addEventListener("popstate", event => {
 
     // Load content of the current tab
     select_tab(stateId);
-    load_content = new Function (`return GET_DATA_${stateId}()`);
+    load_content = new Function (`return GET_DATA_${stateId}(1)`);
     load_content();
 
     // Update the browser title to the cuerrent tab
@@ -106,7 +106,7 @@ window.addEventListener("popstate", event => {
     // Update the state ID to the current tab and load content
     stateId = event.state.id;
     select_tab(stateId);
-    load_content = new Function (`return GET_DATA_${stateId}()`);
+    load_content = new Function (`return GET_DATA_${stateId}(1)`);
     load_content();
 
     // Update browser title

@@ -1,11 +1,11 @@
 // APPLY SEARCH OPERATION PAGINATION
-pageNum = 1;
-$(document).on('click', '#nextPagination', function () {
-    GET_DATA_now_playing(++pageNum);
+let NowpageNum = 1;
+$(document).on('click', '#nextPaginationNow', function () {
+    GET_DATA_now_playing(NowpageNum+=1);
 }); 
 
-$(document).on('click', '#prevPagination', function () {
-    (pageNum > 1 ? GET_DATA_now_playing(--pageNum) :null);
+$(document).on('click', '#prevPaginationNow', function () {
+    (NowpageNum > 1 ? GET_DATA_now_playing(NowpageNum-=1) :null);
 }); 
 
 
@@ -16,8 +16,8 @@ async function GET_DATA_now_playing(resultsPage) {
 let now_playingPageContent =`
 <section id = "now-playing-movies-area" class="now-playing-movies-area">
     <div class="page-pagination">
-        <button id="prevPagination" class="prev">PREV PAGE</button>
-        <button id="nextPagination" class"next">NEXT PAGE</button>
+        <button id="prevPaginationNow" class="prev">PREV PAGE</button>
+        <button id="nextPaginationNow" class"next">NEXT PAGE</button>
     </div>
 </section>`;
 contentDiv.innerHTML = now_playingPageContent;

@@ -302,9 +302,8 @@
 
 .swiper-slide.random-movie .random-movie-img{
     display: block;
-    min-height: 223px;
+    min-height: 220;
     width: 100%;
-    background-color: var(--second-color);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -312,13 +311,12 @@
 
 .swiper-slide.random-movie .random-movie-img img{
     width: 100%;
-    object-fit: cover;
     transition: ease-in-out 1.5s;
+    overflow: hidden;
 }
 
 .swiper-slide.random-movie .random-movie-img img:hover{
     transform: scale(1.05);
-    object-fit: cover;
 }
 
 .swiper-slide.random-movie .random-movie-info{
@@ -399,7 +397,7 @@
     fill: none;
     stroke-width: 3;
     stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
+    animation: progress 2s ease-out forwards;
   }
   
   @keyframes progress {

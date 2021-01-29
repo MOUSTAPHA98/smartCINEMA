@@ -1,11 +1,11 @@
 // APPLY SEARCH OPERATION PAGINATION
-pageNum = 1;
-$(document).on('click', '#nextPagination', function () {
-    GET_DATA_popular(++pageNum);
+let PoppageNum = 1;
+$(document).on('click', '#nextPaginationpop', function () {
+    GET_DATA_popular(PoppageNum+=1);
 }); 
 
-$(document).on('click', '#prevPagination', function () {
-    (pageNum > 1 ? GET_DATA_popular(--pageNum) :null);
+$(document).on('click', '#prevPaginationpop', function () {
+    (PoppageNum > 1 ? GET_DATA_popular(PoppageNum-=1) :null);
 }); 
 
 
@@ -16,8 +16,8 @@ async function GET_DATA_popular(resultsPage) {
 let popularPageContent =`
 <section id = "popular-movies-area" class="popular-movies-area">
     <div class="page-pagination">
-        <button id="prevPagination" class="prev">PREV PAGE</button>
-        <button id="nextPagination" class"next">NEXT PAGE</button>
+        <button id="prevPaginationpop" class="prev">PREV PAGE</button>
+        <button id="nextPaginationpop" class"next">NEXT PAGE</button>
     </div>
 </section>`;
 contentDiv.innerHTML = popularPageContent;

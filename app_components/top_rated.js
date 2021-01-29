@@ -1,11 +1,11 @@
 // APPLY SEARCH OPERATION PAGINATION
-pageNum = 1;
-$(document).on('click', '#nextPagination', function () {
-    GET_DATA_top_rated(++pageNum);
+toppageNum = 1;
+$(document).on('click', '#nextPaginationTop', function () {
+    GET_DATA_top_rated(toppageNum+=1);
 }); 
 
-$(document).on('click', '#prevPagination', function () {
-    (pageNum > 1 ? GET_DATA_top_rated(--pageNum) :null);
+$(document).on('click', '#prevPaginationTop', function () {
+    (toppageNum > 1 ? GET_DATA_top_rated(toppageNum-=1) :null);
 }); 
 
 
@@ -16,8 +16,8 @@ async function GET_DATA_top_rated(resultsPage) {
 let top_ratedPageContent =`
 <section id = "top-rated-movies-area" class="top-rated-movies-area">
     <div class="page-pagination">
-        <button id="prevPagination" class="prev">PREV PAGE</button>
-        <button id="nextPagination" class"next">NEXT PAGE</button>
+        <button id="prevPaginationTop" class="prev">PREV PAGE</button>
+        <button id="nextPaginationTop" class"next">NEXT PAGE</button>
     </div>
 </section>`;
 contentDiv.innerHTML = top_ratedPageContent;

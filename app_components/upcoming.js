@@ -1,11 +1,11 @@
 // APPLY SEARCH OPERATION PAGINATION
-pageNum = 1;
-$(document).on('click', '#nextPagination', function () {
-    GET_DATA_upcoming(++pageNum);
+upPageNum = 1;
+$(document).on('click', '#nextPaginationUp', function () {
+    GET_DATA_upcoming(upPageNum+=1);
 }); 
 
-$(document).on('click', '#prevPagination', function () {
-    (pageNum > 1 ? GET_DATA_upcoming(--pageNum) :null);
+$(document).on('click', '#prevPaginationUp', function () {
+    (upPageNum > 1 ? GET_DATA_upcoming(upPageNum-=1) :null);
 }); 
 
 
@@ -16,8 +16,8 @@ async function GET_DATA_upcoming(resultsPage) {
 let upcomingPageContent =`
 <section id = "upcoming-movies-area" class="upcoming-movies-area">
     <div class="page-pagination">
-        <button id="prevPagination" class="prev">PREV PAGE</button>
-        <button id="nextPagination" class"next">NEXT PAGE</button>
+        <button id="prevPaginationUp" class="prev">PREV PAGE</button>
+        <button id="nextPaginationUp" class"next">NEXT PAGE</button>
     </div>
 </section>`;
 contentDiv.innerHTML = upcomingPageContent;
