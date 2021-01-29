@@ -12,6 +12,10 @@ var load_content = new Function (`return GET_DATA_${pathLink}()`);
 (pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null);
 load_content();
 
+ (pathLink.substring(0,6) == "movie/" ? load_content = new Function (`return GET_DATA_movie()`) : null)
+ load_content();
+
+
 
 ///////////////////////////
 ///   Set App Routes   ///
