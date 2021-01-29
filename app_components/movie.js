@@ -1,15 +1,19 @@
 let movie;
+var that;
 
-$(document).on('click', '.movie', async function () {
+$(document).on('click', '.movie', function () {
+    that=this;
+    console.log(that);
+    GET_DATA_movie();
+});
 
-    //  Update the ID of the movie
-    let $movieID = this.getAttribute("data-movie-id");
+
+
+GET_DATA_movie = async function (params) {
+    let $movieID = that.getAttribute("data-movie-id");
     // Set The History State
     window.history.pushState({$movieID}, `${$movieID}`, `movie/${$movieID}`);   
     
-
-
-
     // read API DATA
     let response = await fetch(`https://api.themoviedb.org/3/movie/${$movieID}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar`);
     let result = await response.json();
@@ -104,4 +108,11 @@ $(document).on('click', '.movie', async function () {
                             movie_genres_area.innerHTML += genre;
                         });
                      }, 500);
-});
+    
+}
+
+// $(document).on('click', '.movie', async function () {
+
+//     //  Update the ID of the movie
+    
+// });
