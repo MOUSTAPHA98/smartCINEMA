@@ -6,7 +6,7 @@ var pathLink = window.location.pathname.substring(1);
 
 // Load App Content Due To The Current Path
 var load_content;
-if (pathLink.substr(0.5) != "movie"){
+if (pathLink.substring(0, 5) != "movie"){
     load_content = new Function (`return GET_DATA_${pathLink}(1)`);
 }
 
