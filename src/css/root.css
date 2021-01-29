@@ -58,7 +58,7 @@
 
 body{
     font-family: "poppins";
-    padding: 50px;
+    /* padding: 50px; */
     min-height: 100Vh;
     /* height: 10000px; */
     /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 71.65%, var(--second-color-transparent) 71.65%, var(--second-color-transparent) 100%), url(../images/background/back.jpg) center no-repeat; */
