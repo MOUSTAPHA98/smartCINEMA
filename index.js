@@ -1,12 +1,18 @@
 // Select All Navbar Links On The App
 let navbarLinks = document.querySelectorAll('.navbar-link');
-
 // Select The Current App Path Without "/" 
 var pathLink = window.location.pathname.substring(1);
-
 // Load App Content Due To The Current Path
 var load_content;
-if (pathLink.substring(0, 5) != "movie"){
+
+
+// Load Default HomePage App Content
+if (pathLink == "" ) {
+  load_content = new Function (`return GET_DATA_home()`);
+  load_content()
+}
+
+if (pathLink.substring(0, 5) != "movie" && pathLink != ""){
     load_content = new Function (`return GET_DATA_${pathLink}(1)`);
   load_content()
 
@@ -15,11 +21,7 @@ if (pathLink.substring(0, 5) != "movie"){
   load_content(pathLink.substring(7));
 }
 
-// Load Default HomePage App Content
-if (pathLink == "" ) {
-  load_content = new Function (`return GET_DATA_home()`);
-  load_content()
-}
+
 
 ///////////////////////////
 ///   Set App Routes   ///
