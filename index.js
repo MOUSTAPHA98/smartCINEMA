@@ -18,7 +18,7 @@ let $movieID = location.pathname.substring(7);
 (pathLink.substring(0,6) == "movie/" ? sdsd = new Function (`return GET_DATA_movie($movieID)`) : null)
 sdsd();
 
-
+ load_content = new Function (`return GET_DATA_${pathLink}()`);
 (pathLink == "" || pathLink == "index.html" ? load_content = new Function (`return GET_DATA_home()`) : null);
 load_content();
 
