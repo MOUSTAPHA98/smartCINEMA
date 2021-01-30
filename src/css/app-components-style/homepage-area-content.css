@@ -210,7 +210,7 @@
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .homepage-area .homepage-pickedmovies-container{
-    /* background-color: #C60013; */
+    /* background-color: tomato; */
     /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 58.8%, var(--second-color) 58.8%, var(--second-color) 100%), url(../../../src/images/background/back.jpg) center no-repeat; */
     background: linear-gradient(to bottom, var(--back-color) 0%, var(--back-color-transparent) 100%), url(../../../src/images/background/back.jpg) center no-repeat;
     background-size: cover;
@@ -405,3 +405,6 @@
       stroke-dasharray: 0 100;
     }
   }
+
+
+

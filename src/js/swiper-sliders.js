@@ -38,6 +38,23 @@ var activeSlider = () =>{
     prevEl: '.homepage-pickedmovies-swiper-button-prev',
     },
 });
+
+
+var movie_cast_Slider = new Swiper('.movie-cast-swiper-container', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 5,
+    centeredSlides: false,
+    spaceBetween: 16,
+    speed: 2000,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+});
+
+
 };
 
 

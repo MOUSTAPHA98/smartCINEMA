@@ -23,13 +23,13 @@
 <body>
 
 <!--    ===     START LOADING PAGE      ===     -->
-<div class="loading-page">
+<!-- <div class="loading-page">
     <div class="counter">
         <p>LOADING...</p>
         <h1>0%</h1>
         <hr/>
     </div>
-</div>
+</div> -->
 <!--    ===     START APP      ===     -->
 <div class="workarea">
     <div class="app-container">
@@ -114,7 +114,7 @@
 
                 <div id="content" class="content col-lg-9 p-0 ">  
 
-                    <!-- <section class="movie-content-area">
+                    <section class="movie-content-area">
                         <div class="movie-area">
                             <img class="movie-backdrop" src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/srYya1ZlI97Au4jUYAktDe3avyA.jpg" alt="">
                             <div class="overlay"></div>
@@ -177,9 +177,31 @@
                                         <a class="btn invert">view trailer</a>
                                     </div>
                                 </div>
+                                <div class="movie-cast-slider">
+                                    <div class="row m-0">
+                                        <div class="col">
+                                            <div class="movie-cast-swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide cast">
+                                                      <div class="cast-profile-img">
+                                                      <img class="img-fluid" src="http://image.tmdb.org/t/p/w300/fysvehTvU6bE3JgxaOTRfvQJzJ4.jpg" alt="">
+                                                      </div>
+                                                        <div class="cast-profile-info">
+                                                          <h3 class="cast-real-name">Aria Shahghasemi</h3>
+                                                          <span class="cast-role-name">cast role name</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Add Arrows -->
+                                                <!-- <div class="movie-cast-swiper-button-next swiper-button-next"></div> -->
+                                                <!-- <div class="movie-cast-swiper-button-prev swiper-button-prev"></div> -->
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </section> -->
+                    </section>
     
 <!--==============================-->
 <!--    ===     END APP_CONTENT AREA    ===    -->
@@ -209,6 +231,9 @@
 <script src="./app_components/movie.js"></script>
 <script src="./index.js"></script>
 
+<!-- <script>
+activeSlider();
+</script> -->
 
 </body>
 </html>

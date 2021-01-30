@@ -1,6 +1,7 @@
 .movie-area{
     position: relative;
-    padding: 75px 0;
+    padding-top: 65px;
+    padding-bottom: 25px;
     min-height: 670px;
 }
 
@@ -63,19 +64,21 @@
     color: var(--second-text-color);
 }
 
-.movie-area .movie-info{
+.movie-area .movie-info span{
+    font-size: 16px;
     color: var(--second-text-color);
     position: relative;
     margin: 10px 0;
+    font-weight: 400;
 }
 
 .movie-area .movie-info span:not(:first-of-type){
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .movie-area .movie-info-pop , .movie-area .movie-info-vote{
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .movie-area .movie-info-pop i , .movie-area .movie-info-vote i{
@@ -122,8 +125,14 @@
     line-height: 75px;
     font-size: 20px;
     font-family: var(--third-font);
-    font-weight: 600;
+    /* font-weight: 600; */
 }
+
+.movie-area .movie-info .movie-rate span{
+    font-size: 20px;
+    font-weight: 900;
+}
+
 .circular-chart {
     right: 1px;
     display: block;
@@ -220,4 +229,60 @@
     border-left: 3px solid transparent;
     border-bottom: 3px solid transparent;
     border-top: 3px solid var(--second-color);
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.movie-cast-slider{
+    z-index: 1;
+    padding-top: 65px;
+    width: 100%;
+}
+
+.movie-cast-swiper-container{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide.cast{
+    border-radius: 15px;
+    /* min-height: 300px; */
+    overflow: hidden;
+    /* text-align: center; */
+    text-transform: capitalize;
+}
+
+.cast-profile-img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.541);
+
+}
+
+.cast-profile-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: scale();
+}
+.cast-profile-info{
+    padding: 10px 0;
+    padding-bottom: 0;
+}
+.cast-real-name{
+    color: var(--second-text-color);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.cast-role-name{
+    color: var(--main-text-color);
+    font-size: 12px;
 }

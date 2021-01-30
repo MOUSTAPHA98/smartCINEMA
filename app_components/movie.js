@@ -1,7 +1,4 @@
 let movie;
-var that;
-
-
 
 $(document).on('click', '.movie', function () {
     let $movieID = this.getAttribute("data-movie-id");
@@ -14,7 +11,7 @@ $(document).on('click', '.movie', function () {
 
 GET_DATA_movie = async function () {
     let key = location.pathname.substring(7);
-    let response = await fetch(`https://api.themoviedb.org/3/movie/${key}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar`);
+    let response = await fetch(`https://api.themoviedb.org/3/movie/${key}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar,credits`);
     let result = await response.json();
     let 
         $movie_title = result.original_title,
@@ -29,12 +26,14 @@ GET_DATA_movie = async function () {
         $movie_Language = result.original_language,
         $movie_budget = result.budget,
         $movie_vote_average = result.vote_average,
-        $movie_vote_count = result.vote_count;
+        $movie_runtime = result.runtime,
+        $movie_cast = result.credits.cast;
+        console.log(result.credits.cast)
 
         if($movie_poster === null){
-            $movie_poster = `https://via.placeholder.com/300x450/C91919/FFFFFF/?text=NOT FOUND`
+            $movie_poster = `https://via.placeholder.com/300x450/C91919/FFFFFF/?text=NOT FOUND`;
         } else {
-            $movie_poster = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${result.poster_path}`
+            $movie_poster = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${result.poster_path}`;
         };
 
 
@@ -87,8 +86,8 @@ GET_DATA_movie = async function () {
                                             ${$movie_pop}
                                         </span>
                                         <span class="movie-info-vote">
-                                            <i class="fas fa-percentage"></i>
-                                            ${$movie_vote_count}
+                                            <i class="fas fa-clock"></i>
+                                            ${Math.floor($movie_runtime/60)}HR ${$movie_runtime%60}M
                                         </span>
                                         <span class="add-movie-fav">
                                             <i class="fal fa-heart"></i>
@@ -105,26 +104,58 @@ GET_DATA_movie = async function () {
                                         <a class="btn invert">view trailer</a>
                                     </div>
                                 </div>
+                                <div class="movie-cast-slider">
+                                    <div class="row m-0">
+                                        <div class="col">
+                                            <div class="movie-cast-swiper-container">
+                                                <div class="swiper-wrapper">
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="movie-trailer-area">
+                        </div>
                     </section>`;
-                
+
+            
                      contentDiv.innerHTML = "",
-                     setTimeout(() => {
                         contentDiv.innerHTML = movieContent;
+                        if (result.videos.results.length != 0){
+                            $movie_trailer = result.videos.results[0].key;
+                            document.querySelector(".movie-trailer-area").innerHTML = `<iframe width="100%" height="500" src="https://www.youtube.com/embed/${$movie_trailer}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                        }
+                            
                         coloRatePaths();
+                        activeSlider();
                         let movie_genres_area =document.querySelector(".movie-genres");
-   
                         $movie_genres.forEach(el => {
                             let genre = `<span>${el.name}</span>`
                             movie_genres_area.innerHTML += genre;
                         });
-                     }, 500);
-    
+                        let movie_cast_area =document.querySelector(".movie-cast-swiper-container .swiper-wrapper");
+                        $movie_cast.forEach(el => {
+                            let $cast_profile_img,
+                                $cast_original_name = el.original_name,
+                                $cast_role_name = el.character;
+
+                           if (el.profile_path == null){
+                                 $cast_profile_img =  `https://via.placeholder.com/300x450/C91919/FFFFFF/?text=NOT FOUND`;
+                           } else {
+                                $cast_profile_img = `http://image.tmdb.org/t/p/w300${el.profile_path}`; 
+                           };
+                            let cast =
+                            `<div class="swiper-slide cast">
+                            <div class="cast-profile-img">
+                            <img class="img-fluid" src="${$cast_profile_img}" alt="">
+                            </div>
+                              <div class="cast-profile-info">
+                                <h3 class="cast-real-name">${$cast_original_name}</h3>
+                                <span class="cast-role-name">${$cast_role_name}</span>
+                              </div>
+                          </div>`;
+                            movie_cast_area.innerHTML += cast;
+                        });
 }
-
-// $(document).on('click', '.movie', async function () {
-
-//     //  Update the ID of the movie
-    
-// });
