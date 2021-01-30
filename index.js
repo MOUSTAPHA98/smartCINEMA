@@ -91,6 +91,7 @@ window.addEventListener("popstate", event => {
   else {
     // Update the state ID to the current tab and load content
     stateId = event.state.id;
+    console.log(stateId);
     select_tab(stateId);
     load_content = new Function (`return GET_DATA_${stateId}(1)`);
     load_content();
