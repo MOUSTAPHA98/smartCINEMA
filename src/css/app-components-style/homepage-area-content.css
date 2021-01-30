@@ -302,7 +302,7 @@
 
 .swiper-slide.random-movie .random-movie-img{
     display: block;
-    min-height: 220px;
+    /* min-height: 220px; */   /*/////////////////////////////////////////////////////////////////////////////////////////*/
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
@@ -408,3 +408,74 @@
 
 
 
+  @media(max-width:1199px){
+
+    .swiper-slide .slide-content{
+        min-height: 576px !important;
+    }
+}
+
+@media(max-width:768px){
+
+    .swiper-slide .slide-content{
+        min-height: 605px !important;
+    }
+}
+
+
+@media(max-width:571px){
+
+    .swiper-slide .slide-content{
+        min-height: 630px !important;
+    }
+}
+
+@media(max-width:536px){
+
+    .homepage-area .homepage-content-swiper-container .swiper-slide .slide-content{
+        padding: 85px 40px;
+    }
+    .swiper-slide .slide-content{
+        min-height: 630px !important;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+        display: none !important;
+    }
+}
+
+@media(max-width:425px){
+
+    .homepage-area .homepage-content-swiper-container .swiper-slide .slide-content{
+        text-align: center;
+    }
+    .homepage-area .homepage-content-swiper-container .swiper-slide .slide-movie .slide-movie-genres,
+    .slide-movie-btns,
+    .slide-movie-info{
+        justify-content: center !important;
+    }
+    .homepage-area .homepage-content-swiper-container .swiper-slide .slide-movie .slide-movie-genres span{
+        margin: 2px 5px;
+    }
+    .swiper-slide .slide-content{
+        min-height: 630px !important;
+    }
+    .slide-movie-title{
+        font-size: 60px !important;
+    }
+    .homepage-area .homepage-content-swiper-container .swiper-slide .slide-movie .slide-movie-description{
+        margin-right: 0 !important;
+        padding: 20px 0;
+    }
+    .homepage-area .homepage-content-swiper-container .swiper-slide .slide-movie .slide-movie-btns .btn{
+        margin-right: 0;
+        margin: 0 10px;
+    }
+
+    .slide-movie-info-comments,
+    .slide-movie-info-likes,
+    .slide-movie-info-rate{
+        margin: 0 !important;
+        padding: 0;
+        margin: 2px 3px !important;
+    }
+}

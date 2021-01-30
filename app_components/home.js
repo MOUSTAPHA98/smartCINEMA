@@ -9,10 +9,10 @@ async function GET_DATA_home() {
     `<section class="homepage-area">
         <div class="homepage-content-swiper-container">
             <!-- Add Arrows -->
-            <div class="homepage-content-swiper-button-next swiper-button-next swiper-pagination d-none d-md-flex">
+            <div class="homepage-content-swiper-button-next swiper-button-next swiper-pagination d-none d-xl-flex">
                 <i class="fal fa-chevron-right"></i>
             </div>
-            <div class="homepage-content-swiper-button-prev swiper-button-prev swiper-pagination  d-none d-md-flex">
+            <div class="homepage-content-swiper-button-prev swiper-button-prev swiper-pagination  d-none d-xl-flex">
                 <i class="fal fa-chevron-left"></i>
             </div>
             <!-- Add Pagination -->

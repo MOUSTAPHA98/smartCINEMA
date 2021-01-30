@@ -52,15 +52,15 @@ GET_DATA_movie = async function () {
                             <img class="movie-backdrop" src="${$movie_backdrop}" alt="">
                             <div class="overlay"></div>
                             <div class="row m-0">
-                                <div class="col-4 movie-poster">
+                                <div class="col-lg-4 col-sm-12 movie-poster">
                                 <span class="ribbon">
                                     <span>
                                     ${$movie_Language}
                                     </span>
                                 </span>
-                                    <img class="d-none d-md-block" src="${$movie_poster}" alt="">
+                                    <img  src="${$movie_poster}" alt="">
                                 </div>
-                                <div class="col-8 d-flex flex-column justify-content-center">
+                                <div class="col-lg-8 col-md-12 d-flex flex-column justify-content-center overview">
                                     <h2 class="movie-title">
                                         ${$movie_title} <span class="movie-r-d">(${$movie_r_d.substring(0, 4)})</span>
                                     </h2>
@@ -88,10 +88,10 @@ GET_DATA_movie = async function () {
                                             <i class="fas fa-clock"></i>
                                             ${Math.floor($movie_runtime / 60)}HR ${$movie_runtime % 60}M
                                         </span>
-                                        <span class="add-movie-fav">
+                                        <span class="add-movie-fav d-none d-md-flex">
                                             <i class="fal fa-heart"></i>
                                         </span>
-                                        <span class="add-movie-watchlist">
+                                        <span class="add-movie-watchlist d-none d-md-flex">
                                             <i class="fal fa-bookmark"></i>
                                         </span>
                                     </div>

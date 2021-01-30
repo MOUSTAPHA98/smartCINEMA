@@ -133,3 +133,45 @@ input:checked[type="checkbox"]::after{
     left: 35px;
     content: "DAYMODE";
 }
+
+
+
+@media(max-width:1199px){
+
+    .switch-mod{
+        margin: 0;
+        margin-left: 20px;
+    }
+}
+
+@media(max-width:991px){
+
+    body{
+        padding: 0;
+    }
+    .switch-mod{
+        margin: 0;
+        margin-left: 40px;
+    }
+
+    .app-container .container .row .side-menu > div{
+        padding: 0 40px !important;
+    }
+    .app-container .container .row .side-menu .app-brand .app-brand-link h2{
+        text-align: left;
+    }
+
+
+    .app-container .container .row .side-menu,
+    .app-container .container .row .content{
+        border-radius: 0;
+    }
+    .app-container .container .row .side-menu.collapsed{
+        max-height: 98px !important;
+    }
+}
+@media(max-width:580px){
+    .loading-page .counter p{
+        font-size: 55px;
+    }
+}

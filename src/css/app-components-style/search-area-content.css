@@ -188,9 +188,8 @@
 
 .movie .movie-img{
     display: block;
-    min-height: 220px;
+    /* min-height: 220px; */
     width: 100%;
-    background-color: var(--second-color);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -268,8 +267,56 @@
     animation: progress 1s ease-out forwards;
   }
   
-  @keyframes progress {
+@keyframes progress {
     0% {
       stroke-dasharray: 0 100;
     }
-  }
+}
+
+
+@media(max-width:768px){
+    .app-container .container .row .content .search-area .search-results{
+        grid-template-columns: repeat(4, 1fr) !important;
+        padding:0 20px;
+    }
+    .app-container .container .row .content .search-area .page-pagination{
+        grid-area: 6 / 1 / 7 / 5;
+    }
+    .app-container .container .row .content .search-area > .search-field::before{
+        display: none;
+    }
+}
+
+
+
+@media(max-width:571px){
+
+    .swiper-slide .slide-content{
+        min-height: 630px !important;
+    }
+    .app-container .container .row .content .search-area .search-field{
+        padding: 10px 0;
+        height: auto;
+        flex-direction: column !important;
+        width: 100%;
+    }
+    .app-container .container .row .content .search-area{
+        padding: 20px;
+        padding-left: 35px;
+    }
+    .app-container .container .row .content .search-area button ,
+        .app-container .container .row .content .search-area input{
+        margin: 10px 0;
+    }
+
+    .app-container .container .row .content .search-area .search-results{
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding:0;
+    }
+    .app-container .container .row .content .search-area .page-pagination{
+        grid-area: 11 / 1 / 12 / 3; 
+    }
+}
+
+
+

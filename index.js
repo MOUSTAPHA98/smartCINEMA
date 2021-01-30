@@ -160,3 +160,10 @@ $(".loading-page").css("display" , "none");
 }
 }, 50);
 });
+
+// document.getElementById("menubars").onclick = function(){
+//   document.getElementById("side-menu").classList.toggle("collapsed");
+// }
+document.getElementById("side-menu").onclick =function(){
+  document.getElementById("side-menu").classList.toggle("collapsed");
+}
