@@ -1,8 +1,5 @@
-// Select All Navbar Links On The App
 let navbarLinks = document.querySelectorAll('.navbar-link');
-// Select The Current App Path Without "/" 
 var pathLink = window.location.pathname.substring(1);
-// Load App Content Due To The Current Path
 var load_content;
 
 
@@ -38,7 +35,7 @@ let routes = {
     '/search' : search,
     '/favourites' : favourites,
     '/bookmarks' : bookmarks,
-    '/movie' : movie,
+    // '/movie' : movie,
 };
 
 // Change Browser Title Due To the Current Path

@@ -6,234 +6,147 @@
     <base href="/">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="src/css/main.css">
-    <title>smartCINEMA | HOME</title>
 
     <script src="./redirect.js"></script>
     <script>recieveRedirect()</script>
 
+    <title>smartCINEMA | HOME</title>
 </head>
 <body>
 
-<!--    ===     START LOADING PAGE      ===     -->
-<!-- <div class="loading-page">
-    <div class="counter">
-        <p>LOADING...</p>
-        <h1>0%</h1>
-        <hr/>
-    </div>
-</div> -->
-<!--    ===     START APP      ===     -->
-<div class="workarea">
-    <div class="app-container">
-        <div class="container p-0">
-            <div class="row">
+    <!--    ===     START LOADING PAGE      ===     -->
+    <!-- <div class="loading-page">
+        <div class="counter">
+            <p>LOADING...</p>
+            <h1>0%</h1>
+            <hr/>
+        </div>
+    </div> -->
+    <!--    ===     END LOADING PAGE      ===     -->
 
-<!--========================-->
-<!--    ===     SIDE_BAR MENU    ===    -->
-<!--========================-->
+    <!--    ===     START APP      ===     -->
+    <div class="workarea">
+        <div class="app-container">
+            <div class="container p-0">
+                <div class="row">
 
+                    <!--============================-->
+                    <!--    ===     START SIDEBAR AREA      ===    -->
+                    <!--============================-->
 
-                <!--    ===     START SIDEBAR AREA      ===     -->
-                <aside class="side-menu col-xl-3 col-lg-3 d-flex flex-column justify-content-start p-0 m-0">
-                    <div class="app-brand">
-                        <a class="app-brand-link">
-                            <h2 class="m-0 p-0">
-                                smart<span>CINEMA</span> 
-                            </h2>
-                        </a>
-                    </div>
-                    <ul class="nav-links m-0 p-0">
-                        <li class="nav-item">
-                            <a id="home"  class="navbar-link active"  onclick="onNavItemClick('/'); return false;"> 
-                                <i class="fal fa-home"></i>
-                                Home
+                    <aside class="side-menu col-xl-3 col-lg-3 d-flex flex-column justify-content-start p-0 m-0">
+                        <div class="app-brand">
+                            <a class="app-brand-link">
+                                <h2 class="m-0 p-0">
+                                    smart<span>CINEMA</span> 
+                                </h2>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="search"  class="navbar-link"  onclick="onNavItemClick('/search'); return false;">
-                                <i class="fal fa-search"></i>
-                                Search
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="popular"  class="navbar-link"  onclick="onNavItemClick('/popular'); return false;">
-                                <i class="fal fa-star"></i>
-                                Popular
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="now_playing"  class="navbar-link" onclick="onNavItemClick('/now_playing'); return false;">
-                                <i class="fal fa-play-circle"></i>
-                                Now_Playing
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="top_rated"  class="navbar-link" onclick="onNavItemClick('/top_rated'); return false;">
-                                <i class="fal fa-thumbs-up"></i>
-                                Top_Rated
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="upcoming"  class="navbar-link" onclick="onNavItemClick('/upcoming'); return false;">
-                                <i class="fal fa-heart-rate"></i>
-                                Upcoming
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="nav-item">
-                            <a id="favourites"  class="navbar-link"  onclick="onNavItemClick('/favourites'); return false;">
-                                <i class="fal fa-heart"></i>
-                                Favourites
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="bookmarks"  class="navbar-link"  onclick="onNavItemClick('/bookmarks'); return false;">
-                                <i class="fal fa-bookmark"></i>
-                                Bookmarks
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="nav-item switch-mod center">
-                            <input type="checkbox" id="modSwitch">
-                        </li>
-                    </ul>
-                </aside>
-                <!--    ===     END SIDEBAR AREA      ===     -->
-
-<!--================================-->
-<!--    ===     START APP_CONTENT AREA    ===    -->
-<!--================================-->
-
-                <div id="content" class="content col-lg-9 p-0 ">  
-
-                    <section class="movie-content-area">
-                        <div class="movie-area">
-                            <img class="movie-backdrop" src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/srYya1ZlI97Au4jUYAktDe3avyA.jpg" alt="">
-                            <div class="overlay"></div>
-                            <div class="row m-0">
-                                <div class="col-4 ml-0 movie-poster">
-                                    <img class="d-none d-md-block" src="http://image.tmdb.org/t/p/w300_and_h450_bestv2/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="">
-                                </div>
-                                <div class="col-8 d-flex flex-column justify-content-center">
-                                    <h2 class="movie-title">
-                                        Deadpool 2 <span class="movie-r-d">( 2020 )</span>
-                                    </h2>
-                                    <div class="movie-genres d-flex flex-row align-items-center">
-                                        <span>
-                                            R
-                                        </span>
-                                        <span>
-                                            action
-                                        </span>
-                                        <span>
-                                            adventure
-                                        </span>
-                                        <span>
-                                            comedy
-                                        </span>
-                                    </div>
-                                    <div class="movie-info d-flex flex-row align-items-center">
-                                        <span class="movie-rate">
-                                            <span>
-                                                100%
-                                            </span>
-                                            <svg viewBox="0 0 36 36" class="circular-chart">
-                                                <path class="circle"
-                                                stroke-dasharray="100, 100"
-                                                d="M18 2.0845
-                                                    a 15.9155 15.9155 0 0 1 0 31.831
-                                                    a 15.9155 15.9155 0 0 1 0 -31.831"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <span class="movie-info-pop">
-                                            <i class="fal fa-fire-alt"></i>
-                                            31565
-                                        </span>
-                                        <span class="movie-info-vote">
-                                            <i class="fas fa-percentage"></i>
-                                            459
-                                        </span>
-                                        <span class="add-movie-fav">
-                                            <i class="fal fa-heart"></i>
-                                        </span>
-                                        <span class="add-movie-watchlist">
-                                            <i class="fal fa-bookmark"></i>
-                                        </span>
-                                    </div>
-                                    <p class="movie-overview">
-                                        A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.
-                                    </p>
-                                    <div class="movie-btns d-flex flex-row justify-content-start align-items-center">
-                                        <a href="" target="_blank" class="btn">Visit Website</a>
-                                        <a class="btn invert">view trailer</a>
-                                    </div>
-                                </div>
-                                <div class="movie-cast-slider">
-                                    <div class="row m-0">
-                                        <div class="col">
-                                            <div class="movie-cast-swiper-container">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide cast">
-                                                      <div class="cast-profile-img">
-                                                      <img class="img-fluid" src="http://image.tmdb.org/t/p/w300/fysvehTvU6bE3JgxaOTRfvQJzJ4.jpg" alt="">
-                                                      </div>
-                                                        <div class="cast-profile-info">
-                                                          <h3 class="cast-real-name">Aria Shahghasemi</h3>
-                                                          <span class="cast-role-name">cast role name</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Add Arrows -->
-                                                <!-- <div class="movie-cast-swiper-button-next swiper-button-next"></div> -->
-                                                <!-- <div class="movie-cast-swiper-button-prev swiper-button-prev"></div> -->
-                                              </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </section>
-    
-<!--==============================-->
-<!--    ===     END APP_CONTENT AREA    ===    -->
-<!--==============================-->
+                        <ul class="nav-links m-0 p-0">
+                            <li class="nav-item">
+                                <a id="home"  class="navbar-link active"  onclick="onNavItemClick('/'); return false;"> 
+                                    <i class="fal fa-home"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="search"  class="navbar-link"  onclick="onNavItemClick('/search'); return false;">
+                                    <i class="fal fa-search"></i>
+                                    Search
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="popular"  class="navbar-link"  onclick="onNavItemClick('/popular'); return false;">
+                                    <i class="fal fa-star"></i>
+                                    Popular
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="now_playing"  class="navbar-link" onclick="onNavItemClick('/now_playing'); return false;">
+                                    <i class="fal fa-play-circle"></i>
+                                    Now_Playing
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="top_rated"  class="navbar-link" onclick="onNavItemClick('/top_rated'); return false;">
+                                    <i class="fal fa-thumbs-up"></i>
+                                    Top_Rated
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="upcoming"  class="navbar-link" onclick="onNavItemClick('/upcoming'); return false;">
+                                    <i class="fal fa-heart-rate"></i>
+                                    Upcoming
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="nav-item">
+                                <a id="favourites"  class="navbar-link"  onclick="onNavItemClick('/favourites'); return false;">
+                                    <i class="fal fa-heart"></i>
+                                    Favourites
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="bookmarks"  class="navbar-link"  onclick="onNavItemClick('/bookmarks'); return false;">
+                                    <i class="fal fa-bookmark"></i>
+                                    Bookmarks
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="nav-item switch-mod center">
+                                <input type="checkbox" id="modSwitch">
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <!--===========================-->
+                    <!--    ===     END SIDEBAR AREA      ===     -->
+                    <!--===========================-->
+
+
+                    <!--================================-->
+                    <!--    ===     START APP_CONTENT AREA    ===    -->
+                    <!--================================-->
+                    <div id="content" class="content col-lg-9 p-0 ">
+                    </div>
+                    <!--==============================-->
+                    <!--    ===     END APP_CONTENT AREA    ===    -->
+                    <!--==============================-->
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!--    ===       END   APP      ===     -->
+    <!--    ===       END   APP      ===     -->
 
 
-<!--    ===     SCRIPTS     ===     -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="./src/js/swiper-sliders.js"></script>
-<script src="./app_components/home.js"></script>
-<script src="./app_components/search.js"></script>
-<script src="./src/js/search-Operation.js"></script>
-<script src="./app_components/popular.js"></script>
-<script src="./app_components/now_playing.js"></script>
-<script src="./app_components/top_rated.js"></script>
-<script src="./app_components/upcoming.js"></script>
-<script src="./app_components/favourites.js"></script>
-<script src="./app_components/bookmarks.js"></script>
-<script src="./app_components/movie.js"></script>
-<script src="./index.js"></script>
+    <!--    ===   START  SCRIPTS     ===     -->
 
-<!-- <script>
-activeSlider();
-</script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="./src/js/swiper-sliders.js"></script>
+    <script src="./app_components/home.js"></script>
+    <script src="./app_components/search.js"></script>
+    <script src="./src/js/search-Operation.js"></script>
+    <script src="./app_components/popular.js"></script>
+    <script src="./app_components/now_playing.js"></script>
+    <script src="./app_components/top_rated.js"></script>
+    <script src="./app_components/upcoming.js"></script>
+    <script src="./app_components/favourites.js"></script>
+    <script src="./app_components/bookmarks.js"></script>
+    <script src="./app_components/movie.js"></script>
+    <script src="./index.js"></script>
+
+    <!--    ===   END  SCRIPTS     ===     -->
 
 </body>
 </html>

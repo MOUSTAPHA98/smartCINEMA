@@ -1,15 +1,12 @@
 var contentDiv = document.getElementById("content");
 
 async function GET_DATA_home() {
-  
-    // read API DATA
     let response = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.ceil(Math.random()*10)}`);
     let results = await response.json();
-    let miniMoviesList = await results.results;
+    let el = await results.results;
 
-    // write data
-    homePageContent = `
-    <section class="homepage-area">
+    let homePageContent = 
+    `<section class="homepage-area">
         <div class="homepage-content-swiper-container">
             <!-- Add Arrows -->
             <div class="homepage-content-swiper-button-next swiper-button-next swiper-pagination d-none d-md-flex">
@@ -20,9 +17,9 @@ async function GET_DATA_home() {
             </div>
             <!-- Add Pagination -->
             <div class="homepage-content-swiper-pagination swiper-pagination"></div>
-    
+
             <div class="swiper-wrapper">
-    
+
             <!--    ===     START SLIDE #01    ===    -->
                 <div class="swiper-slide slide1">
                     <div class="slide-content">
@@ -78,7 +75,7 @@ async function GET_DATA_home() {
                     </div>
                 </div>
                 <!--    ===     END SLIDE #01    ===    -->
-    
+
                 <!--    ===     START SLIDE #02    ===    -->
                 <div class="swiper-slide slide2">
                 <div class="slide-content">
@@ -134,7 +131,7 @@ async function GET_DATA_home() {
                 </div>
             </div>
             <!--    ===     END SLIDE #02    ===    -->
-    
+
             <!--    ===     START SLIDE #03    ===    -->
             <div class="swiper-slide slide3">
                 <div class="slide-content">
@@ -190,13 +187,13 @@ async function GET_DATA_home() {
                 </div>
             </div>
             <!--    ===     END SLIDE #03   ===    -->
-    
+
             </div>
-    
+
             <!-- Add Pagination -->
             <div class="homepage-content-swiper-pagination swiper-pagination"></div>
             </div>
-    
+
         <div class="homepage-pickedmovies-container d-flex flex-column">
             <!-- Add Arrows -->
             <div class="homepage-pickedmovies-swiper-button-next   swiper-button-next    swiper-pagination d-none d-md-flex">
@@ -210,251 +207,251 @@ async function GET_DATA_home() {
             <div class="homepage-random-slider">
                 <div class="homepage-random-slider-container">
                     <div class="swiper-wrapper">
-    
-    
-                      <!-- START TREND MOVIE #01 -->
-                      <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[1].id}">
+
+
+                        <!-- START TREND MOVIE #01 -->
+                        <div class="swiper-slide random-movie movie" data-movie-id = "${el[1].id}">
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[1].original_language).toUpperCase()}
+                                ${(el[1].original_language).toUpperCase()}
                             </span>
                         </span>
-                          <a  class="random-movie-img">
+                            <a  class="random-movie-img">
                             <span class="random-movie-rate">
                                 <span>
-                                    ${(miniMoviesList[1].vote_average) * 10}%
+                                    ${(el[1].vote_average) * 10}%
                                 </span>
                                 <svg viewBox="0 0 36 36" class="circular-chart">
                                     <path class="circle"
-                                    stroke-dasharray="${(miniMoviesList[1].vote_average) * 10}, 100"
+                                    stroke-dasharray="${(el[1].vote_average) * 10}, 100"
                                     d="M18 2.0845
                                         a 15.9155 15.9155 0 0 1 0 31.831
                                         a 15.9155 15.9155 0 0 1 0 -31.831"
                                     />
                                 </svg>
                             </span>
-                              <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[19].poster_path}" alt="">
-                          </a>
-                          <div class="random-movie-info">
-                              <h2 class="random-movie-title">
-                                  ${miniMoviesList[1].title}
+                                <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${el[19].poster_path}" alt="">
+                            </a>
+                            <div class="random-movie-info">
+                                <h2 class="random-movie-title">
+                                    ${el[1].title}
                                 </h2>
-                              <span class="random-movie-release-date">
-                                ${miniMoviesList[1].release_date}
-                              </span>
-                          </div>
-                      </div>
-                      <!-- END TREND MOVIE #01 -->
-    
-    
-                      <!-- START TREND MOVIE #02 -->
-                      <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[17].id}" >
+                                <span class="random-movie-release-date">
+                                ${el[1].release_date}
+                                </span>
+                            </div>
+                        </div>
+                        <!-- END TREND MOVIE #01 -->
+
+
+                        <!-- START TREND MOVIE #02 -->
+                        <div class="swiper-slide random-movie movie" data-movie-id = "${el[17].id}" >
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[17].original_language).toUpperCase()}
+                                ${(el[17].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[17].vote_average) * 10}%
-                              </span>
+                            ${(el[17].vote_average) * 10}%
+                                </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[17].vote_average) * 10}, 100"
-                                  d="M18 2.0845
+                                    stroke-dasharray="${(el[17].vote_average) * 10}, 100"
+                                    d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                              </svg>
-                          </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[17].poster_path}" alt="">
+                                </svg>
+                            </span>
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${el[17].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-movie-title">
-                                ${miniMoviesList[17].title}
-                              </h2>
+                                ${el[17].title}
+                                </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[17].release_date}
+                                ${el[17].release_date}
                             </span>
                         </div>
                     </div>
                     <!-- END TREND MOVIE #02 -->
-    
-    
+
+
                     <!-- START TREND MOVIE #03 -->
-                    <div class="swiper-slide random-movie movie"  data-movie-id = "${miniMoviesList[15].id}" >
+                    <div class="swiper-slide random-movie movie"  data-movie-id = "${el[15].id}" >
                         
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[15].original_language).toUpperCase()}
+                                ${(el[15].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[15].vote_average) * 10}%
-                              </span>
+                            ${(el[15].vote_average) * 10}%
+                                </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[15].vote_average) * 10}, 100"
-                                  d="M18 2.0845
+                                    stroke-dasharray="${(el[15].vote_average) * 10}, 100"
+                                    d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
-                              </svg>
-                          </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[15].poster_path}" alt="">
+                                </svg>
+                            </span>
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${el[15].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-movie-title">
-                                ${miniMoviesList[15].title}
-                              </h2>
+                                ${el[15].title}
+                                </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[15].release_date}
+                                ${el[15].release_date}
                             </span>
                         </div>
                     </div>
                     <!-- END TREND MOVIE #03 -->
-    
-    
+
+
                     <!-- START TREND MOVIE #04 -->
-                    <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[13].id}" >
+                    <div class="swiper-slide random-movie movie" data-movie-id = "${el[13].id}" >
                         
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[13].original_language).toUpperCase()}
+                                ${(el[13].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[13].vote_average) * 10}%
-                              </span>
+                            ${(el[13].vote_average) * 10}%
+                                </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[13].vote_average) * 10}, 100"
-                                  d="M18 2.0845
+                                    stroke-dasharray="${(el[13].vote_average) * 10}, 100"
+                                    d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
-                              </svg>
-                          </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[13].poster_path}" alt="">
+                                </svg>
+                            </span>
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${el[13].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-movie-title">
-                                ${miniMoviesList[13].title}
-                              </h2>
+                                ${el[13].title}
+                                </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[13].release_date}
+                                ${el[13].release_date}
                             </span>
                         </div>
                     </div>
                     <!-- END TREND MOVIE #04 -->
-    
-    
+
+
                     <!-- START TREND MOVIE #05 -->
-                    <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[11].id}" >
-                       
+                    <div class="swiper-slide random-movie movie" data-movie-id = "${el[11].id}" >
+                        
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[11].original_language).toUpperCase()}
+                                ${(el[11].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a  class="random-movie-img">
                         <span class="random-movie-rate">
                         <span>
-                        ${(miniMoviesList[11].vote_average) * 10}%
-                          </span>
+                        ${(el[11].vote_average) * 10}%
+                            </span>
                         <svg viewBox="0 0 36 36" class="circular-chart">
                             <path class="circle"
-                              stroke-dasharray="${(miniMoviesList[11].vote_average) * 10}, 100"
-                              d="M18 2.0845
+                                stroke-dasharray="${(el[11].vote_average) * 10}, 100"
+                                d="M18 2.0845
                                 a 15.9155 15.9155 0 0 1 0 31.831
                                 a 15.9155 15.9155 0 0 1 0 -31.831"
                             />
-                          </svg>
-                      </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[11].poster_path}" alt="">
+                            </svg>
+                        </span>
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${el[11].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-movie-title">
-                                ${miniMoviesList[11].title}
-                              </h2>
+                                ${el[11].title}
+                                </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[11].release_date}
+                                ${el[11].release_date}
                             </span>
                         </div>
                     </div>
                     <!-- END TREND MOVIE #05 -->
-    
-    
+
+
                     <!-- START TREND MOVIE #06 -->
-                    <div class="swiper-slide random-movie movie" data-movie-id = "${miniMoviesList[9].id}" >
+                    <div class="swiper-slide random-movie movie" data-movie-id = "${el[9].id}" >
                         
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[9].original_language).toUpperCase()}
+                                ${(el[9].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[9].vote_average) * 10}%
-                              </span>
+                            ${(el[9].vote_average) * 10}%
+                                </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[9].vote_average) * 10}, 100"
-                                  d="M18 2.0845
+                                    stroke-dasharray="${(el[9].vote_average) * 10}, 100"
+                                    d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
-                              </svg>
-                          </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[9].poster_path}" alt="">
+                                </svg>
+                            </span>
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${el[9].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-movie-title">
-                                ${miniMoviesList[9].title}
-                              </h2>
+                                ${el[9].title}
+                                </h2>
                             <span class="random-movie-release-date">
-                                ${miniMoviesList[9].release_date}
+                                ${el[9].release_date}
                             </span>
                         </div>
                     </div>
                     <!-- END TREND MOVIE #06 -->
-    
-    
+
+
                     <!-- START TREND MOVIE #07 -->
-                    <div class="swiper-slide random-movie movie"  data-movie-id = "${miniMoviesList[14].id}" >
+                    <div class="swiper-slide random-movie movie"  data-movie-id = "${el[14].id}" >
                         
                         <span class="ribbon">
                             <span>
-                                ${(miniMoviesList[14].original_language).toUpperCase()}
+                                ${(el[14].original_language).toUpperCase()}
                             </span>
                         </span>
                         <a  class="random-movie-img">
                         <span class="random-movie-rate">
                             <span>
-                            ${(miniMoviesList[14].vote_average) * 10}%
-                              </span>
+                            ${(el[14].vote_average) * 10}%
+                                </span>
                             <svg viewBox="0 0 36 36" class="circular-chart">
                                 <path class="circle"
-                                  stroke-dasharray="${(miniMoviesList[14].vote_average) * 10}, 100"
-                                  d="M18 2.0845
+                                    stroke-dasharray="${(el[14].vote_average) * 10}, 100"
+                                    d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
-                              </svg>
-                          </span>
-                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${miniMoviesList[14].poster_path}" alt="">
+                                </svg>
+                            </span>
+                            <img class="img-fluid" src="https://image.tmdb.org/t/p/w220_and_h330_face/${el[14].poster_path}" alt="">
                         </a>
                         <div class="random-movie-info">
                             <h2 class="random-movie-title">
-                                ${miniMoviesList[14].title}
-                              </h2>
+                                ${el[14].title}
+                                </h2>
                             <span class="random-movie-release-date">
-                            ${miniMoviesList[14].release_date}
+                            ${el[14].release_date}
                             </span>
                         </div>
                     </div>
@@ -465,20 +462,17 @@ async function GET_DATA_home() {
         </div>
     </section>`;
 
-  
-    // wait 3 seconds
-    await new Promise((resolve, reject) => setTimeout(resolve, 0));
     contentDiv.innerHTML = homePageContent;
-    var paths = document.querySelectorAll('.circle');
-    paths.forEach(el => {
-        let reputation = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
-        if (reputation <= 75){
-            el.style.stroke = "#FFDA3B";
-        }
-        if(reputation < 50) {
-            el.style.stroke = "tomato";
-        }
-    });
     activeSlider();
+    coloRatePaths();
 };
 
+let coloRatePaths = function() {
+    var paths = document.querySelectorAll('.circle');
+    paths.forEach(el => {
+    let reputation = parseInt(el.getAttribute("stroke-dasharray").substring(0,3));
+    if (reputation <= 75 ? el.style.stroke = "#FFDA3B" : null );
+    if (reputation <= 50 ? el.style.stroke = "tomato" : null );
+    if (reputation == 0 ? el.style.stroke = "gray" : null );
+    });
+};

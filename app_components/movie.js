@@ -22,13 +22,12 @@ GET_DATA_movie = async function () {
         $movie_pop = result.popularity,
         $movie_poster = result.poster_path,
         $movie_r_d = result.release_date,
-        $movie_revenue = result.revenue,
+        // $movie_revenue = result.revenue,
         $movie_Language = result.original_language,
-        $movie_budget = result.budget,
+        // $movie_budget = result.budget,
         $movie_vote_average = result.vote_average,
         $movie_runtime = result.runtime,
         $movie_cast = result.credits.cast;
-        console.log(result.credits.cast)
 
         if($movie_poster === null){
             $movie_poster = `https://via.placeholder.com/300x450/C91919/FFFFFF/?text=NOT FOUND`;
@@ -70,11 +69,11 @@ GET_DATA_movie = async function () {
                                     <div class="movie-info d-flex flex-row align-items-center">
                                         <span class="movie-rate">
                                             <span>
-                                                ${$movie_vote_average*10}%
+                                                ${$movie_vote_average * 10}%
                                             </span>
                                             <svg viewBox="0 0 36 36" class="circular-chart">
                                                 <path class="circle"
-                                                stroke-dasharray="${$movie_vote_average*10}, 100"
+                                                stroke-dasharray="${$movie_vote_average * 10}, 100"
                                                 d="M18 2.0845
                                                     a 15.9155 15.9155 0 0 1 0 31.831
                                                     a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -87,7 +86,7 @@ GET_DATA_movie = async function () {
                                         </span>
                                         <span class="movie-info-vote">
                                             <i class="fas fa-clock"></i>
-                                            ${Math.floor($movie_runtime/60)}HR ${$movie_runtime%60}M
+                                            ${Math.floor($movie_runtime / 60)}HR ${$movie_runtime % 60}M
                                         </span>
                                         <span class="add-movie-fav">
                                             <i class="fal fa-heart"></i>
@@ -144,7 +143,7 @@ GET_DATA_movie = async function () {
                            if (el.profile_path == null){
                                  $cast_profile_img =  `https://via.placeholder.com/300x450/C91919/FFFFFF/?text=NOT FOUND`;
                            } else {
-                                $cast_profile_img = `http://image.tmdb.org/t/p/w300${el.profile_path}`; 
+                                $cast_profile_img = `https://image.tmdb.org/t/p/w300${el.profile_path}`; 
                            };
                             let cast =
                             `<div class="swiper-slide cast">

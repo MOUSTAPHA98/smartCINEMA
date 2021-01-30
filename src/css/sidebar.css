@@ -36,13 +36,7 @@
 }
 
 .app-container .container .row .side-menu  .nav-links  .nav-item .navbar-link:hover{
-    font-size: 15px;
     color: var(--second-text-color) !important;
-}
-
-.app-container .container .row .side-menu  .nav-links  .nav-item .navbar-link:hover i{
-    font-size: 15px;
-    font-size: 20px;
 }
 
 .app-container .container .row .side-menu  .nav-links  .nav-item .navbar-link.active:hover{
@@ -86,7 +80,7 @@ li.divider{
 }
 
 input[type="checkbox"]{
-    width: 100%;
+    width: 212.5px;
     height: 66px;
     outline: none;
     background-color: var(--main-color);
@@ -95,6 +89,8 @@ input[type="checkbox"]{
     transition: .8s;
     position: relative;
     cursor: pointer;
+    transition: .8s;
+
 }
 
 input[type="checkbox"]:before{
