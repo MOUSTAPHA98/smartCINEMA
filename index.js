@@ -3,13 +3,12 @@ var pathLink = window.location.pathname.substring(1);
 var load_content;
 
 
-// Load Default HomePage App Content
-if (pathLink == "" ) {
+if (pathLink == "" || pathLink == "index.html" ) {
   load_content = new Function (`return GET_DATA_home()`);
   load_content()
 }
 
-if (pathLink.substring(0, 5) != "movie" && pathLink != ""){
+if (pathLink.substring(0, 5) != "movie" && pathLink != "" && pathLink != "index.html"){
     load_content = new Function (`return GET_DATA_${pathLink}(1)`);
   load_content()
 
@@ -18,30 +17,8 @@ if (pathLink.substring(0, 5) != "movie" && pathLink != ""){
   load_content(pathLink.substring(7));
 }
 
-
-
-///////////////////////////
-///   Set App Routes   ///
-//////////////////////////
-
-let routes = {
-    '/': home,
-    '/home': home,
-    '/index.html': home,
-    '/popular' : popular,
-    '/now_playing' : now_playing,
-    '/top_rated' : top_rated,
-    '/upcoming' : upcoming,
-    '/search' : search,
-    '/favourites' : favourites,
-    '/bookmarks' : bookmarks,
-    // '/movie' : movie,
-};
-
-// Change Browser Title Due To the Current Path
-(pathLink != "" ? document.title = `smartCINEMA | ${pathLink.toUpperCase()}` : null)
+(pathLink != "" && pathLink != "index.html" ? document.title = `smartCINEMA | ${pathLink.toUpperCase()}` : null)
   
-// Select The Tab (Navbar) That Is Clicked Function
 function select_tab(id) {
     navbarLinks.forEach(item => item.classList.remove('active'));
     document.querySelectorAll("#" + id).forEach(item => item.classList.add('active'));
@@ -141,12 +118,14 @@ let modSwitch = document.getElementById("modSwitch");
 modSwitch.onclick = function(){
   let appBody =  document.body;
     if (modSwitch.checked == false ){
-      appBody.className = "darkMod"
+      modSwitch.className = "unchecked";
+      appBody.className = "darkMod";
     } else if (modSwitch.checked == true ){
-      appBody.className = "lightMod"
+      appBody.className = "lightMod";
+      modSwitch.className = "checked";
     }
     appThemeMod = localStorage.setItem("appThemeMod", document.body.className);
-    console.log(localStorage.getItem("appThemeMod"));
+    localStorage.setItem("switch", modSwitch.checked);	
 };
 
 
@@ -157,6 +136,8 @@ modSwitch.onclick = function(){
 
 $(document).ready(function() {
 document.body.className = localStorage.getItem("appThemeMod");
+var checked = JSON.parse(localStorage.getItem("switch"));
+modSwitch.checked = checked;
 var counter = 0;
 var c = 0;
 var i = setInterval(function(){

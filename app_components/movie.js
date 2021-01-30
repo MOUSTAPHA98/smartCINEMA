@@ -136,25 +136,22 @@ GET_DATA_movie = async function () {
                         });
                         let movie_cast_area =document.querySelector(".movie-cast-swiper-container .swiper-wrapper");
                         $movie_cast.forEach(el => {
-                            let $cast_profile_img,
+                            if (el.profile_path != null){
+                                $cast_profile_img = `https://image.tmdb.org/t/p/w300${el.profile_path}`; 
+
                                 $cast_original_name = el.original_name,
                                 $cast_role_name = el.character;
-
-                           if (el.profile_path == null){
-                                 $cast_profile_img =  `https://via.placeholder.com/300x450/C91919/FFFFFF/?text=NOT FOUND`;
-                           } else {
-                                $cast_profile_img = `https://image.tmdb.org/t/p/w300${el.profile_path}`; 
-                           };
-                            let cast =
-                            `<div class="swiper-slide cast">
-                            <div class="cast-profile-img">
-                            <img class="img-fluid" src="${$cast_profile_img}" alt="">
-                            </div>
-                              <div class="cast-profile-info">
-                                <h3 class="cast-real-name">${$cast_original_name}</h3>
-                                <span class="cast-role-name">${$cast_role_name}</span>
-                              </div>
-                          </div>`;
+                                let cast =
+                                `<div class="swiper-slide cast">
+                                <div class="cast-profile-img">
+                                <img class="img-fluid" src="${$cast_profile_img}" alt="">
+                                </div>
+                                <div class="cast-profile-info">
+                                    <h3 class="cast-real-name">${$cast_original_name}</h3>
+                                    <span class="cast-role-name">${$cast_role_name}</span>
+                                </div>
+                                </div>`;
                             movie_cast_area.innerHTML += cast;
+                            }
                         });
 }

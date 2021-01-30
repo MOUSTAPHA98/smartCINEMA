@@ -5,7 +5,6 @@ var activeSlider = () =>{
       observeParents: true,
       centeredSlides: true,
       speed: 2000,
-      // effect: "fade",
       loop: true,
       autoplay: {
           delay: 10000,
@@ -30,7 +29,7 @@ var activeSlider = () =>{
     speed: 2000,
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: true,
       },
     navigation: {
@@ -45,11 +44,11 @@ var movie_cast_Slider = new Swiper('.movie-cast-swiper-container', {
     observeParents: true,
     slidesPerView: 5,
     centeredSlides: false,
-    spaceBetween: 16,
+    spaceBetween: 30,
     speed: 2000,
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
       },
 });
