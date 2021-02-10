@@ -15,7 +15,7 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide.slide1{
-    background: linear-gradient(to top, var(--back-color)  0%, transparent 100%),url(../../images/slider/deadpool.jpg);
+    background: linear-gradient(to top, var(--back-color)  0%, transparent 100%),url(../../images/slider/deadpool.webp);
     background-size: cover;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .homepage-area .homepage-content-swiper-container .swiper-slide.slide3{
-    background: linear-gradient(to top, var(--back-color) 0%, transparent 100%),url(../../images/slider/ca.jpg);
+    background: linear-gradient(to top, var(--back-color) 0%, transparent 100%),url(../../images/slider/ca.webp);
     background-size: cover;
 }
 
@@ -211,8 +211,8 @@
 
 .homepage-area .homepage-pickedmovies-container{
     /* background-color: tomato; */
-    /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 58.8%, var(--second-color) 58.8%, var(--second-color) 100%), url(../../../src/images/background/back.jpg) center no-repeat; */
-    background: linear-gradient(to bottom, var(--back-color) 0%, var(--back-color-transparent) 100%), url(../../../src/images/background/back.jpg) center no-repeat;
+    /* background: linear-gradient(to left, var(--back-color) 0%, var(--back-color) 58.8%, var(--second-color) 58.8%, var(--second-color) 100%), url(../../../src/images/background/back.webp) center no-repeat; */
+    background: linear-gradient(to bottom, var(--back-color) 0%, var(--back-color-transparent) 100%), url(../../../src/images/background/back.webp) center no-repeat;
     background-size: cover;
     padding: 30px;
     position: relative;

@@ -10,6 +10,8 @@ $(document).on('click', '.movie', function () {
 
 
 GET_DATA_movie = async function () {
+    contentDiv.innerHTML = "";
+
     let key = location.pathname.substring(7);
     let response = await fetch(`https://api.themoviedb.org/3/movie/${key}?api_key=0f483e0f9987fd0d89c1b0732ea93785&append_to_response=videos,reviews,similar,credits`);
     let result = await response.json();
@@ -120,7 +122,6 @@ GET_DATA_movie = async function () {
                     </section>`;
 
             
-                     contentDiv.innerHTML = "",
                         contentDiv.innerHTML = movieContent;
                         if (result.videos.results.length != 0){
                             $movie_trailer = result.videos.results[0].key;

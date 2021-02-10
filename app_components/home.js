@@ -1,6 +1,14 @@
 var contentDiv = document.getElementById("content");
 
 async function GET_DATA_home() {
+    contentDiv.innerHTML = `
+    <div class="spinner">
+        <svg>
+            <use href="src/images/icons.svg#icon-loader"></use>
+        </svg>
+    </div>
+    `;
+    
     let response = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=0f483e0f9987fd0d89c1b0732ea93785&page=${Math.ceil(Math.random()*10)}`);
     let results = await response.json();
     let el = await results.results;
@@ -23,7 +31,7 @@ async function GET_DATA_home() {
             <!--    ===     START SLIDE #01    ===    -->
                 <div class="swiper-slide slide1">
                     <div class="slide-content">
-                    <img class="d-none d-md-block" src="./src/images/deadpool.png" alt="">
+                    <img class="d-none d-md-block" src="./src/images/deadpool.webp" alt="">
                         <div class="row">
                             <div class="slide-movie col-xl-7 p-0 d-flex flex-column justify-content-center">
                                     <span class="slide-category">
@@ -79,7 +87,7 @@ async function GET_DATA_home() {
                 <!--    ===     START SLIDE #02    ===    -->
                 <div class="swiper-slide slide2">
                 <div class="slide-content">
-                    <img class="d-none d-md-block" src="./src/images/ironman.png" alt="">
+                    <img class="d-none d-md-block" src="./src/images/ironman.webp" alt="">
                     <div class="row">
                             <div class="slide-movie col-xl-7 p-0 d-flex flex-column justify-content-center">
                                 <span class="slide-category">
@@ -135,7 +143,7 @@ async function GET_DATA_home() {
             <!--    ===     START SLIDE #03    ===    -->
             <div class="swiper-slide slide3">
                 <div class="slide-content">
-                    <img class="d-none d-md-block" src="./src/images/marvel.png" alt="">
+                    <img class="d-none d-md-block" src="./src/images/marvel.webp" alt="">
                     <div class="row">
                             <div class="slide-movie col-xl-12 p-0 d-flex flex-column justify-content-center">
                                 <span class="slide-category">
